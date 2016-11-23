@@ -5,12 +5,12 @@
   "cordova": {
     "id": "telpo.sdk",
     "platforms": [
-      "ios"
+     "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+ssh://git@github.com:arpitkulria/telpo-cordova-plugin.git"
   },
   "keywords": [
     "telpo",

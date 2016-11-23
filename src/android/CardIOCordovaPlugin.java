@@ -20,6 +20,104 @@ import android.net.Uri;
 import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
 
+public class MagneticCard extends CordovaPlugin {
+    static {
+        System.loadLibrary("telpo_msr");
+    }
+
+    public MagneticCard() {
+    }
+
+    public static synchronized void open() throws TelpoException {
+        int ret = open_msr();
+        switch(ret) {
+        case -3:
+            throw new InternalErrorException("Cannot open magnetic stripe card reader!");
+        case -2:
+            throw new DeviceAlreadyOpenException("The magnetic stripe card reader has been opened!");
+        default:
+        }
+    }
+
+    public static synchronized void close() {
+        close_msr();
+    }
+
+    public static synchronized String[] check(int timeout) throws TelpoException {
+        byte[] result = new byte[256];
+        int ret = check_msr(timeout, result);
+        switch(ret) {
+        case -4:
+            throw new TimeoutException("Timeout to get magnetic stripe card data!");
+        case -3:
+            throw new InternalErrorException("Cannot get magnetic stripe card data!");
+        case -2:
+        default:
+            return ParseData(ret, result);
+        case -1:
+            throw new DeviceNotOpenException("The magnetic stripe card reader has not been opened!");
+        }
+    }
+
+    private static String[] ParseData(int size, byte[] data) throws TelpoException {
+        String[] result = new String[3];
+        byte pos = 0;
+        byte len = data[pos];
+        if(len == 0) {
+            result[0] = "";
+        } else {
+            try {
+                result[0] = new String(data, pos + 1, len, "GBK");
+            } catch (UnsupportedEncodingException var8) {
+                var8.printStackTrace();
+                throw new InternalErrorException();
+            }
+        }
+
+        int pos1 = data[0] + 1;
+        len = data[pos1];
+        if(len == 0) {
+            result[1] = "";
+        } else {
+            try {
+                result[1] = new String(data, pos1 + 1, len, "GBK");
+            } catch (UnsupportedEncodingException var7) {
+                var7.printStackTrace();
+                throw new InternalErrorException();
+            }
+        }
+
+        pos1 += data[pos1] + 1;
+        len = data[pos1];
+        if(len == 0) {
+            result[2] = "";
+        } else {
+            try {
+                result[2] = new String(data, pos1 + 1, len, "GBK");
+            } catch (UnsupportedEncodingException var6) {
+                var6.printStackTrace();
+                throw new InternalErrorException();
+            }
+        }
+
+        return result;
+    }
+
+    public static int startReading() {
+        return ready_for_read();
+    }
+
+    private static native int open_msr();
+
+    private static native void close_msr();
+
+    private static native int check_msr(int var0, byte[] var1);
+
+    private static native int ready_for_read();
+}
+
+
+
 public class CardIOCordovaPlugin extends CordovaPlugin {
 
     private CallbackContext callbackContext;

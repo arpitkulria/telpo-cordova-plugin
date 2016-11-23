@@ -12,6 +12,9 @@
  */
 function CardIO() {
 }
+function MagneticCard() {
+
+}
 
 /**
  * Scan a credit card with card.io.
@@ -51,6 +54,51 @@ CardIO.prototype.canScan = function(callback) {
   cordova.exec(wrappedSuccess, failureCallback, "CardIO", "canScan", []);
 };
 
+MagneticCard.prototype.open = function(callback) {
+  var failureCallback = function() {
+    console.log("Could not detect whether MagneticCard open is available.");
+    callback(false);
+  };
+  var wrappedSuccess = function(response) {
+    callback(response !== 0);
+  };
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "open", []);
+};
+
+MagneticCard.prototype.close = function(callback) {
+  var failureCallback = function() {
+    console.log("Could not detect whether MagneticCard close is available.");
+    callback(false);
+  };
+  var wrappedSuccess = function(response) {
+    callback(response !== 0);
+  };
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "close", []);
+};
+
+MagneticCard.prototype.startReading = function(callback) {
+  var failureCallback = function() {
+    console.log("Could not detect whether MagneticCard startReading is available.");
+    callback(false);
+  };
+  var wrappedSuccess = function(response) {
+    callback(response !== 0);
+  };
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "startReading", []);
+};
+
+
+MagneticCard.prototype.check = function(callback, timeout) {
+  var failureCallback = function() {
+    console.log("Could not detect whether MagneticCard check is available.");
+    callback(false);
+  };
+  var wrappedSuccess = function(response) {
+    callback(response !== 0);
+  };
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "check", timeout);
+};
+
 /**
  * Retrieve the version of the card.io library. Useful when contacting support.
  *
@@ -69,3 +117,4 @@ CardIO.prototype.version = function(callback) {
  * Plugin setup boilerplate.
  */
 module.exports = new CardIO();
+module.exports = new MagneticCard();

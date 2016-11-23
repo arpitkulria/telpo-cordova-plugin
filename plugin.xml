@@ -5,9 +5,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="card.io.cordova.mobilesdk"
     version="2.1.0">
-    <name>CardIO</name>
-    <description>This plugin allows to add to add CardIO to your application using CardIO Native library</description>
-    <license>MIT License, see LICENSE.md for details</license>
+    <name>MagneticCard</name>
+    <description>This plugin allows to add to add CardIO to your application using Telpo Native library</description>
+    <license></license>
     <engines>
             <engine name="cordova" version="&gt;=3.0.0" />
     </engines>
@@ -16,6 +16,12 @@
     <js-module src="www/cdv-plugin-card-io.js" name="CardIO">
         <clobbers target="CardIO" />
     </js-module>
+
+
+        <js-module src="www/cdv-plugin-card-io.js" name="MagneticCard">
+            <clobbers target="MagneticCard" />
+        </js-module>
+
 
     <!-- ios -->
     <platform name="ios">
@@ -63,8 +69,8 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="CardIO">
-                <param name="android-package" value="io.card.cordova.sdk.CardIOCordovaPlugin" />
+            <feature name="MagneticCard">
+                <param name="android-package" value="io.card.cordova.sdk.MagneticCard" />
             </feature>
         </config-file>
 
