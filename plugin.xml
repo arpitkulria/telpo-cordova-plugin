@@ -27,13 +27,13 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="CardIO">
-                <param name="ios-package" value="CardIOCordovaPlugin" onload="false" />
+                <param name="ios-package" value="CardIOCordovaPlugin1" onload="false" />
             </feature>
         </config-file>
 
         <!-- Plugin implementation -->
-        <header-file src="src/ios/CardIOCordovaPlugin.h" />
-        <source-file src="src/ios/CardIOCordovaPlugin.m" />
+        <header-file src="src/ios/CardIOCordovaPlugin1.h" />
+        <source-file src="src/ios/CardIOCordovaPlugin1.m" />
 
         <!-- CardIO library -->
         <header-file src="src/ios/CardIO/CardIO.h" />
@@ -74,7 +74,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/CardIOCordovaPlugin.java" target-dir="src/io/card/cordova/sdk" />
+        <source-file src="src/android/CardIOCordovaPlugin1.java" target-dir="src/io/card/cordova/sdk" />
 	      <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
 
     </platform>

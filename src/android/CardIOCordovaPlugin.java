@@ -118,7 +118,7 @@ public class MagneticCard extends CordovaPlugin {
 
 
 
-public class CardIOCordovaPlugin extends CordovaPlugin {
+public class CardIOCordovaPlugin1 extends CordovaPlugin {
 
     private CallbackContext callbackContext;
     private Activity activity = null;
