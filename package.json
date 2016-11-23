@@ -1,5 +1,5 @@
 {
-  "name": "card.io.cordova.mobilesdk",
+  "name": "card.io.cordova.MagneticCard",
   "version": "2.1.0",
   "description": "This plugin allows to add card.io scanning capabilities to your application using Telpo SDK Native library",
   "cordova": {
