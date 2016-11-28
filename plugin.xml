@@ -12,63 +12,14 @@
             <engine name="cordova" version="&gt;=3.0.0" />
     </engines>
 
-
-    <js-module src="www/cdv-plugin-card-io.js" name="CardIO">
-        <clobbers target="CardIO" />
-    </js-module>
-
-
-        <js-module src="www/cdv-plugin-card-io.js" name="MagneticCard">
+      <js-module src="www/cdv-plugin-card-io.js" name="MagneticCard">
             <clobbers target="MagneticCard" />
-        </js-module>
+      </js-module>
 
-
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="CardIO">
-                <param name="ios-package" value="CardIOCordovaPlugin1" onload="false" />
-            </feature>
-        </config-file>
-
-        <!-- Plugin implementation -->
-        <header-file src="src/ios/CardIOCordovaPlugin1.h" />
-        <source-file src="src/ios/CardIOCordovaPlugin1.m" />
-
-        <!-- CardIO library -->
-        <header-file src="src/ios/CardIO/CardIO.h" />
-        <header-file src="src/ios/CardIO/CardIOCreditCardInfo.h" />
-        <header-file src="src/ios/CardIO/CardIODetectionMode.h" />
-        <header-file src="src/ios/CardIO/CardIOPaymentViewController.h" />
-        <header-file src="src/ios/CardIO/CardIOPaymentViewControllerDelegate.h" />
-        <header-file src="src/ios/CardIO/CardIOUtilities.h" />
-        <header-file src="src/ios/CardIO/CardIOView.h" />
-        <header-file src="src/ios/CardIO/CardIOViewDelegate.h" />
-        <source-file src="src/ios/CardIO/libCardIO.a" framework="true" />
-        <source-file src="src/ios/CardIO/libopencv_core.a" framework="true" />
-        <source-file src="src/ios/CardIO/libopencv_imgproc.a" framework="true" />
-
-        <!-- link libraries for CardIO -->
-        <framework src="Accelerate.framework" />
-        <framework src="AudioToolbox.framework" />
-        <framework src="AVFoundation.framework" />
-        <framework src="CoreGraphics.framework" />
-        <framework src="CoreMedia.framework" />
-        <framework src="CoreVideo.framework" />
-        <framework src="Foundation.framework" />
-        <framework src="MobileCoreServices.framework" />
-        <framework src="OpenGLES.framework" />
-        <framework src="QuartzCore.framework" />
-        <framework src="Security.framework" />
-        <framework src="UIKit.framework" />
-        <framework src="libc++.dylib" />
-
-    </platform>
-
-    <!-- android -->
+  <!-- android -->
     <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="/*">
+        <config-file target="config.xml" parent="/*">
             <feature name="MagneticCard">
                 <param name="android-package" value="io.card.cordova.sdk.MagneticCard" />
             </feature>
@@ -76,7 +27,5 @@
 
         <source-file src="src/android/CardIOCordovaPlugin1.java" target-dir="src/io/card/cordova/sdk" />
 	      <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-
     </platform>
-
 </plugin>

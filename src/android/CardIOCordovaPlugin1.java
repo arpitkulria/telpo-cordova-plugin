@@ -19,8 +19,9 @@ import android.net.Uri;
 
 import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
+import TelpoException;
 
-public class MagneticCard extends CordovaPlugin {
+class MagneticCard extends CordovaPlugin {
     static {
         System.loadLibrary("telpo_msr");
     }
