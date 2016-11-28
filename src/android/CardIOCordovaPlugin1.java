@@ -19,7 +19,30 @@ import android.net.Uri;
 
 import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
-import TelpoException;
+
+class TelpoException extends Exception {
+    private static final long serialVersionUID = 1136193940236894072L;
+
+    public TelpoException() {
+    }
+
+    public TelpoException(String detailMessage, Throwable throwable) {
+        super(detailMessage, throwable);
+    }
+
+    public TelpoException(String detailMessage) {
+        super(detailMessage);
+    }
+
+    public TelpoException(Throwable throwable) {
+        super(throwable);
+    }
+
+    public String getDescription() {
+        return "Exception occur during telpo device operation!";
+    }
+}
+
 
 class MagneticCard extends CordovaPlugin {
     static {
@@ -33,9 +56,9 @@ class MagneticCard extends CordovaPlugin {
         int ret = open_msr();
         switch(ret) {
         case -3:
-            throw new InternalErrorException("Cannot open magnetic stripe card reader!");
+            throw new TelpoException("Cannot open magnetic stripe card reader!");
         case -2:
-            throw new DeviceAlreadyOpenException("The magnetic stripe card reader has been opened!");
+            throw new TelpoException("The magnetic stripe card reader has been opened!");
         default:
         }
     }
@@ -49,14 +72,14 @@ class MagneticCard extends CordovaPlugin {
         int ret = check_msr(timeout, result);
         switch(ret) {
         case -4:
-            throw new TimeoutException("Timeout to get magnetic stripe card data!");
+            throw new TelpoException("Timeout to get magnetic stripe card data!");
         case -3:
-            throw new InternalErrorException("Cannot get magnetic stripe card data!");
+            throw new TelpoException("Cannot get magnetic stripe card data!");
         case -2:
         default:
             return ParseData(ret, result);
         case -1:
-            throw new DeviceNotOpenException("The magnetic stripe card reader has not been opened!");
+            throw new TelpoException("The magnetic stripe card reader has not been opened!");
         }
     }
 
@@ -69,9 +92,9 @@ class MagneticCard extends CordovaPlugin {
         } else {
             try {
                 result[0] = new String(data, pos + 1, len, "GBK");
-            } catch (UnsupportedEncodingException var8) {
-                var8.printStackTrace();
-                throw new InternalErrorException();
+
+            }catch (Exception ex){
+                System.out.println("in teklpo exception");
             }
         }
 
@@ -82,9 +105,9 @@ class MagneticCard extends CordovaPlugin {
         } else {
             try {
                 result[1] = new String(data, pos1 + 1, len, "GBK");
-            } catch (UnsupportedEncodingException var7) {
+            } catch (Exception var7) {
                 var7.printStackTrace();
-                throw new InternalErrorException();
+                throw new TelpoException();
             }
         }
 
@@ -95,9 +118,9 @@ class MagneticCard extends CordovaPlugin {
         } else {
             try {
                 result[2] = new String(data, pos1 + 1, len, "GBK");
-            } catch (UnsupportedEncodingException var6) {
+            } catch (Exception var6) {
                 var6.printStackTrace();
-                throw new InternalErrorException();
+                throw new TelpoException();
             }
         }
 
