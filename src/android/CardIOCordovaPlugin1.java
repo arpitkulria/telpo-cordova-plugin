@@ -53,7 +53,7 @@ class MagneticCard extends CordovaPlugin {
     }
 
     public static synchronized void open() throws TelpoException {
-        System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ")
+        System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
         int ret = open_msr();
         switch(ret) {
         case -3:
@@ -65,12 +65,12 @@ class MagneticCard extends CordovaPlugin {
     }
 
     public static synchronized void close() {
-        System.out.println("\n\n\n\n --------------------IN CLOSE FUNCTION JAVA------------------------ \n\n\n\n\n ")
+        System.out.println("\n\n\n\n --------------------IN CLOSE FUNCTION JAVA------------------------ \n\n\n\n\n ");
         close_msr();
     }
 
     public static synchronized String[] check(int timeout) throws TelpoException {
-        System.out.println("\n\n\n\n --------------------IN CHECK FUNCTION JAVA------------------------ \n\n\n\n\n ")
+        System.out.println("\n\n\n\n --------------------IN CHECK FUNCTION JAVA------------------------ \n\n\n\n\n ");
         byte[] result = new byte[256];
         int ret = check_msr(timeout, result);
         switch(ret) {
