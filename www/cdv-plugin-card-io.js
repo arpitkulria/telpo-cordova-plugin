@@ -54,18 +54,13 @@ CardIO.prototype.canScan = function(callback) {
   cordova.exec(wrappedSuccess, failureCallback, "CardIO", "canScan", []);
 };
 
-MagneticCard.prototype.open = function(callback) {
-  var failureCallback = function() {
-    console.log("Could not detect whether MagneticCard open is available.");
-    callback(false);
-  };
-  var wrappedSuccess = function(response) {
-    callback(response !== 0);
-  };
-  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "open", []);
+MagneticCard.prototype.open = function(onSuccess, onFailure) {
+  console.log("-----------In OPEN FUNCTION---------------------------");
+  cordova.exec(onSuccess, onFailure, "MagneticCard", "open");
 };
 
 MagneticCard.prototype.close = function(callback) {
+  console.log("-----------In CLOSE FUNCTION---------------------------");
   var failureCallback = function() {
     console.log("Could not detect whether MagneticCard close is available.");
     callback(false);
@@ -77,6 +72,7 @@ MagneticCard.prototype.close = function(callback) {
 };
 
 MagneticCard.prototype.startReading = function(callback) {
+  console.log("-----------In startReading FUNCTION---------------------------");
   var failureCallback = function() {
     console.log("Could not detect whether MagneticCard startReading is available.");
     callback(false);
@@ -89,6 +85,8 @@ MagneticCard.prototype.startReading = function(callback) {
 
 
 MagneticCard.prototype.check = function(callback, timeout) {
+  console.log("-----------In check FUNCTION---------------------------");
+
   var failureCallback = function() {
     console.log("Could not detect whether MagneticCard check is available.");
     callback(false);
@@ -96,7 +94,7 @@ MagneticCard.prototype.check = function(callback, timeout) {
   var wrappedSuccess = function(response) {
     callback(response !== 0);
   };
-  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "check", timeout);
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCaMagneticCardrd", "check", timeout);
 };
 
 /**
@@ -117,4 +115,5 @@ CardIO.prototype.version = function(callback) {
  * Plugin setup boilerplate.
  */
 module.exports = new CardIO();
-module.exports = new MagneticCard();
+var magCard = new MagneticCard();
+module.exports = magCard;
