@@ -62,12 +62,16 @@ class MagneticCard extends CordovaPlugin {
         boolean retValue = true;
         if (action.equals("open")) {
             System.out.println("\n\n\n In Action == open \n\n\n\n");
-            this.open();
-        } else if (action.equals("")) {
+            try {
+                this.open();
+            } catch (Exception ex){
+                System.out.println("in teklpo exception");
+            }
+        } /*else if (action.equals("")) {
             //
         } else if (action.equals("")) {
             //
-        } else {
+        }*/ else {
             retValue = false;
         }
 
