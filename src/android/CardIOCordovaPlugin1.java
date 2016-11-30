@@ -91,7 +91,7 @@ class MagneticCard extends CordovaPlugin {
             return PluginResult.Status.OK;
             //throw new TelpoException("The magnetic stripe card reader has been opened!");
         default:
-            throw new TelpoException("The magnetic stripe card reader default case")
+            throw new TelpoException("The magnetic stripe card reader default case");
         }
     }
 
