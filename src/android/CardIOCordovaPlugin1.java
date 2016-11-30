@@ -45,6 +45,35 @@ class TelpoException extends Exception {
 
 
 class MagneticCard extends CordovaPlugin {
+
+    @Override
+    protected void pluginInitialize() {
+    }
+
+    private CallbackContext callbackContext;
+    private Activity activity = null;
+    private static final int REQUEST_CARD_SCAN = 10;
+
+    @Override
+    public boolean execute(String action, JSONArray args,
+                           CallbackContext callbackContext) throws JSONException {
+        this.callbackContext = callbackContext;
+        this.activity = this.cordova.getActivity();
+        boolean retValue = true;
+        if (action.equals("open")) {
+            System.out.println("\n\n\n In Action == open \n\n\n\n");
+            this.open();
+        } else if (action.equals("")) {
+            //
+        } else if (action.equals("")) {
+            //
+        } else {
+            retValue = false;
+        }
+
+        return retValue;
+    }
+
     static {
         System.loadLibrary("telpo_msr");
     }
@@ -59,8 +88,10 @@ class MagneticCard extends CordovaPlugin {
         case -3:
             throw new TelpoException("Cannot open magnetic stripe card reader!");
         case -2:
-            throw new TelpoException("The magnetic stripe card reader has been opened!");
+            return PluginResult.Status.OK;
+            //throw new TelpoException("The magnetic stripe card reader has been opened!");
         default:
+            throw new TelpoException("The magnetic stripe card reader default case")
         }
     }
 

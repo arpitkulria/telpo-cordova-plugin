@@ -54,10 +54,22 @@ CardIO.prototype.canScan = function(callback) {
   cordova.exec(wrappedSuccess, failureCallback, "CardIO", "canScan", []);
 };
 
-MagneticCard.prototype.open = function(onSuccess, onFailure) {
+
+//--------------------------------------------------FIRST---------------------------------------------------------------
+MagneticCard.prototype.open = function() {
   console.log("-----------In OPEN FUNCTION---------------------------");
-  cordova.exec(onSuccess, onFailure, "MagneticCard", "open");
+    var failureCallback = function() {
+        console.log("Problem while open");
+    };
+
+    var wrappedSuccess = function() {
+        console.log("Open success");
+    };
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "open", []);
 };
+
+//----------------------------------------------------------------------------------------------------------------------
+
 
 MagneticCard.prototype.close = function(callback) {
   console.log("-----------In CLOSE FUNCTION---------------------------");
@@ -80,7 +92,7 @@ MagneticCard.prototype.startReading = function(callback) {
   var wrappedSuccess = function(response) {
     callback(response !== 0);
   };
-  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "startReading", []);
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "startReading");
 };
 
 
@@ -94,7 +106,7 @@ MagneticCard.prototype.check = function(callback, timeout) {
   var wrappedSuccess = function(response) {
     callback(response !== 0);
   };
-  cordova.exec(wrappedSuccess, failureCallback, "MagneticCaMagneticCardrd", "check", timeout);
+  cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "check", timeout);
 };
 
 /**
