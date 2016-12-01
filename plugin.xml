@@ -31,6 +31,7 @@
         <source-file src="src/android/lib/SmartCardLib.jar" target-dir="lib" />
         <source-file src="src/android/lib/telpo_api.jar" target-dir="lib" />
         <source-file src="src/android/lib/armeabi.jar" target-dir="lib" />
+        <source-file src="src/android/lib/native.jar" target-dir="lib" />
 
 
         <lib-file src="src/android/lib/armeabi/libtelpo_msr.so" arch="device" />
