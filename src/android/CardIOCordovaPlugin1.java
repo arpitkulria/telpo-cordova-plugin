@@ -22,6 +22,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
+import android.util.Log;
 
 class TelpoException extends Exception {
     private static final long serialVersionUID = 1136193940236894072L;
@@ -58,7 +59,7 @@ class MagneticCard extends CordovaPlugin {
         // TODO Auto-generated method stub
         super.initialize(cordova, webView);
         System.out.println("\n\n\n In initialize function \n\n\n\n");
-        Log.d("SAMPLE_ECHO", "initializing");
+        Log.d("---------------------SAMPLE_ECHO---------------------", "--------------------- initializing ---------------------");
     }
 
     private CallbackContext callbackContext;
