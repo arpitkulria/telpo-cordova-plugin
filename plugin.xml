@@ -40,7 +40,7 @@
         <source-file src="src/android/lib/armeabi/libled.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libmoneybox.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libpicc.so" target-dir="lib/armeabi" />
-        <source-file src="src/android/lib/armeabi/libystem_util.so" target-dir="lib/armeabi" />
+        <source-file src="src/android/lib/armeabi/libsystem_util.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libtelpo_msr.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libtelpo_printer.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libtelpo_serial.so" target-dir="lib/armeabi" />

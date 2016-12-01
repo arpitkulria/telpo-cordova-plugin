@@ -7,27 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" afterPath="$PROJECT_DIR$/src/android/lib/SmartCardLib.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" afterPath="$PROJECT_DIR$/src/android/lib/acssmc-1.1.1.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi.jar" afterPath="$PROJECT_DIR$/src/android/lib/armeabi.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libcollect.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libcollect.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libdecode.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libdecode.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libidcard.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libidcard.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libled.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libled.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libmoneybox.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libpicc.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libpicc.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_msr.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_printer.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_serial.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/lib/armeabi/libusb_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" afterPath="$PROJECT_DIR$/src/android/lib/core-3.1.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" afterPath="$PROJECT_DIR$/src/android/lib/sdtapi.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" afterPath="$PROJECT_DIR$/src/android/lib/telpo_api.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/MagneticCard.java" afterPath="$PROJECT_DIR$/src/android/MagneticCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -84,11 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state relative-caret-position="239">
+              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libsystem_util.so" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/android/CardIOCordovaPlugin1.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
-        <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/android/MagneticCard.java" />
+        <option value="$PROJECT_DIR$/plugin.xml" />
       </list>
     </option>
   </component>
@@ -249,6 +240,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="telpo.sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="telpo.sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="armeabi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -910,16 +927,16 @@
       <workItem from="1480490823773" duration="10975000" />
       <workItem from="1480511140111" duration="8074000" />
       <workItem from="1480584580998" duration="245000" />
-      <workItem from="1480584851856" duration="2810000" />
+      <workItem from="1480584851856" duration="3163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31766000" />
+    <option name="totallyTimeSpent" value="32119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -929,7 +946,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38517746" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1272,14 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1291,6 +1300,22 @@
             <marker date="1480590182811" expanded="false" signature="6675:6686" ph=" { " />
             <marker date="1480590182811" expanded="false" signature="6704:6710" ph=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
