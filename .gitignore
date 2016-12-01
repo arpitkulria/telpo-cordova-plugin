@@ -9,3 +9,6 @@ plugins
 *.DS_Store
 resources
 .idea/
+/.idea
+.idea
+/.idea_modules

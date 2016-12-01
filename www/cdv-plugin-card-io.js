@@ -127,5 +127,4 @@ CardIO.prototype.version = function(callback) {
  * Plugin setup boilerplate.
  */
 module.exports = new CardIO();
-var magCard = new MagneticCard();
-module.exports = magCard;
+module.exports = new MagneticCard();
