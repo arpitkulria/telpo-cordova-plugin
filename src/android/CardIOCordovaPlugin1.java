@@ -16,7 +16,10 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
 import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
 
