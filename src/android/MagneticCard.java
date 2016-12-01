@@ -52,7 +52,7 @@ public class MagneticCard extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-        System.loadLibrary("armeabi");
+        System.loadLibrary("/lib/armeabi");
     }
 
     @Override
