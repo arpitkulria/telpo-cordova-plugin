@@ -48,7 +48,7 @@ class TelpoException extends Exception {
 }
 
 
-class MagneticCard extends CordovaPlugin {
+public class MagneticCard extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
@@ -190,6 +190,7 @@ class MagneticCard extends CordovaPlugin {
     private static native int ready_for_read();
 }
 
+/*
 
 
 public class CardIOCordovaPlugin1 extends CordovaPlugin {
@@ -309,3 +310,4 @@ public class CardIOCordovaPlugin1 extends CordovaPlugin {
         }
     }
 }
+*/
