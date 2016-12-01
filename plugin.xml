@@ -25,25 +25,25 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/core-3.1.0.jar" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/sdtapi.jar" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/SmartCardLib.jar" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/telpo_api.jar" target-dir="src/io/card/cordova/sdk" />
+        <source-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="libs" />
+        <source-file src="src/android/libs/core-3.1.0.jar" target-dir="libs" />
+        <source-file src="src/android/libs/sdtapi.jar" target-dir="libs" />
+        <source-file src="src/android/libs/SmartCardLib.jar" target-dir="libs" />
+        <source-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
 
 
-        <source-file src="src/android/libs/libcard_reader.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libcollect.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libdecode.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libidcard.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libled.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libmoneybox.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libpicc.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libsystem_util.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libtelpo_msr.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libtelpo_printer.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libtelpo_serial.so" target-dir="src/io/card/cordova/sdk" />
-        <source-file src="src/android/libs/libusb_util.so" target-dir="src/io/card/cordova/sdk" />
+        <source-file src="src/android/libs/libcard_reader.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libcollect.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libdecode.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libidcard.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libled.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libmoneybox.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libpicc.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libsystem_util.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libtelpo_msr.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libtelpo_printer.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libtelpo_serial.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/libusb_util.so" target-dir="libs/armeabi" />
 
 
 
