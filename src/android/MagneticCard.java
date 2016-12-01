@@ -52,6 +52,7 @@ public class MagneticCard extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
+
     }
 
     @Override

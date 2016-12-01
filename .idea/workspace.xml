@@ -7,7 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libcard_reader.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libcollect.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libdecode.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libidcard.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libled.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libmoneybox.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libpicc.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libsystem_util.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libtelpo_msr.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libtelpo_printer.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libtelpo_serial.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/libusb_util.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/native.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/MagneticCard.java" afterPath="$PROJECT_DIR$/src/android/MagneticCard.java" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,22 +50,32 @@
       <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+            <state relative-caret-position="324">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1480576467314" expanded="false" signature="6631:6642" ph=" { " />
-                <marker date="1480576467314" expanded="false" signature="6660:6666" ph=" }" />
+                <marker date="1480580990933" expanded="false" signature="6632:6643" ph=" { " />
+                <marker date="1480580990933" expanded="false" signature="6661:6667" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="45" column="83" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
+            <state relative-caret-position="694">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -98,6 +127,7 @@
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
         <option value="$PROJECT_DIR$/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/android/MagneticCard.java" />
       </list>
     </option>
   </component>
@@ -187,28 +217,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telpo.sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telpo.sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -887,16 +895,16 @@
       <workItem from="1480328219955" duration="1609000" />
       <workItem from="1480414286143" duration="8053000" />
       <workItem from="1480490823773" duration="10975000" />
-      <workItem from="1480511140111" duration="7078000" />
+      <workItem from="1480511140111" duration="8036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27715000" />
+    <option name="totallyTimeSpent" value="28673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -910,7 +918,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23327805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23327805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -983,8 +991,8 @@
           <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480576467314" expanded="false" signature="6631:6642" ph=" { " />
-            <marker date="1480576467314" expanded="false" signature="6660:6666" ph=" }" />
+            <marker date="1480580990933" expanded="false" signature="6632:6643" ph=" { " />
+            <marker date="1480580990933" expanded="false" signature="6661:6667" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1005,8 +1013,8 @@
           <caret line="71" column="82" selection-start-line="71" selection-start-column="82" selection-end-line="71" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480576467314" expanded="false" signature="6631:6642" ph=" { " />
-            <marker date="1480576467314" expanded="false" signature="6660:6666" ph=" }" />
+            <marker date="1480580990933" expanded="false" signature="6632:6643" ph=" { " />
+            <marker date="1480580990933" expanded="false" signature="6661:6667" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1035,8 +1043,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480576467314" expanded="false" signature="6631:6642" ph=" { " />
-            <marker date="1480576467314" expanded="false" signature="6660:6666" ph=" }" />
+            <marker date="1480580990933" expanded="false" signature="6632:6643" ph=" { " />
+            <marker date="1480580990933" expanded="false" signature="6661:6667" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1132,22 +1140,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        <state relative-caret-position="324">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480576467314" expanded="false" signature="6631:6642" ph=" { " />
-            <marker date="1480576467314" expanded="false" signature="6660:6666" ph=" }" />
+            <marker date="1480580990933" expanded="false" signature="6632:6643" ph=" { " />
+            <marker date="1480580990933" expanded="false" signature="6661:6667" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="45" column="83" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
