@@ -33,6 +33,8 @@
         <source-file src="src/android/lib/armeabi.jar" target-dir="lib" />
 
 
+        <lib-file src="src/android/lib/armeabi/libtelpo_msr.so" arch="device" />
+
         <source-file src="src/android/lib/armeabi/libcard_reader.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libcollect.so" target-dir="lib/armeabi" />
         <source-file src="src/android/lib/armeabi/libdecode.so" target-dir="lib/armeabi" />
