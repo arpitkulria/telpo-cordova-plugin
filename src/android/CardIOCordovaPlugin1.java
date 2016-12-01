@@ -50,6 +50,14 @@ class MagneticCard extends CordovaPlugin {
     protected void pluginInitialize() {
     }
 
+    @Override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView)     {
+        // TODO Auto-generated method stub
+        super.initialize(cordova, webView);
+        System.out.println("\n\n\n In initialize function \n\n\n\n");
+        Log.d("SAMPLE_ECHO", "initializing");
+    }
+
     private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
