@@ -32,18 +32,18 @@
         <source-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
 
 
-        <source-file src="src/android/libs/libcard_reader.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libcollect.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libdecode.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libidcard.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libled.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libmoneybox.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libpicc.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libsystem_util.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libtelpo_msr.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libtelpo_printer.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libtelpo_serial.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/libusb_util.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi" />
 
 
 
