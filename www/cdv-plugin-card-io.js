@@ -10,13 +10,14 @@
  *
  * @constructor
  */
-function CardIO() {
-}
+/*function CardIO() {
+}*/
 function MagneticCard() {
 
 }
+/*
 
-/**
+/!**
  * Scan a credit card with card.io.
  *
  *
@@ -32,17 +33,17 @@ function MagneticCard() {
  *
  * @parameter onFailure: a zero argument callback function that will be called if the user
  * cancels card scanning.
- */
+ *!/
 CardIO.prototype.scan = function(options, onSuccess, onFailure) {
   cordova.exec(onSuccess, onFailure, "CardIO", "scan", [options]);
 };
 
-/**
+/!**
  * Check whether card scanning is currently available. (May vary by
  * device, OS version, network connectivity, etc.)
  *
  * @parameter callback: a callback function accepting a boolean.
- */
+ *!/
 CardIO.prototype.canScan = function(callback) {
   var failureCallback = function() {
     console.log("Could not detect whether card.io card scanning is available.");
@@ -53,6 +54,7 @@ CardIO.prototype.canScan = function(callback) {
   };
   cordova.exec(wrappedSuccess, failureCallback, "CardIO", "canScan", []);
 };
+*/
 
 
 //--------------------------------------------------FIRST---------------------------------------------------------------
@@ -108,12 +110,12 @@ MagneticCard.prototype.check = function(callback, timeout) {
   };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCard", "check", timeout);
 };
-
-/**
+/*
+/!**
  * Retrieve the version of the card.io library. Useful when contacting support.
  *
  * @parameter callback: a callback function accepting a string.
- */
+ *!/
 CardIO.prototype.version = function(callback) {
   var failureCallback = function() {
     console.log("Could not retrieve card.io library version");
@@ -123,8 +125,8 @@ CardIO.prototype.version = function(callback) {
 };
 
 
-/**
+/!**
  * Plugin setup boilerplate.
- */
-module.exports = new CardIO();
+ *!/
+module.exports = new CardIO();*/
 module.exports = new MagneticCard();
