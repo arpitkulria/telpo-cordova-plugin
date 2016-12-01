@@ -53,6 +53,7 @@ public class MagneticCard extends CordovaPlugin {
     @Override
     protected void pluginInitialize() {
         //System.loadLibrary("/lib/armeabi");
+        System.loadLibrary("telpo_msr");
     }
 
     @Override
