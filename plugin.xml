@@ -30,6 +30,7 @@
         <source-file src="src/android/libs/sdtapi.jar" target-dir="libs" />
         <source-file src="src/android/libs/SmartCardLib.jar" target-dir="libs" />
         <source-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi.jar" target-dir="libs" />
 
 
         <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi" />
