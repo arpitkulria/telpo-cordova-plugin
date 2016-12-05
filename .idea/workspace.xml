@@ -7,8 +7,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/SmartCardLib.jar" afterPath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/acssmc-1.1.1.jar" afterPath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcollect.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libdecode.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libidcard.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libled.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libmoneybox.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libpicc.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_msr.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_printer.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_serial.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libusb_util.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi.jar" afterPath="$PROJECT_DIR$/src/android/libs/armeabi.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcard_reader.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcollect.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libdecode.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libidcard.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libmoneybox.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libpicc.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libsystem_util.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_msr.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_printer.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_serial.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libusb_util.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/core-3.1.0.jar" afterPath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/native.jar" afterPath="$PROJECT_DIR$/src/android/libs/native.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/sdtapi.jar" afterPath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/telpo_api.jar" afterPath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/MagneticCard.java" afterPath="$PROJECT_DIR$/src/android/MagneticCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state relative-caret-position="245">
+              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
@@ -44,7 +76,7 @@
         </entry>
       </file>
       <file leaf-file-name="libled.so" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi-v7a/libled.so">
+        <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -73,18 +105,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+            <state relative-caret-position="162">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="libsystem_util.so" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+        <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -94,7 +126,7 @@
         </entry>
       </file>
       <file leaf-file-name="libcard_reader.so" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so">
+        <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -148,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/android/CardIOCordovaPlugin1.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
-        <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/android/MagneticCard.java" />
+        <option value="$PROJECT_DIR$/plugin.xml" />
       </list>
     </option>
   </component>
@@ -160,10 +192,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="21" />
-    <option name="width" value="1309" />
-    <option name="height" value="747" />
+    <option name="x" value="1431" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -246,7 +278,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -913,15 +945,15 @@
       <workItem from="1480584851856" duration="7302000" />
       <workItem from="1480914133097" duration="2688000" />
       <workItem from="1480917872205" duration="1403000" />
-      <workItem from="1480923555389" duration="739000" />
+      <workItem from="1480923555389" duration="1569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41088000" />
+    <option name="totallyTimeSpent" value="41918000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="21" width="1309" height="747" extended-state="6" />
+    <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -932,11 +964,11 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38517746" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27580893" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1868476" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22961204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16030957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -988,7 +1020,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi-v7a/libled.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1020,7 +1052,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1028,7 +1060,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1082,7 +1114,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1090,7 +1122,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1128,7 +1160,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libled.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libled.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1173,7 +1205,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libled.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libled.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1326,7 +1358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1344,7 +1376,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1352,7 +1384,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi/libled.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi/libled.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1375,15 +1407,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/lib/armeabi-v7a/libled.so">
+    <entry file="file://$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1393,13 +1417,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        <state relative-caret-position="245">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
             <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
