@@ -25,13 +25,13 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="libs" />
-        <source-file src="src/android/libs/core-3.1.0.jar" target-dir="libs" />
-        <source-file src="src/android/libs/sdtapi.jar" target-dir="libs" />
-        <source-file src="src/android/libs/SmartCardLib.jar" target-dir="libs" />
-        <source-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
-        <source-file src="src/android/libs/armeabi.jar" target-dir="libs" />
-        <source-file src="src/android/libs/native.jar" target-dir="libs" />
+        <source-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/core-3.1.0.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/sdtapi.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/SmartCardLib.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/telpo_api.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/armeabi.jar" target-dir="libs"  framework="true" />
+        <source-file src="src/android/libs/native.jar" target-dir="libs"  framework="true" />
 
 
 
@@ -39,45 +39,45 @@
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />-->
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="simulator" />-->
 
-        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi" framework="true"  />
+        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi"  framework="true" />
 
 
-        <lib-file src="src/android/libs/armeabi/libcard_reader.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libcollect.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libdecode.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libidcard.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libled.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libmoneybox.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libpicc.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libsystem_util.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libtelpo_printer.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libtelpo_serial.so" arch="device" />
-        <lib-file src="src/android/libs/armeabi/libusb_util.so" arch="device" />
+        <lib-file src="src/android/libs/armeabi/libcard_reader.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libcollect.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libdecode.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libidcard.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libled.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libmoneybox.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libpicc.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libsystem_util.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libtelpo_printer.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libtelpo_serial.so" arch="device"  framework="true" />
+        <lib-file src="src/android/libs/armeabi/libusb_util.so" arch="device"  framework="true" />
 
-        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi-v7a" />
+        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
 
 
         <source-file src="src/android/MagneticCard.java" target-dir="src/io/card/cordova/sdk" />
