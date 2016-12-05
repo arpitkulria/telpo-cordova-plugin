@@ -95,7 +95,6 @@ public class MagneticCard extends CordovaPlugin {
 
     static {
         System.loadLibrary("telpo_msr");
-        System.loadLibrary("libtelpo_msr");
     }
 
     public MagneticCard() {

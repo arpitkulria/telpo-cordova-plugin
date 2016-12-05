@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/MagneticCard.java" afterPath="$PROJECT_DIR$/src/android/MagneticCard.java" />
     </list>
     <ignored path="telpo.sdk.iws" />
@@ -32,12 +31,12 @@
       <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+            <state relative-caret-position="234">
+              <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-                <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+                <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+                <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -160,10 +159,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="57" />
+    <option name="y" value="21" />
+    <option name="width" value="1309" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -939,30 +938,30 @@
       <workItem from="1480584851856" duration="7302000" />
       <workItem from="1480914133097" duration="2688000" />
       <workItem from="1480917872205" duration="1403000" />
-      <workItem from="1480923555389" duration="290000" />
+      <workItem from="1480923555389" duration="564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40639000" />
+    <option name="totallyTimeSpent" value="40913000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="57" y="21" width="1309" height="747" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38517746" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38517746" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1868476" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27580893" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16030957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22961204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1008,8 +1007,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1078,8 +1077,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1140,8 +1139,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1185,8 +1184,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1230,8 +1229,8 @@
           <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1252,8 +1251,8 @@
           <caret line="71" column="82" selection-start-line="71" selection-start-column="82" selection-end-line="71" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1281,8 +1280,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1419,12 +1418,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        <state relative-caret-position="234">
+          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480923818738" expanded="false" signature="6825:6836" ph=" { " />
-            <marker date="1480923818738" expanded="false" signature="6854:6860" ph=" }" />
+            <marker date="1480924118558" expanded="false" signature="6781:6792" ph=" { " />
+            <marker date="1480924118558" expanded="false" signature="6810:6816" ph=" }" />
           </folding>
         </state>
       </provider>
