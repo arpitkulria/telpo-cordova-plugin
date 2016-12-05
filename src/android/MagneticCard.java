@@ -20,8 +20,6 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import io.card.payment.CardIOActivity;
-import io.card.payment.CreditCard;
 import android.util.Log;
 
 class TelpoException extends Exception {
