@@ -64,5 +64,6 @@
 
 
         <source-file src="src/android/MagneticCard.java" target-dir="src/io/card/cordova/sdk" />
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
     </platform>
 </plugin>
