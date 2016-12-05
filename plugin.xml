@@ -34,6 +34,8 @@
         <source-file src="src/android/libs/native.jar" target-dir="libs" />
 
 
+
+
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />-->
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="simulator" />-->
 

@@ -13,4 +13,5 @@ dependencies {
         provided files('src/android/libs/armeabi.jar')
         provided files('src/android/libs/native.jar')
     }
+    compile fileTree(dir: 'src/android/libs', include: ['*.jar'])
 }
