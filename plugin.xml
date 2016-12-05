@@ -25,13 +25,22 @@
             </feature>
         </config-file>
 
-        <lib-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/core-3.1.0.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/sdtapi.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/SmartCardLib.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/armeabi.jar" target-dir="libs" />
-        <lib-file src="src/android/libs/native.jar" target-dir="libs" />
+        <source-file src="src/android/libs/acssmc-1.1.1.jar" target-dir="libs" />
+        <source-file src="src/android/libs/core-3.1.0.jar" target-dir="libs" />
+        <source-file src="src/android/libs/sdtapi.jar" target-dir="libs" />
+        <source-file src="src/android/libs/SmartCardLib.jar" target-dir="libs" />
+        <source-file src="src/android/libs/telpo_api.jar" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi.jar" target-dir="libs" />
+        <source-file src="src/android/libs/native.jar" target-dir="libs" />
+
+
+        <lib-file src="src/android/libs/acssmc-1.1.1.jar" arch="device" />
+        <lib-file src="src/android/libs/core-3.1.0.jar" arch="device" />
+        <lib-file src="src/android/libs/sdtapi.jar" arch="device" />
+        <lib-file src="src/android/libs/SmartCardLib.jar" arch="device" />
+        <lib-file src="src/android/libs/telpo_api.jar" arch="device" />
+        <lib-file src="src/android/libs/armeabi.jar" arch="device" />
+        <lib-file src="src/android/libs/native.jar" arch="device" />
 
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />-->
         <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="simulator" />-->
