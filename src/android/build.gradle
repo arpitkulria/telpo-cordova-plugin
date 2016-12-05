@@ -7,7 +7,6 @@ dependencies {
     dependencies {
         provided files('src/android/libs/acssmc-1.1.1.jar')
         provided files('src/android/libs/core-3.1.0.jar')
-        provided files('src/android/libs/sdtapi.jar')
         provided files('src/android/libs/SmartCardLib.jar')
         provided files('src/android/libs/telpo_api.jar')
         provided files('src/android/libs/armeabi.jar')
