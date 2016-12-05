@@ -35,6 +35,7 @@
 
 
         <lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />
+        <lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="simulator" />
 
         <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi" />
         <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi" />
