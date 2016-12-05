@@ -63,6 +63,20 @@
         <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi-v7a" />
 
 
+        <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs" />
+        <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs" />
+
+
 
         <source-file src="src/android/MagneticCard.java" target-dir="src/io/card/cordova/sdk" />
 	      <framework src="src/android/build.gradle" custom="true" type="gradleReference" />

@@ -54,6 +54,7 @@ public class MagneticCard extends CordovaPlugin {
     protected void pluginInitialize() {
 //        System.loadLibrary("src/android/lib/native");
 //        System.loadLibrary("src/android/lib/armeabi");
+        System.out.println("\n\n\n In pluginInitialize function \n\n\n\n");
         System.loadLibrary("telpo_msr");
     }
 
@@ -94,6 +95,7 @@ public class MagneticCard extends CordovaPlugin {
     }
 
     static {
+        System.out.println("\n\n\n In Static function \n\n\n\n");
         System.loadLibrary("telpo_msr");
     }
 

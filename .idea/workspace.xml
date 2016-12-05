@@ -7,40 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/SmartCardLib.jar" afterPath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/acssmc-1.1.1.jar" afterPath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcollect.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libdecode.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libidcard.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libled.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libmoneybox.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libpicc.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_msr.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_printer.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_serial.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi-v7a/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libusb_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi.jar" afterPath="$PROJECT_DIR$/src/android/libs/armeabi.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcard_reader.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcollect.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libdecode.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libidcard.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libmoneybox.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libpicc.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libsystem_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_msr.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_printer.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_serial.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/armeabi/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libusb_util.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/core-3.1.0.jar" afterPath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/native.jar" afterPath="$PROJECT_DIR$/src/android/libs/native.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/sdtapi.jar" afterPath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/android/lib/telpo_api.jar" afterPath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/MagneticCard.java" afterPath="$PROJECT_DIR$/src/android/MagneticCard.java" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,12 +33,12 @@
       <file leaf-file-name="MagneticCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+            <state relative-caret-position="414">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-                <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+                <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+                <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -108,8 +77,8 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state relative-caret-position="569">
+              <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -294,7 +263,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MobilePayHybrid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MobilePay" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;*.xml&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/platforms/android/AndroidManifest.xml&#10;UnsupportedEncodingException&#9;PSI&#9;JAVA://java.io.UnsupportedEncodingException" />
   </component>
@@ -945,12 +914,12 @@
       <workItem from="1480584851856" duration="7302000" />
       <workItem from="1480914133097" duration="2688000" />
       <workItem from="1480917872205" duration="1403000" />
-      <workItem from="1480923555389" duration="1569000" />
+      <workItem from="1480923555389" duration="2158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41918000" />
+    <option name="totallyTimeSpent" value="42507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -1014,8 +983,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1084,8 +1053,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1146,8 +1115,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1191,8 +1160,8 @@
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1236,8 +1205,8 @@
           <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1258,8 +1227,8 @@
           <caret line="71" column="82" selection-start-line="71" selection-start-column="82" selection-end-line="71" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1287,8 +1256,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1417,20 +1386,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/MagneticCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        <state relative-caret-position="414">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1480924292413" expanded="false" signature="6785:6796" ph=" { " />
-            <marker date="1480924292413" expanded="false" signature="6814:6820" ph=" }" />
+            <marker date="1480925605707" expanded="false" signature="6927:6938" ph=" { " />
+            <marker date="1480925605707" expanded="false" signature="6956:6962" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        <state relative-caret-position="569">
+          <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
           <folding />
         </state>
       </provider>
