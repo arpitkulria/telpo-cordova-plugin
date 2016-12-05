@@ -25,22 +25,22 @@
             </feature>
         </config-file>
 
-        <!--<source-file src="/libs/acssmc-1.1.1.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/core-3.1.0.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/sdtapi.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/SmartCardLib.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/telpo_api.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/armeabi.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/native.jar" target-dir="libs"  framework="true" />-->
+        <source-file src="libs/acssmc-1.1.1.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/core-3.1.0.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/sdtapi.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/SmartCardLib.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/telpo_api.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/armeabi.jar" target-dir="libs"  framework="true" />
+        <source-file src="libs/native.jar" target-dir="libs"  framework="true" />
 
 
-        <lib-file src="libs/acssmc-1.1.1.jar" arch="device"  framework="true" />
-        <lib-file src="libs/core-3.1.0.jar" arch="device"  framework="true" />
-        <lib-file src="libs/sdtapi.jar" arch="device"  framework="true" />
-        <lib-file src="libs/SmartCardLib.jar" arch="device"  framework="true" />
-        <lib-file src="libs/telpo_api.jar" arch="device"  framework="true" />
-        <lib-file src="libs/armeabi.jar" arch="device"  framework="true" />
-        <lib-file src="libs/native.jar" arch="device"  framework="true" />
+        <!--<lib-file src="libs/acssmc-1.1.1.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/core-3.1.0.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/sdtapi.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/SmartCardLib.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/telpo_api.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/armeabi.jar" arch="device"  framework="true" />-->
+        <!--<lib-file src="libs/native.jar" arch="device"  framework="true" />-->
 
 
 
