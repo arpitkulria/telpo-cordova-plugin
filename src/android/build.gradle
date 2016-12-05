@@ -9,8 +9,6 @@ dependencies {
         provided files('src/android/libs/core-3.1.0.jar')
         provided files('src/android/libs/SmartCardLib.jar')
         provided files('src/android/libs/telpo_api.jar')
-        provided files('src/android/libs/armeabi.jar')
-        provided files('src/android/libs/native.jar')
     }
     compile fileTree(dir: 'src/android/libs', include: ['*.jar'])
 }
