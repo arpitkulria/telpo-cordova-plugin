@@ -3,25 +3,25 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="card.io.cordova.MagneticCard"
+    id="com.primoris.cardreader.MagneticCardHelper"
     version="2.1.0">
-    <name>MagneticCard</name>
+    <name>MagneticCardHelper</name>
     <description>This plugin allows to add to add CardIO to your application using Telpo Native library</description>
     <license></license>
     <engines>
             <engine name="cordova" version="&gt;=3.0.0" />
     </engines>
 
-      <js-module src="www/cdv-plugin-card-io.js" name="MagneticCard">
-            <clobbers target="MagneticCard" />
+      <js-module src="www/cdv-plugin-card-io.js" name="MagneticCardHelper">
+            <clobbers target="MagneticCardHelper" />
       </js-module>
 
   <!-- android -->
     <platform name="android">
 
         <config-file target="config.xml" parent="/*">
-            <feature name="MagneticCard">
-                <param name="android-package" value="io.card.cordova.sdk.MagneticCard" />
+            <feature name="MagneticCardHelper">
+                <param name="android-package" value="com.primoris.cardreader.MagneticCardHelper" />
             </feature>
         </config-file>
 
@@ -87,7 +87,7 @@
         <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
 
 
-        <source-file src="src/android/MagneticCard.java" target-dir="src/io/card/cordova/sdk" />
+        <source-file src="src/android/com/primoris/cardreader/MagneticCardHelper.java" target-dir="src/com/primoris/cardreader/cordova/sdk" />
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
     </platform>
 </plugin>
