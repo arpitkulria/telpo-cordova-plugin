@@ -64,11 +64,14 @@ public class MagneticCardHelper extends CordovaPlugin {
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
-        } /*else if (action.equals("")) {
-            //
-        } else if (action.equals("")) {
-            //
-        }*/ else {
+        } else if (action.equals("startReading")) {
+            System.out.println("\n\n\n In Action == startReading \n\n\n\n");
+            try {
+                this.startReading();
+            } catch (Exception ex) {
+                System.out.println("in teklpo exception");
+            }
+        } else {
             retValue = false;
         }
 
@@ -78,5 +81,11 @@ public class MagneticCardHelper extends CordovaPlugin {
     public static void open() throws TelpoException {
         System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
         MagneticCard.open();
+    }
+
+    public static String[] startReading() throws TelpoException {
+        System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
+        MagneticCard.startReading();
+        return MagneticCard.check(10000);
     }
 }
