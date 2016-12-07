@@ -2,16 +2,29 @@ repositories{
     mavenCentral()
 }
 
-dependencies {
-  compile 'io.card:android-sdk:5.4.0'
-    dependencies {
-        provided files('libs/acssmc-1.1.1.jar')
-        provided files('libs/core-3.1.0.jar')
-        provided files('libs/SmartCardLib.jar')
-        provided files('libs/telpo_api.jar')
-        provided files('libs/armeabi.jar')
-        provided files('libs/native.jar')
-        provided files('libs/sdtapi.jar')
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.telpo.tps550.api.demo"
+        minSdkVersion 15
+        targetSdkVersion 15
     }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'io.card:android-sdk:5.4.0'
+    compile files('libs/SmartCardLib.jar')
+    compile files('libs/acssmc-1.1.1.jar')
+    compile files('libs/core-3.1.0.jar')
+    compile files('libs/sdtapi.jar')
+    compile files('libs/telpo_api.jar')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
