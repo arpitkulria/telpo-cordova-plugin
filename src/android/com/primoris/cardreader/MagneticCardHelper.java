@@ -84,8 +84,11 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     public static String[] startReading() throws TelpoException {
-        System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
+        System.out.println("\n\n\n\n --------------------IN startReading FUNCTION JAVA------------------------ \n\n\n\n\n ");
         MagneticCard.startReading();
-        return MagneticCard.check(10000);
+        String[] arr = MagneticCard.check(10000);
+        System.out.println("\n\n\n\n\n\n check output---------------" + arr + "---------------\n\n\n\n\n");
+        return arr;
+
     }
 }
