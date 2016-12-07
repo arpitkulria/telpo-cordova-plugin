@@ -52,7 +52,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     private static final int REQUEST_CARD_SCAN = 10;
 
     @Override
-    public String[] execute(String action, JSONArray args,
+    public boolean execute(String action, JSONArray args,
                            CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
@@ -61,7 +61,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == open \n\n\n\n");
             try {
                 this.open();
-                return new Array("Open Done");
+                //return new Array("Open Done");
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
@@ -74,7 +74,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             }
         } else {
             retValue = false;
-            return new Array("Else case");
+            //return new Array("Else case");
         }
 
         return retValue;
