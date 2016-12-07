@@ -71,6 +71,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     public static void open() {
         System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
-        MagneticCard.open()
+        MagneticCard.open();
     }
 }
