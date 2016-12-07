@@ -9,6 +9,9 @@ dependencies {
         provided files('libs/core-3.1.0.jar')
         provided files('libs/SmartCardLib.jar')
         provided files('libs/telpo_api.jar')
+        provided files('libs/armeabi.jar')
+        provided files('libs/native.jar')
+        provided files('libs/sdtapi.jar')
     }
-    compile fileTree(dir: 'src/android/libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
