@@ -68,7 +68,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             try {
-                return this.startReading();
+                //return this.startReading();
+                this.startReading();
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
@@ -91,6 +92,5 @@ public class MagneticCardHelper extends CordovaPlugin {
         String[] arr = MagneticCard.check(10000);
         System.out.println("\n\n\n\n\n\n check output---------------" + Arrays.toString(arr) + "---------------\n\n\n\n\n");
         return arr;
-
     }
 }
