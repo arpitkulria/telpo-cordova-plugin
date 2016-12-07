@@ -25,8 +25,10 @@ MagneticCardHelper.prototype.startReading = function() {
         console.log("Problem while startReading");
     };
 
-    var wrappedSuccess = function() {
+    var wrappedSuccess = function(data) {
+        console.log(data)
         console.log("startReading success");
+        return data
     };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "startReading", []);
 };
