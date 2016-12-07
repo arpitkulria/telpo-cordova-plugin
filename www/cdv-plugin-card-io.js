@@ -20,7 +20,7 @@ MagneticCardHelper.prototype.open = function() {
 
 
 MagneticCardHelper.prototype.startReading = function() {
-  console.log("-----------In OPEN FUNCTION---------------------------");
+  console.log("-----------In startReading FUNCTION---------------------------");
     var failureCallback = function() {
         console.log("Problem while startReading");
     };
