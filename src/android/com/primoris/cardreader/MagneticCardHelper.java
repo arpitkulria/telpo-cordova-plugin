@@ -22,6 +22,12 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import android.util.Log;
 import com.telpo.tps550.api.magnetic.MagneticCard;
+import com.telpo.tps550.api.DeviceAlreadyOpenException;
+import com.telpo.tps550.api.DeviceNotOpenException;
+import com.telpo.tps550.api.InternalErrorException;
+import com.telpo.tps550.api.TelpoException;
+import com.telpo.tps550.api.TimeoutException;
+import java.io.UnsupportedEncodingException;
 
 
 public class MagneticCardHelper extends CordovaPlugin {
@@ -69,7 +75,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         return retValue;
     }
 
-    public static void open() {
+    public static void open() throws TelpoException {
         System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
         MagneticCard.open();
     }
