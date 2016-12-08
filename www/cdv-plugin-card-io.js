@@ -20,15 +20,15 @@ MagneticCardHelper.prototype.startReading = function() {
   console.log("-----------In startReading FUNCTION---------------------------");
     var failureCallback = function() {
         console.log("Problem while startReading");
-        return new Promise("Problem while startReading");
+        return "Problem while startReading";
     };
 
     var wrappedSuccess = function(data) {
         console.log( "Data from magnetic card >>>> " + data)
         console.log("startReading success");
-        return new Promise(data);
+        return data;
     };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "startReading", []);
 };
-
-module.exports = new MagneticCardHelper();
+var magneticFunc = new MagneticCardHelper();
+module.exports = magneticFunc
