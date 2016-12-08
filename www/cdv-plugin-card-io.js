@@ -30,5 +30,5 @@ MagneticCardHelper.prototype.startReading = function() {
     };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "startReading", []);
 };
-var magneticFunc = new MagneticCardHelper();
-module.exports = magneticFunc
+
+module.exports = new MagneticCardHelper();
