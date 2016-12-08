@@ -61,15 +61,15 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == open \n\n\n\n");
             try {
                 this.open();
-                //return new Array("Open Done");
+                callbackContext.success("Successssssss opeeeeenn");
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             try {
-                //return this.startReading();
-                this.startReading();
+                String[] ans = this.startReading();
+                callbackContext.success(ans);
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
