@@ -50,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/www/cdv-plugin-card-io.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="39" />
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -947,12 +947,12 @@
       <workItem from="1481022262676" duration="34000" />
       <workItem from="1481025355028" duration="175000" />
       <workItem from="1481089418400" duration="11286000" />
-      <workItem from="1481190264855" duration="6100000" />
+      <workItem from="1481190264855" duration="8332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77019000" />
+    <option name="totallyTimeSpent" value="79251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1309" height="747" extended-state="6" />
@@ -1148,7 +1148,7 @@
     <entry file="file://$PROJECT_DIR$/www/cdv-plugin-card-io.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="39" />
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
