@@ -69,7 +69,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             try {
                 String[] ans = this.startReading();
-                callbackContext.success(ans);
+                callbackContext.success(Arrays.toString(ans));
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
