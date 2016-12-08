@@ -6,7 +6,7 @@ function MagneticCardHelper() {
 
 
 //--------------------------------------------------FIRST---------------------------------------------------------------
-MagneticCardHelper.prototype.open = function() {
+MagneticCardHelper.prototype.open = new Promise(function() {
   console.log("-----------In OPEN FUNCTION---------------------------");
     var failureCallback = function() {
         console.log("Problem while open");
@@ -16,22 +16,23 @@ MagneticCardHelper.prototype.open = function() {
         console.log("Open success");
     };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "open", []);
-};
+});
 
 
-MagneticCardHelper.prototype.startReading = function() {
+MagneticCardHelper.prototype.startReading = new Promise(function() {
   console.log("-----------In startReading FUNCTION---------------------------");
     var failureCallback = function() {
         console.log("Problem while startReading");
+        return "Problem while startReading";
     };
 
     var wrappedSuccess = function(data) {
         console.log( "Data from magnetic card >>>> " + data)
         console.log("startReading success");
-        return data
+        return data;
     };
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "startReading", []);
-};
+});
 
 //----------------------------------------------------------------------------------------------------------------------
 module.exports = new MagneticCardHelper();
