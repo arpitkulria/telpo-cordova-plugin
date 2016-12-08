@@ -26,7 +26,7 @@ MagneticCardHelper.prototype.startReading = function() {
     };
 
     var wrappedSuccess = function(data) {
-        console.log(data)
+        console.log( "Data from magnetic card >>>> " + data)
         console.log("startReading success");
         return data
     };
