@@ -36,23 +36,23 @@ MagneticCardHelper.prototype.open = function() {
 // };
 
 
-MagneticCardHelper.prototype.startReading = new Promise(function(resolve, reject) {
+MagneticCardHelper.prototype.startReading = function() {
   console.log("-----------In startReading FUNCTION---------------------------");
     var failureCallback = function() {
         console.log("Problem while startReading");
-        //return "Problem while startReading";
-        reject("Problem whjile reading");
+        return "Problem while startReading";
+        // reject("Problem whjile reading");
     };
 
     var wrappedSuccess = function(data) {
         console.log( "Data from magnetic card >>>> " + this.data)
         console.log("startReading success");
-        // return data;
-        resolve(this.data);
+       return data;
+    //resolve(this.data);
     };
-
+    // var promise = new Promise()
   cordova.exec(wrappedSuccess, failureCallback, "MagneticCardHelper", "startReading", []);
-});
+};
 
 
 module.exports = new MagneticCardHelper();
