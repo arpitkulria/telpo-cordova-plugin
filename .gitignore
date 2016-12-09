@@ -13,3 +13,4 @@ resources
 .idea
 /.idea_modules
 .idea*/
+gen/
