@@ -75,7 +75,6 @@ public class MagneticCardHelper extends CordovaPlugin {
             }
         } else {
             retValue = false;
-            //return new Array("Else case");
         }
 
         return retValue;
