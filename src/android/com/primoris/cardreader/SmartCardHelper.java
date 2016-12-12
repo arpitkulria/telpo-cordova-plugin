@@ -16,7 +16,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.content.Context
+import android.content.Context;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -28,7 +28,8 @@ import com.telpo.tps550.api.DeviceNotOpenException;
 import com.telpo.tps550.api.InternalErrorException;
 import com.telpo.tps550.api.TelpoException;
 import com.telpo.tps550.api.TimeoutException;
-import com.telpo.tps550.api.reader.{ReaderMonitor, SmartCardReader}
+import com.telpo.tps550.api.reader.ReaderMonitor;
+import com.telpo.tps550.api.reader.SmartCardReader;
 import java.io.UnsupportedEncodingException;
 import android.content.IntentFilter;
 
