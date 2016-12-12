@@ -25,26 +25,12 @@
             </feature>
         </config-file>
 
-        <!--<source-file src="/libs/acssmc-1.1.1.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/core-3.1.0.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/SmartCardLib.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/telpo_api.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/armeabi.jar" target-dir="libs"  framework="true" />-->
-        <!--<source-file src="/libs/native.jar" target-dir="libs"  framework="true" />-->
-
-
         <lib-file src="src/android/libs/acssmc-1.1.1.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/core-3.1.0.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/SmartCardLib.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/telpo_api.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/armeabi.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/native.jar" arch="device"  framework="true" />
-
-
-
-
-        <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device" />-->
-        <!--<lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="simulator" />-->
 
         <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi"  framework="true" />
         <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi"  framework="true" />
@@ -88,6 +74,7 @@
 
 
         <source-file src="src/android/com/primoris/cardreader/MagneticCardHelper.java" target-dir="src/com/primoris/cardreader/cordova/sdk" />
+        <source-file src="src/android/com/primoris/cardreader/SmartCardHelper.java" target-dir="src/com/primoris/cardreader/cordova/sdk" />
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
     </platform>
 </plugin>

@@ -34,17 +34,12 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-//        System.loadLibrary("src/android/lib/native");
-//        System.loadLibrary("src/android/lib/armeabi");
-        System.out.println("\n\n\n In pluginInitialize function \n\n\n\n");
     }
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         // TODO Auto-generated method stub
         super.initialize(cordova, webView);
-        System.out.println("\n\n\n In initialize function \n\n\n\n");
-        Log.d("---------------------SAMPLE_ECHO---------------------", "--------------------- initializing ---------------------");
     }
 
     private CallbackContext callbackContext;
@@ -81,15 +76,12 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     public static void open() throws TelpoException {
-        System.out.println("\n\n\n\n --------------------IN OPEN FUNCTION JAVA------------------------ \n\n\n\n\n ");
         MagneticCard.open();
     }
 
     public static String[] startReading() throws TelpoException {
-        System.out.println("\n\n\n\n --------------------IN startReading FUNCTION JAVA------------------------ \n\n\n\n\n ");
         MagneticCard.startReading();
         String[] arr = MagneticCard.check(10000);
-        System.out.println("\n\n\n\n\n\n check output---------------" + Arrays.toString(arr) + "---------------\n\n\n\n\n");
         return arr;
     }
 }
