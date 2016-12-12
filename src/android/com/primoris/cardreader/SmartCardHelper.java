@@ -22,6 +22,7 @@ import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import android.util.Log;
+import android.content.BroadcastReceiver;
 import com.telpo.tps550.api.magnetic.MagneticCard;
 import com.telpo.tps550.api.DeviceAlreadyOpenException;
 import com.telpo.tps550.api.DeviceNotOpenException;
@@ -70,7 +71,7 @@ public class SmartCardHelper extends CordovaPlugin {
         return retValue;
     }
 
-    public static boolean startMonitor() throws TelpoException {
+    public boolean startMonitor() throws TelpoException {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
 
