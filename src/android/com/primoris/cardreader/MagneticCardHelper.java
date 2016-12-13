@@ -11,7 +11,7 @@ import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
 import org.apache.cordova.CallbackContext;
 
-import org.apache.commons.codec.binary.Hex;
+//import org.apache.commons.codec.binary.Hex;
 
 import android.content.Context;
 import org.apache.cordova.CordovaPlugin;
