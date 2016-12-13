@@ -29,6 +29,7 @@ MagneticCardHelper.prototype.startReading = function(callback) {
 
 
 SmartCardHelper.prototype.startMonitor = function(callback) {
+    console.log("+++++++++++++++IN START MONITOR++++++++++++++++++++++")
     var failureCallback = function() {
         console.log("Problem while startReading");
     };
