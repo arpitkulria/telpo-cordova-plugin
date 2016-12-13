@@ -310,7 +310,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         int expiryDateTagLoc = cardNumAndExpiryDate.indexOf("D");
         String cardNumber  = cardNumAndExpiryDate.substring(0, expiryDateTagLoc);
 
-        String expiryDate = cardNumAndExpiryDate.charAt(expiryDateTagLoc + 3) + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 4) +
+        String expiryDate = cardNumAndExpiryDate.charAt(expiryDateTagLoc + 3) + "" + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 4) +
                 cardNumAndExpiryDate.charAt(expiryDateTagLoc + 1) + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 2);
 
         String nameInHexa = resApdu.substring(cardHolderNameTagLoc + 6, resApdu.lastIndexOf("20"));
