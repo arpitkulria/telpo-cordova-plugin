@@ -7,8 +7,6 @@
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cdv-plugin-card-io.js" afterPath="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cdv-plugin-card-io.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cdv-plugin-card-io.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/cdv-plugin-card-io.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="414">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -67,15 +65,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="144">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1144#1145#0" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
+                <element signature="e#1318#1319#0" expanded="true" />
+                <element signature="e#1368#1369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,10 +81,9 @@
       <file leaf-file-name="SmartCardHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1091">
-              <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+            <state relative-caret-position="5">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1439#1440#0" expanded="true" />
                 <element signature="e#1489#1490#0" expanded="true" />
               </folding>
@@ -147,8 +143,8 @@
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" />
-        <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
+        <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
       </list>
     </option>
   </component>
@@ -952,12 +948,12 @@
       <workItem from="1481190264855" duration="8912000" />
       <workItem from="1481261337520" duration="12346000" />
       <workItem from="1481545282937" duration="165000" />
-      <workItem from="1481545501099" duration="9978000" />
+      <workItem from="1481545501099" duration="10183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104359000" />
+    <option name="totallyTimeSpent" value="104564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -971,7 +967,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5223421" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38517746" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38517746" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1033,9 +1029,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1280,12 +1275,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/cdv-plugin-card-io.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1091">
-          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+        <state relative-caret-position="5">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1489#1490#0" expanded="true" />
           </folding>
@@ -1294,21 +1296,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        <state relative-caret-position="144">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/cdv-plugin-card-io.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>

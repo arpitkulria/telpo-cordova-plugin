@@ -10,7 +10,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.content.Intent;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -26,6 +26,9 @@ import com.telpo.tps550.api.InternalErrorException;
 import com.telpo.tps550.api.TelpoException;
 import com.telpo.tps550.api.TimeoutException;
 import java.io.UnsupportedEncodingException;
+import android.content.BroadcastReceiver;
+import com.telpo.tps550.api.reader.ReaderMonitor;
+import com.telpo.tps550.api.reader.SmartCardReader;
 
 
 public class MagneticCardHelper extends CordovaPlugin {
