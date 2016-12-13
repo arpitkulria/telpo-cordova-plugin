@@ -78,7 +78,7 @@ public class SmartCardHelper extends CordovaPlugin {
         IntentFilter filter = new IntentFilter();
         filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
 
-        getContext().registerReceiver(mReceiver, filter);
+        Context.getContext().registerReceiver(mReceiver, filter);
     }
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
