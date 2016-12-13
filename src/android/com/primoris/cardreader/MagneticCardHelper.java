@@ -178,11 +178,20 @@ public class MagneticCardHelper extends CordovaPlugin {
         //Get Processing options APDU
         String processingOptionsApdu = "80A80000028300";
 
+        if(!resp.equals("6A82")) {
+            getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
+        } else {
+            new HashMap();
+        }
+
+/*
         switch(resp) {
-            case "6A82": new HashMap();
+            case "6A82":
+                new HashMap();
                 break;
             default: getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         }
+*/
 
 
     }
@@ -231,7 +240,26 @@ public class MagneticCardHelper extends CordovaPlugin {
         String param2;
         String sfiStr;
 
-        switch(cardType) {
+        if(cardType.equals("VISA")) {
+            sfiStr = resArr.get(4);
+            param1 = resArr.get(5);
+            param2 = getParam2(sfiStr);
+            response = readCardDetails(param1, param2);
+        } else if(cardType.equals("AMEX")) {
+            sfiStr = resArr.get(4);
+            param1 = resArr.get(5);
+            param2 = getParam2(sfiStr);
+            response = readCardDetails(param1, param2);
+        } else if(cardType.equals("MC")) {
+            int aflTagIndex = resArr.indexOf("94");
+            param1 = resArr.get(aflTagIndex + 3);
+            param2 = getParam2(resArr.get(aflTagIndex + 2));
+            response = readCardDetails(param1, param2);
+        } else {
+            throw new IllegalArgumentException("Invalid card type");
+        }
+
+/*        switch(cardType) {
             case "VISA":
                 sfiStr = resArr.get(4);
                 param1 = resArr.get(5);
@@ -253,7 +281,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 response = readCardDetails(param1, param2);
                 break;
             default: throw new IllegalArgumentException("Invalid card type");
-        }
+        }*/
 
         return response;
     }
@@ -282,7 +310,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         int expiryDateTagLoc = cardNumAndExpiryDate.indexOf("D");
         String cardNumber  = cardNumAndExpiryDate.substring(0, expiryDateTagLoc);
 
-        String expiryDate = cardNumAndExpiryDate.charAt(expiryDateTagLoc + 3).toString + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 4) +
+        String expiryDate = cardNumAndExpiryDate.charAt(expiryDateTagLoc + 3) + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 4) +
                 cardNumAndExpiryDate.charAt(expiryDateTagLoc + 1) + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 2);
 
         String nameInHexa = resApdu.substring(cardHolderNameTagLoc + 6, resApdu.lastIndexOf("20"));
