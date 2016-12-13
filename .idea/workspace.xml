@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/git" afterPath="$PROJECT_DIR$/git" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" afterPath="$PROJECT_DIR$/src/android/libs/SmartCardLib.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" afterPath="$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi.jar" afterPath="$PROJECT_DIR$/src/android/libs/armeabi.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" afterPath="$PROJECT_DIR$/src/android/libs/core-3.1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/native.jar" afterPath="$PROJECT_DIR$/src/android/libs/native.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" afterPath="$PROJECT_DIR$/src/android/libs/sdtapi.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" afterPath="$PROJECT_DIR$/src/android/libs/telpo_api.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcard_reader.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libcollect.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libdecode.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libidcard.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libled.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libmoneybox.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libpicc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libsystem_util.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_msr.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_printer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libtelpo_serial.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi-v7a/libusb_util.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcard_reader.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libcollect.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libcollect.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libdecode.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libdecode.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libidcard.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libidcard.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libled.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libled.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libmoneybox.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libmoneybox.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libpicc.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libpicc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libsystem_util.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_msr.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_msr.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_printer.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_printer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_serial.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libtelpo_serial.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/libs/armeabi/libusb_util.so" afterPath="$PROJECT_DIR$/src/android/libs/armeabi/libusb_util.so" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,8 +79,8 @@
       <file leaf-file-name="SmartCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1453#1454#0" expanded="true" />
@@ -983,12 +943,12 @@
       <workItem from="1481190264855" duration="8912000" />
       <workItem from="1481261337520" duration="12346000" />
       <workItem from="1481545282937" duration="165000" />
-      <workItem from="1481545501099" duration="6129000" />
+      <workItem from="1481545501099" duration="6405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100510000" />
+    <option name="totallyTimeSpent" value="100786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -1337,8 +1297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state relative-caret-position="360">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1453#1454#0" expanded="true" />
