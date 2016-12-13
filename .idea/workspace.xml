@@ -68,12 +68,12 @@
       <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="312" column="79" selection-start-line="312" selection-start-column="79" selection-end-line="312" selection-end-column="79" />
+            <state relative-caret-position="176">
+              <caret line="173" column="30" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7109#7110#0" expanded="true" />
-                <element signature="e#7156#7157#0" expanded="true" />
+                <element signature="e#7175#7176#0" expanded="true" />
+                <element signature="e#7222#7223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -875,12 +875,12 @@
       <workItem from="1481545282937" duration="165000" />
       <workItem from="1481545501099" duration="11054000" />
       <workItem from="1481620647845" duration="28000" />
-      <workItem from="1481621020140" duration="20864000" />
+      <workItem from="1481621020140" duration="21097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126327000" />
+    <option name="totallyTimeSpent" value="126560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1309" height="747" extended-state="6" />
@@ -965,8 +965,8 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7109#7110#0" expanded="true" />
-            <element signature="e#7156#7157#0" expanded="true" />
+            <element signature="e#7175#7176#0" expanded="true" />
+            <element signature="e#7222#7223#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1020,8 +1020,8 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7109#7110#0" expanded="true" />
-            <element signature="e#7156#7157#0" expanded="true" />
+            <element signature="e#7175#7176#0" expanded="true" />
+            <element signature="e#7222#7223#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1067,8 +1067,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7109#7110#0" expanded="true" />
-            <element signature="e#7156#7157#0" expanded="true" />
+            <element signature="e#7175#7176#0" expanded="true" />
+            <element signature="e#7222#7223#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,12 +1325,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="312" column="79" selection-start-line="312" selection-start-column="79" selection-end-line="312" selection-end-column="79" />
+        <state relative-caret-position="176">
+          <caret line="173" column="30" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7109#7110#0" expanded="true" />
-            <element signature="e#7156#7157#0" expanded="true" />
+            <element signature="e#7175#7176#0" expanded="true" />
+            <element signature="e#7222#7223#0" expanded="true" />
           </folding>
         </state>
       </provider>

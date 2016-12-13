@@ -179,9 +179,10 @@ public class MagneticCardHelper extends CordovaPlugin {
         String processingOptionsApdu = "80A80000028300";
 
         if(!resp.equals("6A82")) {
-            getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
+            return getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         } else {
-            new HashMap();
+            Map<String, String> blankMap = new HashMap();
+           return blankMap;
         }
 
 /*
