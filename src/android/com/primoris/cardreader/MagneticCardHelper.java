@@ -144,43 +144,26 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
     private void getCardDetails() {
-        Map cardAppIdentifiers = new HashMap();
+        Map<String, String> cardAppIdentifiers = new HashMap();
         cardAppIdentifiers.put("A00000002501", "AMEX");
         cardAppIdentifiers.put("A0000000031010", "VISA");
         cardAppIdentifiers.put("A0000000041010", "MC");
 
         String selectCommandApdu = "00A40400";
 
-        for(Map.Entry<String, String> entry : cardAppIdentifiers.entrySet()) {
-            //System.out.println(entry.getKey() + "/" + entry.getValue());
-
-            if(cardAppIdentifiers.getKey() == "AMEX") {
-                String resp = sendApdu(selectCommandApdu + "06" + cardAppIdentifiers.getKey + "00");
-                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.getValue());
+        for(String key : cardAppIdentifiers.keySet()) {
+            if(cardAppIdentifiers.get(key) == "AMEX") {
+                String resp = sendApdu(selectCommandApdu + "06" + key + "00");
+                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
-                //return ans;
+//                return ans;
             } else {
-                String resp = sendApdu(selectCommandApdu + "07" + cardAppIdentifiers.getKey + "00");
-                Map<String, String> ans = checkSelectResponse(resp,  cardAppIdentifiers.getValue());
+                String resp = sendApdu(selectCommandApdu + "07" + key + "00");
+                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
 //                return ans;
             }
         }
-
-/*
-        for(String key: cardAppIdentifiers.keySet()) {
-            if(cardAppIdentifiers.get(key) == "AMEX") {
-                String resp = sendApdu(selectCommandApdu + "06" + key + "00");
-                Map<String, String> ans = checkSelectResponse(resp, cardType);
-                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
-                return ans;
-            } else {
-                String resp = sendApdu(selectCommandApdu + "07" + cardAID + "00");
-                Map<String, String> ans = checkSelectResponse(resp, cardType);
-                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
-                return ans;
-            }
-        }*/
 
 
 
@@ -246,17 +229,18 @@ public class MagneticCardHelper extends CordovaPlugin {
         Map<String, String> response;
         String param1;
         String param2;
+        String sfiStr;
 
         switch(cardType) {
             case "VISA":
-                String sfiStr = resArr.get(4);
+                sfiStr = resArr.get(4);
                 param1 = resArr.get(5);
                 param2 = getParam2(sfiStr);
                 response = readCardDetails(param1, param2);
                 break;
 
             case "AMEX":
-                String sfiStr = resArr.get(4);
+                sfiStr = resArr.get(4);
                 param1 = resArr.get(5);
                 param2 = getParam2(sfiStr);
                 response = readCardDetails(param1, param2);
@@ -296,10 +280,10 @@ public class MagneticCardHelper extends CordovaPlugin {
         //Expiry Date tag
 
         int expiryDateTagLoc = cardNumAndExpiryDate.indexOf("D");
-        String cardNumber  = cardNumAndExpiryDate.substring(ZERO, expiryDateTagLoc);
+        String cardNumber  = cardNumAndExpiryDate.substring(0, expiryDateTagLoc);
 
-        String expiryDate = cardNumAndExpiryDate(expiryDateTagLoc + 3).toString + cardNumAndExpiryDate(expiryDateTagLoc + 4) +
-                cardNumAndExpiryDate(expiryDateTagLoc + 1) + cardNumAndExpiryDate(expiryDateTagLoc + 2);
+        String expiryDate = cardNumAndExpiryDate.charAt(expiryDateTagLoc + 3).toString + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 4) +
+                cardNumAndExpiryDate.charAt(expiryDateTagLoc + 1) + cardNumAndExpiryDate.charAt(expiryDateTagLoc + 2);
 
         String nameInHexa = resApdu.substring(cardHolderNameTagLoc + 6, resApdu.lastIndexOf("20"));
         String cardHolderName = hexStringToAscii(nameInHexa);
