@@ -153,14 +153,17 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         for(String key : cardAppIdentifiers.keySet()) {
             if(cardAppIdentifiers.get(key) == "AMEX") {
+                System.out.println("<<<<<<<<<<<<>>>AMEX>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
+                System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
 //                return ans;
             } else {
+
+                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
+                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
 //                return ans;
             }
         }
@@ -171,6 +174,8 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private Map<String, String> checkSelectResponse(String resp, String cardType) {
+
+        System.out.println("<<<<<<<<<<<<in >>>checkSelectResponse>>>>>>>>>>>card type === " + cardType + ">>>>>>>>>>>>>>>>");
         //Response APDU if File Not Found
         String fileResponseApdu = "6A82";
         //Get Response Command APDU
@@ -179,8 +184,10 @@ public class MagneticCardHelper extends CordovaPlugin {
         String processingOptionsApdu = "80A80000028300";
 
         if(!resp.equals("6A82")) {
+            System.out.println("----------------in!resp.equal6A82) ----------------")
             return getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         } else {
+            System.out.println("---------------- else case resp == " + resp +" ----------------")
             Map<String, String> blankMap = new HashMap();
            return blankMap;
         }
@@ -342,8 +349,12 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
     private String sendApdu(String apdu) {
+        System.out.println("---------------sendApdu----------------------" + apdu);
         byte[] apduArr = toByteArray(apdu);
+        System.out.println("---------------sendApdu--apduArrr--------------------" + apduArr);
         byte[] responseApdu = ReaderMonitor.transmit(apduArr);
+        System.out.println("---------------sendApdu--responseApdu--------------------" + responseApdu);
+        System.out.println("---------------sendApdu--StringUtil.toHexString(responseApdu)--------------------" + StringUtil.toHexString(responseApdu));
         return StringUtil.toHexString(responseApdu);
     }
 
