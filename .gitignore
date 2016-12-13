@@ -8,9 +8,6 @@ plugins
 *.log
 *.DS_Store
 resources
-.idea/
-/.idea
-.idea
-/.idea_modules
-.idea*/
 gen/
+.idea/
+.idea

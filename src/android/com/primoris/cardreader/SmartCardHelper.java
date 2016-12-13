@@ -33,6 +33,7 @@ import com.telpo.tps550.api.reader.ReaderMonitor;
 import com.telpo.tps550.api.reader.SmartCardReader;
 import java.io.UnsupportedEncodingException;
 import android.content.IntentFilter;
+import com.telpo.tps550.api.reader.CardReader;
 
 public class SmartCardHelper extends CordovaPlugin {
 
@@ -42,7 +43,6 @@ public class SmartCardHelper extends CordovaPlugin {
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        // TODO Auto-generated method stub
         super.initialize(cordova, webView);
     }
 
@@ -77,7 +77,8 @@ public class SmartCardHelper extends CordovaPlugin {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
-        callbackContext.getContext().registerReceiver(mReceiver, filter);
+
+        getContext().registerReceiver(mReceiver, filter);
     }
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
