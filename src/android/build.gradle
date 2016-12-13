@@ -37,7 +37,6 @@ dependencies {
     compile files('libs/sdtapi.jar')
     compile files('libs/telpo_api.jar')
     compile fileTree(dir: 'src/android/libs', include: ['*.jar'])
-    // https://mvnrepository.com/artifact/commons-io/commons-io
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
 
 }

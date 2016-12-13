@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
 import com.telpo.tps550.api.util.StringUtil;
-import javax.xml.bind.DatatypeConverter;
+import android.util.Base64;
 import org.apache.cordova.CallbackContext;
 import android.content.Context;
 import org.apache.cordova.CordovaPlugin;
@@ -308,7 +308,9 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private byte[] toByteArray(String hex) {
         String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");
-        return DatatypeConverter.parseHexBinary(finedHex);
+        return Base64.decode(finedHex, DEFAULT);
+
+        //return DatatypeConverter.parseHexBinary(finedHex);
     }
 
 
