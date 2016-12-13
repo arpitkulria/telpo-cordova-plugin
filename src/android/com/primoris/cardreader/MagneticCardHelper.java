@@ -186,8 +186,8 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     }
 
-    private boolean checkValidResponse(resApdu: String) = {
-        resApdu.endsWith("9000");
+    private boolean checkValidResponse(String resApdu) {
+        return resApdu.endsWith("9000");
     }
 
     private Map<String, String> getCardDetailsHelper(String response, String getCommandApdu, String processingOptionsApdu, String cardType) {
@@ -199,7 +199,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         } else {
             throw new IllegalArgumentException("Invalid Parameter for command APDU");
         }
-
     }
 
     private Map<String, String> callGetProcessingOptions(String processingOptionsApdu, String getCommandApdu, String cardType) {
@@ -219,27 +218,32 @@ public class MagneticCardHelper extends CordovaPlugin {
         for(int i = 0; i < resApdu.length(); i+=2) {
             resArr.add(charArr[i] + "" + charArr[i+1]);
         }
+
         return resArr;
     }
 
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
         ArrayList<String> resArr = sliding(resApdu);
 
+        Map<String, String> response;
+
         switch(cardType) {
             case "VISA" | "AMEX":
                 String sfiStr = resArr.get(4);
                 String param1 = resArr.get(5);
                 String param2 = getParam2(sfiStr);
-                return readCardDetails(param1, param2);
+                response = readCardDetails(param1, param2);
                 break;
             case "MC":
                 int aflTagIndex = resArr.indexOf("94");
                 String param1 = resArr.get(aflTagIndex + 3);
                 String param2 = getParam2(resArr.get(aflTagIndex + 2));
-                return readCardDetails(param1, param2);
+                response = readCardDetails(param1, param2);
                 break;
             default: throw new IllegalArgumentException("Invalid card type");
         }
+
+        return response;
     }
 
 
@@ -298,7 +302,8 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private String sendApdu(String apdu) {
         byte[] apduArr = toByteArray(apdu);
-        return ReaderMonitor.transmit(apduArr);
+        byte[] responseApdu = ReaderMonitor.transmit(apduArr);
+        return StringUtil.toHexString(responseApdu)
     }
 
     private byte[] toByteArray(String hex) {
