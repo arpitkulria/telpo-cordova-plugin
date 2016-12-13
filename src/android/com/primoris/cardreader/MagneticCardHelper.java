@@ -366,6 +366,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "").replace('+','-').replace('/','_');
 //        String encodedString = new String(Base64.encodeBase64('string to encode'));
 //        String safeString = encodedString.replace('+','-').replace('/','_');
+
         return Base64.decode(finedHex, Base64.DEFAULT);
 
 
