@@ -79,12 +79,11 @@
       <file leaf-file-name="SmartCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="288">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1503#1504#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1542#1543#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -274,7 +273,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/android/libs/telpo_api.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DemoSDK(2016-06-24)/DemoSDK(20160624)" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;giti&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;*.xml&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/platforms/android/AndroidManifest.xml&#10;UnsupportedEncodingException&#9;PSI&#9;JAVA://java.io.UnsupportedEncodingException" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -943,12 +942,12 @@
       <workItem from="1481190264855" duration="8912000" />
       <workItem from="1481261337520" duration="12346000" />
       <workItem from="1481545282937" duration="165000" />
-      <workItem from="1481545501099" duration="6405000" />
+      <workItem from="1481545501099" duration="6904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100786000" />
+    <option name="totallyTimeSpent" value="101285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -1297,12 +1296,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="288">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
           </folding>
         </state>
       </provider>

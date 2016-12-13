@@ -17,6 +17,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.content.Context;
+import android.content.ContextWrapper;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -78,8 +79,9 @@ public class SmartCardHelper extends CordovaPlugin {
         IntentFilter filter = new IntentFilter();
         filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
 
-        Context ctx = new Context();
+        ContextWrapper ctx = new ContextWrapper();
         ctx.getApplicationContext().registerReceiver(mReceiver, filter);
+        ctx.registerReceiver(mReceiver, filter);
     }
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
