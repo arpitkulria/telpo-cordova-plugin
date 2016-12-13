@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/build.gradle" afterPath="$PROJECT_DIR$/src/android/build.gradle" />
     </list>
     <ignored path="telpo.sdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="226">
+              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -65,13 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="305" column="52" selection-start-line="305" selection-start-column="52" selection-end-line="305" selection-end-column="52" />
+            <state relative-caret-position="140">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#6842#6843#0" expanded="true" />
                 <element signature="e#6889#6890#0" expanded="true" />
               </folding>
@@ -137,7 +135,6 @@
       <list>
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/android/CardIOCordovaPlugin1.java" />
-        <option value="$PROJECT_DIR$/src/android/build.gradle" />
         <option value="$PROJECT_DIR$/src/android/MagneticCard.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -146,6 +143,7 @@
         <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
         <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
+        <option value="$PROJECT_DIR$/src/android/build.gradle" />
       </list>
     </option>
   </component>
@@ -206,7 +204,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DemoSDK(2016-06-24)/DemoSDK(20160624)" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;giti&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;*.xml&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/platforms/android/AndroidManifest.xml&#10;UnsupportedEncodingException&#9;PSI&#9;JAVA://java.io.UnsupportedEncodingException" />
+    <property name="SearchEverywhereHistoryKey" value="build&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/src/android/build.gradle&#10;git&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;giti&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/.gitignore&#10;*.xml&#9;FILE&#9;file:///home/arpit/workspace/telpo.sdk/platforms/android/AndroidManifest.xml&#10;UnsupportedEncodingException&#9;PSI&#9;JAVA://java.io.UnsupportedEncodingException" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -875,12 +873,12 @@
       <workItem from="1481545282937" duration="165000" />
       <workItem from="1481545501099" duration="11054000" />
       <workItem from="1481620647845" duration="28000" />
-      <workItem from="1481621020140" duration="14306000" />
+      <workItem from="1481621020140" duration="14532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119769000" />
+    <option name="totallyTimeSpent" value="119995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1309" height="747" extended-state="6" />
@@ -964,7 +962,6 @@
         <state relative-caret-position="90">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#6842#6843#0" expanded="true" />
             <element signature="e#6889#6890#0" expanded="true" />
           </folding>
@@ -1019,7 +1016,6 @@
         <state relative-caret-position="594">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#6842#6843#0" expanded="true" />
             <element signature="e#6889#6890#0" expanded="true" />
           </folding>
@@ -1066,7 +1062,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#6842#6843#0" expanded="true" />
             <element signature="e#6889#6890#0" expanded="true" />
           </folding>
@@ -1272,14 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1325,13 +1312,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="305" column="52" selection-start-line="305" selection-start-column="52" selection-end-line="305" selection-end-column="52" />
+        <state relative-caret-position="140">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#6842#6843#0" expanded="true" />
             <element signature="e#6889#6890#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
