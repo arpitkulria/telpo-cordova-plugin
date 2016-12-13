@@ -12,6 +12,7 @@ import org.apache.cordova.CallbackContext;
 import android.content.Context;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
+import java.util.ArrayList;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Intent;
@@ -150,6 +151,23 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         String selectCommandApdu = "00A40400";
 
+        for(Map.Entry<String, String> entry : cardAppIdentifiers.entrySet()) {
+            //System.out.println(entry.getKey() + "/" + entry.getValue());
+
+            if(cardAppIdentifiers.getKey() == "AMEX") {
+                String resp = sendApdu(selectCommandApdu + "06" + cardAppIdentifiers.getKey + "00");
+                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.getValue());
+                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
+                //return ans;
+            } else {
+                String resp = sendApdu(selectCommandApdu + "07" + cardAppIdentifiers.getKey + "00");
+                Map<String, String> ans = checkSelectResponse(resp,  cardAppIdentifiers.getValue());
+                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
+//                return ans;
+            }
+        }
+
+/*
         for(String key: cardAppIdentifiers.keySet()) {
             if(cardAppIdentifiers.get(key) == "AMEX") {
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
@@ -162,7 +180,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ans);
                 return ans;
             }
-        }
+        }*/
 
 
 
@@ -180,7 +198,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         switch(resp) {
             case "6A82": new HashMap();
                 break;
-            default: getCardDetailsHelper(response, getCommandApdu, processingOptionsApdu, cardType);
+            default: getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         }
 
 
@@ -203,7 +221,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Map<String, String> callGetProcessingOptions(String processingOptionsApdu, String getCommandApdu, String cardType) {
         String respApdu = sendApdu(processingOptionsApdu);
-        String processingOptResp = sendApdu(getCommandApdu + respApdu.substring(TWO));
+        String processingOptResp = sendApdu(getCommandApdu + respApdu.substring(2));
         if (checkValidResponse(processingOptResp)) {
             return getCommandAPDUParams(processingOptResp, cardType);
         } else {
@@ -226,18 +244,28 @@ public class MagneticCardHelper extends CordovaPlugin {
         ArrayList<String> resArr = sliding(resApdu);
 
         Map<String, String> response;
+        String param1;
+        String param2;
 
         switch(cardType) {
-            case "VISA" | "AMEX":
+            case "VISA":
                 String sfiStr = resArr.get(4);
-                String param1 = resArr.get(5);
-                String param2 = getParam2(sfiStr);
+                param1 = resArr.get(5);
+                param2 = getParam2(sfiStr);
                 response = readCardDetails(param1, param2);
                 break;
+
+            case "AMEX":
+                String sfiStr = resArr.get(4);
+                param1 = resArr.get(5);
+                param2 = getParam2(sfiStr);
+                response = readCardDetails(param1, param2);
+                break;
+
             case "MC":
                 int aflTagIndex = resArr.indexOf("94");
-                String param1 = resArr.get(aflTagIndex + 3);
-                String param2 = getParam2(resArr.get(aflTagIndex + 2));
+                param1 = resArr.get(aflTagIndex + 3);
+                param2 = getParam2(resArr.get(aflTagIndex + 2));
                 response = readCardDetails(param1, param2);
                 break;
             default: throw new IllegalArgumentException("Invalid card type");
@@ -247,10 +275,10 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
 
-    private Map<String, String> readCardDetails(String param1, String param1) {
+    private Map<String, String> readCardDetails(String param1, String param2) {
         String readRecordCommandApdu = "00B2" + param1 + param2;
         String readRecordResp = sendApdu(readRecordCommandApdu + "00");
-        String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(TWO));
+        String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(2));
         if(checkValidResponse(cardDetailResp)) {
             return getCardInfo(cardDetailResp);
         }
@@ -308,7 +336,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private byte[] toByteArray(String hex) {
         String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");
-        return Base64.decode(finedHex, DEFAULT);
+        return Base64.decode(finedHex, Base64.DEFAULT);
 
         //return DatatypeConverter.parseHexBinary(finedHex);
     }
