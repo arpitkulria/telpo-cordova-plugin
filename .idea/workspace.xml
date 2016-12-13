@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3e8a6a5-f61d-418e-a4be-c26660d73575" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/libs/javax.xml.bind.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/build.gradle" afterPath="$PROJECT_DIR$/src/android/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" afterPath="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
     </list>
     <ignored path="telpo.sdk.iws" />
@@ -38,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="90">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -68,15 +64,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="367" column="26" selection-start-line="367" selection-start-column="26" selection-end-line="367" selection-end-column="26" />
+            <state relative-caret-position="36">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7742#7743#0" expanded="true" />
-                <element signature="e#7789#7790#0" expanded="true" />
+                <element signature="e#7744#7745#0" expanded="true" />
+                <element signature="e#7791#7792#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,9 +142,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/SmartCardHelper.java" />
         <option value="$PROJECT_DIR$/www/cdv-plugin-card-io.js" />
-        <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/android/build.gradle" />
+        <option value="$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java" />
       </list>
     </option>
   </component>
@@ -1006,12 +1002,12 @@
       <workItem from="1481545282937" duration="165000" />
       <workItem from="1481545501099" duration="11054000" />
       <workItem from="1481620647845" duration="28000" />
-      <workItem from="1481621020140" duration="24560000" />
+      <workItem from="1481621020140" duration="24596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130023000" />
+    <option name="totallyTimeSpent" value="130059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1309" height="747" extended-state="6" />
@@ -1025,7 +1021,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38674885" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38366717" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38366717" sideWeight="0.49806523" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1088,8 +1084,8 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7742#7743#0" expanded="true" />
-            <element signature="e#7789#7790#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1143,8 +1139,8 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7742#7743#0" expanded="true" />
-            <element signature="e#7789#7790#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1190,8 +1186,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7742#7743#0" expanded="true" />
-            <element signature="e#7789#7790#0" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1454,23 +1450,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="367" column="26" selection-start-line="367" selection-start-column="26" selection-end-line="367" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7742#7743#0" expanded="true" />
-            <element signature="e#7789#7790#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/android/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="36">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7744#7745#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

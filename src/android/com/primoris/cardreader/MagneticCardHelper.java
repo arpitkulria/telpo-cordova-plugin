@@ -1,6 +1,6 @@
 package com.primoris.cardreader;
 
-import javax.xml.bind.DatatypeConverter;
+//import javax.xml.bind.DatatypeConverter;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashSet;
