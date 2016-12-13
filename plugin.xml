@@ -32,7 +32,6 @@
         <lib-file src="src/android/libs/armeabi.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/native.jar" arch="device"  framework="true" />
         <lib-file src="src/android/libs/commons-io-2.5.jar" arch="device"  framework="true" />
-        <lib-file src="src/android/libs/javax.xml.bind.jar" arch="device"  framework="true" />
 
         <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi"  framework="true" />
         <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi"  framework="true" />

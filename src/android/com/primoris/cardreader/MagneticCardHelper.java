@@ -361,9 +361,12 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private byte[] toByteArray(String hex) {
         String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");
-        return Base64.decode(finedHex, Base64.DEFAULT);
+        String encodedString = new String(Base64.encodeBase64('string to encode'));
+        String safeString = encodedString.replace('+','-').replace('/','_');
+//        return Base64.decode(finedHex, Base64.DEFAULT);
 
-        //return DatatypeConverter.parseHexBinary(finedHex);
+        return safeString;
+//        return DatatypeConverter.parseHexBinary(finedHex);
     }
 
 
