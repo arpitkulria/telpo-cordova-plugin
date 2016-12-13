@@ -356,6 +356,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         System.out.println("---------------sendApdu----------------------" + apdu);
         byte[] apduArr = toByteArray(apdu);
         System.out.println("---------------sendApdu--apduArrr--------------------" + apduArr);
+        System.out.println("---------------sendApdu--apduArrr tosTring--------------------" + Arrays.toString(apduArr));
         byte[] responseApdu = ReaderMonitor.transmit(apduArr);
         System.out.println("---------------sendApdu--responseApdu--------------------" + responseApdu);
         System.out.println("---------------sendApdu--StringUtil.toHexString(responseApdu)--------------------" + StringUtil.toHexString(responseApdu));
