@@ -1,11 +1,9 @@
 
 function MagneticCardHelper() {
-
 }
 
-function SmartCardHelper() {
-
-}
+// function SmartCardHelper() {
+// }
 
 MagneticCardHelper.prototype.open = function() {
     var failureCallback = function() {
@@ -28,15 +26,15 @@ MagneticCardHelper.prototype.startReading = function(callback) {
 };
 
 
-SmartCardHelper.prototype.startMonitor = function(callback) {
-    console.log("+++++++++++++++IN START MONITOR++++++++++++++++++++++")
+MagneticCardHelper.prototype.startMonitor = function(callback) {
+    console.log("+++++++++++++++IN START MONITOR++++++++++++++++++++++");
     var failureCallback = function() {
         console.log("Problem while startReading");
     };
 
-    cordova.exec(callback, failureCallback, "SmartCardHelper", "startMonitor", []);
+    cordova.exec(callback, failureCallback, "MagneticCardHelper", "startMonitor", []);
 };
 
 
 module.exports = new MagneticCardHelper();
-module.exports = new SmartCardHelper();
+// module.exports = new SmartCardHelper();

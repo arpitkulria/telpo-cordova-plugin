@@ -1,5 +1,3 @@
-//  Copyright (c) 2016 PayPal. All rights reserved.
-
 package com.primoris.cardreader;
 
 import java.math.BigDecimal;
@@ -38,7 +36,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        // TODO Auto-generated method stub
         super.initialize(cordova, webView);
     }
 
@@ -68,6 +65,14 @@ public class MagneticCardHelper extends CordovaPlugin {
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
+        } else if(action.equals("startMonitor")) {
+            System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
+            try {
+                this.startMonitor();
+                callbackContext.success("Successssssss startMonitor");
+            } catch (Exception ex) {
+                System.out.println("in teklpo exception");
+            }
         } else {
             retValue = false;
         }
@@ -84,4 +89,41 @@ public class MagneticCardHelper extends CordovaPlugin {
         String[] arr = MagneticCard.check(10000);
         return arr;
     }
+
+    public boolean startMonitor() throws TelpoException {
+        ReaderMonitor.setContext(this.activity);
+        ReaderMonitor.startMonitor();
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
+
+        this.activity.registerReceiver(mReceiver, filter);
+        return true;
+    }
+
+
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("123", "icc present Broadcast Receiver");
+            if (intent.getAction() == ReaderMonitor.ACTION_ICC_PRESENT) {
+                if (intent.getExtras().getBoolean(ReaderMonitor.EXTRA_IS_PRESENT)) {
+                    int cardType = intent.getExtras().getInt(ReaderMonitor.EXTRA_CARD_TYPE);
+                    if (cardType == CardReader.CARD_TYPE_SLE4428) {
+                        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<SLE4428>>>>>>>>>>>>>>>>>>>>>");
+                    } else if (cardType == CardReader.CARD_TYPE_SLE4442) {
+                        System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
+                    } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
+                    } else {
+                        System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
+                    }
+                } else {
+                    System.out.println("<<<<<<<<<<<<<<<NO Card>>>>>>>>>>>>>>>>>>>");
+                }
+            }
+        }
+
+    };
 }

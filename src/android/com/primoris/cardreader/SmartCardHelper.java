@@ -1,5 +1,3 @@
-//  Copyright (c) 2016 PayPal. All rights reserved.
-
 package com.primoris.cardreader;
 
 import java.math.BigDecimal;
@@ -57,6 +55,9 @@ public class SmartCardHelper extends CordovaPlugin {
         this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
         boolean retValue = true;
+
+        System.out.println("9999999999999999999999999999999999999999999999999");
+
         if (action.equals("startMonitor")) {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
