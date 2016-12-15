@@ -1,6 +1,5 @@
 package com.primoris.cardreader;
 
-//import javax.xml.bind.DatatypeConverter;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,8 +10,7 @@ import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
 import org.apache.cordova.CallbackContext;
 import java.io.ByteArrayOutputStream;
-//import org.apache.commons.codec.binary.Hex;
-
+import org.json.JSONObject;
 import android.content.Context;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
@@ -85,7 +83,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
                 Map<String, String> result  = this.startMonitor();
-                callbackContext.success(result);
+                callbackContext.success(new JSONObject(result));
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
