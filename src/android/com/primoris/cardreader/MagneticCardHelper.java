@@ -148,6 +148,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Map<String, String> getCardDetails() {
         Map<String, String> cardAppIdentifiers = new HashMap();
+        Map<String, String> result = new HashMap();
         cardAppIdentifiers.put("A00000002501", "AMEX");
         cardAppIdentifiers.put("A0000000031010", "VISA");
         cardAppIdentifiers.put("A0000000041010", "MC");
@@ -159,22 +160,17 @@ public class MagneticCardHelper extends CordovaPlugin {
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
-                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
+                result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + ans);
-                return ans;
             } else {
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
-                Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
+                result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + ans);
-                return ans;
             }
         }
-
-
-
-
+        return result;
     }
 
     private Map<String, String> checkSelectResponse(String resp, String cardType) {
