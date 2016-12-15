@@ -246,28 +246,29 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
+        System.out.println("---------before sliding = == " + resApdu);
         ArrayList<String> resArr = sliding(resApdu);
-
+        System.out.println("---------after sliding = == " + Arrays.toString(resArr));
         Map<String, String> response;
-        String param1;
-        String param2;
-        String sfiStr;
+//        String param1;
+//        String param2;
+//        String sfiStr;
 
         if(cardType.equals("VISA")) {
-            sfiStr = resArr.get(4);
-            param1 = resArr.get(5);
-            param2 = getParam2(sfiStr);
-            response = readCardDetails(param1, param2);
+            String sfiStr1 = resArr.get(4);
+            String p1 = resArr.get(5);
+            String p2 = getParam2(sfiStr1);
+            response = readCardDetails(p1, p2);
         } else if(cardType.equals("AMEX")) {
-            sfiStr = resArr.get(4);
-            param1 = resArr.get(5);
-            param2 = getParam2(sfiStr);
-            response = readCardDetails(param1, param2);
+            String sfiStr2 = resArr.get(4);
+            String p1_1 = resArr.get(5);
+            String p2_1 = getParam2(sfiStr2);
+            response = readCardDetails(p1_1, p1_2);
         } else if(cardType.equals("MC")) {
             int aflTagIndex = resArr.indexOf("94");
-            param1 = resArr.get(aflTagIndex + 3);
-            param2 = getParam2(resArr.get(aflTagIndex + 2));
-            response = readCardDetails(param1, param2);
+            String p1_2 = resArr.get(aflTagIndex + 3);
+            String p2_2 = getParam2(resArr.get(aflTagIndex + 2));
+            response = readCardDetails(p1_2, p2_2);
         } else {
             throw new IllegalArgumentException("Invalid card type");
         }
