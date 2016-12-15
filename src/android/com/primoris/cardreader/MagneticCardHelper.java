@@ -248,8 +248,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
         System.out.println("---------before sliding = == " + resApdu);
         ArrayList<String> resArr = sliding(resApdu);
-        System.out.println("---------after sliding = == " + Arrays.toString(resArr.toArray));
-        System.out.println("---------after sliding = == " + resArr.forEach(s -> System.out.println(s)));
+        System.out.println("---------after sliding = == " + Arrays.toString(resArr.toArray()));
         Map<String, String> response;
 //        String param1;
 //        String param2;
