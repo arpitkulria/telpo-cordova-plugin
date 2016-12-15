@@ -317,12 +317,30 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private String hexStringToAscii(String hexValue) {
+
         StringBuilder output = new StringBuilder("");
-        for (int i = 0; i < hexValue.length(); i += 2) {
-            String str = hexValue.substring(i, i + 2);
+
+
+        System.out.println("in hexStringToAscii == " + hexValue);
+
+        ArrayList<String> strArr = sliding(hexValue);
+
+        System.out.println("-----------STRARR >>> AFTER SLIDING  == " + strArr);
+
+
+        for (int i = 0; i < strArr.length(); i ++) {
+            String str = strArr.get(i);
             output.append((char) Integer.parseInt(str, 16));
         }
-        return output.toString();
+
+
+        /*for (int i = 0; i < hexValue.length(); i += 2) {
+            String str = hexValue.substring(i, i + 2);
+            output.append((char) Integer.parseInt(str, 16));
+        }*/
+
+        System.out.println("----------- output.toString().trim()== " + output.toString().trim());
+        return output.toString().trim();
     }
 
 
