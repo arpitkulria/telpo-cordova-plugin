@@ -324,8 +324,11 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
     private String getParam2(String sfiStr) {
-        byte[] sfiByte = sfiStr.getBytes();
-        byte[] p2 = {(byte)(sfiByte[0] | 4)};
+        //byte[] sfiByte = sfiStr.getBytes();
+
+        byte[] data = toByteArray(sfiStr);
+
+        byte[] p2 = {(byte)(data[0] | 4)};
         return StringUtil.toHexString(p2);
     }
 
