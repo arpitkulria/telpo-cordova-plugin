@@ -84,8 +84,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         } else if(action.equals("startMonitor")) {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
-                this.startMonitor();
-                callbackContext.success("Successssssss startMonitor");
+                Map<String, String> result  = this.startMonitor();
+                callbackContext.success(result);
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
@@ -106,7 +106,11 @@ public class MagneticCardHelper extends CordovaPlugin {
         return arr;
     }
 
-    public boolean startMonitor() throws TelpoException {
+
+
+    public Map<String, String> chipData = new HashMap();
+
+    public Map<String, String> startMonitor() throws TelpoException {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
 
@@ -114,10 +118,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
 
         this.activity.registerReceiver(mReceiver, filter);
-
-        return true;
+        return chipData;
     }
-
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
@@ -133,8 +135,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
-                        getCardDetails();
-
+                        chipData = getCardDetails();
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
                     }
@@ -147,7 +148,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     };
 
 
-    private void getCardDetails() {
+    private Map<String, String> getCardDetails() {
         Map<String, String> cardAppIdentifiers = new HashMap();
         cardAppIdentifiers.put("A00000002501", "AMEX");
         cardAppIdentifiers.put("A0000000031010", "VISA");
@@ -162,15 +163,14 @@ public class MagneticCardHelper extends CordovaPlugin {
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + ans);
-//                return ans;
+                return ans;
             } else {
-
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + ans);
-//                return ans;
+                return ans;
             }
         }
 
