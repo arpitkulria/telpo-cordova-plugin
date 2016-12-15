@@ -161,6 +161,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
+                System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + ans);
 //                return ans;
             } else {
 
@@ -168,6 +169,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 Map<String, String> ans = checkSelectResponse(resp, cardAppIdentifiers.get(key));
+                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + ans);
 //                return ans;
             }
         }
@@ -280,6 +282,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         String readRecordCommandApdu = "00B2" + param1 + param2;
         String readRecordResp = sendApdu(readRecordCommandApdu + "00");
         String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(2));
+        System.out.println("------IN readCardDetails FUNCTION ---param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
         if(checkValidResponse(cardDetailResp)) {
             System.out.println("+++++++++++check valid response if case and card deaaa =   "+ cardDetailResp+" +++++++++++");
             return getCardInfo(cardDetailResp);
