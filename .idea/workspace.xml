@@ -68,8 +68,8 @@
       <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="163" column="83" selection-start-line="163" selection-start-column="83" selection-end-line="163" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -941,12 +941,12 @@
       <workItem from="1481545501099" duration="11054000" />
       <workItem from="1481620647845" duration="28000" />
       <workItem from="1481621020140" duration="30908000" />
-      <workItem from="1481797065282" duration="8829000" />
+      <workItem from="1481797065282" duration="8931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145200000" />
+    <option name="totallyTimeSpent" value="145302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -957,10 +957,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42484343" sideWeight="0.50193477" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42484343" sideWeight="0.49806523" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42484343" sideWeight="0.49806523" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39457202" sideWeight="0.49253732" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39457202" sideWeight="0.49253732" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1370,8 +1370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="163" column="83" selection-start-line="163" selection-start-column="83" selection-end-line="163" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

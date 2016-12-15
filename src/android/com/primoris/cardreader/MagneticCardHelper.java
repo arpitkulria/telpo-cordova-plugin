@@ -161,13 +161,13 @@ public class MagneticCardHelper extends CordovaPlugin {
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + ans);
+                System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + result);
             } else {
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + ans);
+                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + result);
             }
         }
         return result;
