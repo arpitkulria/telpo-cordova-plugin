@@ -248,7 +248,8 @@ public class MagneticCardHelper extends CordovaPlugin {
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
         System.out.println("---------before sliding = == " + resApdu);
         ArrayList<String> resArr = sliding(resApdu);
-        System.out.println("---------after sliding = == " + Arrays.toString(resArr));
+        System.out.println("---------after sliding = == " + Arrays.toString(resArr.toArray));
+        System.out.println("---------after sliding = == " + resArr.forEach(s -> System.out.println(s)));
         Map<String, String> response;
 //        String param1;
 //        String param2;
@@ -263,7 +264,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             String sfiStr2 = resArr.get(4);
             String p1_1 = resArr.get(5);
             String p2_1 = getParam2(sfiStr2);
-            response = readCardDetails(p1_1, p1_2);
+            response = readCardDetails(p1_1, p2_1);
         } else if(cardType.equals("MC")) {
             int aflTagIndex = resArr.indexOf("94");
             String p1_2 = resArr.get(aflTagIndex + 3);
