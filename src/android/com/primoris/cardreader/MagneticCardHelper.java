@@ -209,6 +209,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private boolean checkValidResponse(String resApdu) {
+        System.out.println("in chack valid respons enad stsing is ===" + resApdu);
         return resApdu.endsWith("9000");
     }
 
@@ -270,31 +271,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         } else {
             throw new IllegalArgumentException("Invalid card type");
         }
-
-/*        switch(cardType) {
-            case "VISA":
-                sfiStr = resArr.get(4);
-                param1 = resArr.get(5);
-                param2 = getParam2(sfiStr);
-                response = readCardDetails(param1, param2);
-                break;
-
-            case "AMEX":
-                sfiStr = resArr.get(4);
-                param1 = resArr.get(5);
-                param2 = getParam2(sfiStr);
-                response = readCardDetails(param1, param2);
-                break;
-
-            case "MC":
-                int aflTagIndex = resArr.indexOf("94");
-                param1 = resArr.get(aflTagIndex + 3);
-                param2 = getParam2(resArr.get(aflTagIndex + 2));
-                response = readCardDetails(param1, param2);
-                break;
-            default: throw new IllegalArgumentException("Invalid card type");
-        }*/
-
         return response;
     }
 
@@ -304,9 +280,11 @@ public class MagneticCardHelper extends CordovaPlugin {
         String readRecordResp = sendApdu(readRecordCommandApdu + "00");
         String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(2));
         if(checkValidResponse(cardDetailResp)) {
+            System.out.println("+++++++++++check valid response if case and card deaaa =   "+ cardDetailResp+" +++++++++++");
             return getCardInfo(cardDetailResp);
         }
         else {
+            System.out.println("---------param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
             throw new IllegalArgumentException("Invalid Parameter for command APDU");
         }
 
