@@ -328,7 +328,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         System.out.println("-----------STRARR >>> AFTER SLIDING  == " + strArr);
 
 
-        for (int i = 0; i < strArr.length(); i ++) {
+        for (int i = 0; i < strArr.size(); i ++) {
             String str = strArr.get(i);
             output.append((char) Integer.parseInt(str, 16));
         }
