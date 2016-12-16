@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Date;
 import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
 import org.apache.cordova.CallbackContext;
@@ -123,8 +124,12 @@ public class MagneticCardHelper extends CordovaPlugin {
         try {
 //            Thread.sleep(4000);
 
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date date = new Date();
+            System.out.println(" beforeeeeeeee" + dateFormat.format(date));
             Thread.currentThread().join();
-
+            Date date1 = new Date();
+            System.out.println(" Aftereeeeeeeee" + dateFormat.format(date1));
         } catch (Exception e) {
             System.out.println("=================================================");
             System.out.println(e);
