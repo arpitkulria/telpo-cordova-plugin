@@ -93,6 +93,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 this.activity.runOnUiThread(new Runnable() {
                     public void run() {
                         String[] ans = startReading();
+
                         callbackContext.success(Arrays.toString(ans));
                     }
                 });
