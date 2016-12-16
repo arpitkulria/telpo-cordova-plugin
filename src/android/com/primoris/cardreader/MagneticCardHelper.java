@@ -69,44 +69,47 @@ public class MagneticCardHelper extends CordovaPlugin {
         boolean retValue = true;
         if (action.equals("open")) {
             System.out.println("\n\n\n In Action == open \n\n\n\n");
-            try {
-                this.activity.runOnUiThread(new Runnable() {
-                    public void run() {
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception");
                     }
-                });
-            } catch (Exception ex) {
-                System.out.println("in teklpo exception");
-            }
+                }
+            });
+
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
 
-            try {
-                this.activity.runOnUiThread(new Runnable() {
-                    public void run() {
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
                         String[] ans = startReading();
-
                         callbackContext.success(Arrays.toString(ans));
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception");
                     }
-                });
+                }
+            });
 
-            } catch (Exception ex) {
-                System.out.println("in teklpo exception");
-            }
         } else if(action.equals("startMonitor")) {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
-            try {
-                this.activity.runOnUiThread(new Runnable() {
-                    public void run() {
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception");
                     }
-                });
-            } catch (Exception ex) {
-                System.out.println("in teklpo exception");
-            }
+                }
+            });
         } else {
             retValue = false;
         }
