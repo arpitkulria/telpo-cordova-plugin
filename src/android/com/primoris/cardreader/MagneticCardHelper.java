@@ -64,7 +64,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         this.activity = this.cordova.getActivity();
         boolean retValue = true;
         if (action.equals("open")) {
-            System.out.println("\n\n\n In Action == open \n\n\n\n");
             try {
                 this.open();
                 callbackContext.success("Successssssss opeeeeenn");
@@ -72,7 +71,6 @@ public class MagneticCardHelper extends CordovaPlugin {
                 System.out.println("in teklpo exception");
             }
         } else if (action.equals("startReading")) {
-            System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             try {
                 String[] ans = this.startReading();
                 callbackContext.success(Arrays.toString(ans));
@@ -83,6 +81,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
                 Map<String, String> result  = this.startMonitor();
+                System.out.println("Redult >>>>>>>>>> " + result);
                 System.out.println("JSON OBJECT >>>>>>>>>> " + new JSONObject(result));
                 callbackContext.success(new JSONObject(result));
             } catch (Exception ex) {
@@ -158,17 +157,11 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         for(String key : cardAppIdentifiers.keySet()) {
             if(cardAppIdentifiers.get(key) == "AMEX") {
-                System.out.println("<<<<<<<<<<<<>>>AMEX>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
-                System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + result);
             } else {
-                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
-                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + result);
             }
         }
         return result;
@@ -176,7 +169,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Map<String, String> checkSelectResponse(String resp, String cardType) {
 
-        System.out.println("<<<<<<<<<<<<in >>>checkSelectResponse>>>>>>>>>>>card type === " + cardType + ">>>>>>>>>>>>>>>>");
         //Response APDU if File Not Found
         String fileResponseApdu = "6A82";
         //Get Response Command APDU
@@ -185,10 +177,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         String processingOptionsApdu = "80A80000028300";
 
         if(!resp.equals("6A82")) {
-            System.out.println("----------------in!resp.equal6A82) ----------------");
             return getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         } else {
-            System.out.println("---------------- else case resp == " + resp +" ----------------");
             Map<String, String> blankMap = new HashMap();
            return blankMap;
         }
@@ -206,7 +196,6 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private boolean checkValidResponse(String resApdu) {
-        System.out.println("in chack valid respons enad stsing is ===" + resApdu);
         return resApdu.endsWith("9000");
     }
 
@@ -243,9 +232,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
-        System.out.println("---------before sliding = == " + resApdu);
         ArrayList<String> resArr = sliding(resApdu);
-        System.out.println("---------after sliding = == " + Arrays.toString(resArr.toArray()));
         Map<String, String> response;
 //        String param1;
 //        String param2;
@@ -277,13 +264,10 @@ public class MagneticCardHelper extends CordovaPlugin {
         String readRecordCommandApdu = "00B2" + param1 + param2;
         String readRecordResp = sendApdu(readRecordCommandApdu + "00");
         String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(2));
-        System.out.println("------IN readCardDetails FUNCTION ---param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
         if(checkValidResponse(cardDetailResp)) {
-            System.out.println("+++++++++++check valid response if case and card deaaa =   "+ cardDetailResp+" +++++++++++");
             return getCardInfo(cardDetailResp);
         }
         else {
-            System.out.println("---------param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
             throw new IllegalArgumentException("Invalid Parameter for command APDU");
         }
 
@@ -312,38 +296,18 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private String hexStringToAscii(String hexValue) {
-
         StringBuilder output = new StringBuilder("");
-
-
-        System.out.println("in hexStringToAscii == " + hexValue);
-
         ArrayList<String> strArr = sliding(hexValue);
-
-        System.out.println("-----------STRARR >>> AFTER SLIDING  == " + strArr);
-
-
         for (int i = 0; i < strArr.size(); i ++) {
             String str = strArr.get(i);
             output.append((char) Integer.parseInt(str, 16));
         }
-
-
-        /*for (int i = 0; i < hexValue.length(); i += 2) {
-            String str = hexValue.substring(i, i + 2);
-            output.append((char) Integer.parseInt(str, 16));
-        }*/
-
-        System.out.println("----------- output.toString().trim()== " + output.toString().trim());
         return output.toString().trim();
     }
 
 
     private String getParam2(String sfiStr) {
-        //byte[] sfiByte = sfiStr.getBytes();
-
         byte[] data = toByteArray(sfiStr);
-
         byte[] p2 = {(byte)(data[0] | 4)};
         return StringUtil.toHexString(p2);
     }
@@ -351,26 +315,18 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
     private String sendApdu(String apdu) {
-        System.out.println("---------------sendApdu----------------------" + apdu);
         byte[] apduArr = toByteArray(apdu);
-        System.out.println("---------------sendApdu--apduArrr--------------------" + apduArr);
-        System.out.println("---------------sendApdu--apduArrr tosTring--------------------" + Arrays.toString(apduArr));
         byte[] responseApdu = ReaderMonitor.transmit(apduArr);
-        System.out.println("---------------sendApdu--responseApdu--------------------" + responseApdu);
-        System.out.println("---------------sendApdu--StringUtil.toHexString(responseApdu)--------------------" + StringUtil.toHexString(responseApdu));
         return StringUtil.toHexString(responseApdu);
     }
 
     private byte[] toByteArray(String hex) {
-        String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");//.replace('+','-').replace('/','_');
+        String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");
         ArrayList<String> data = sliding(hex);
-
         ByteArrayOutputStream op = new ByteArrayOutputStream();
-
         for (int i = 0; i < data.size(); i++) {
             op.write((byte)Integer.parseInt(data.get(i),16));
         }
-
         return op.toByteArray();
     }
 }
