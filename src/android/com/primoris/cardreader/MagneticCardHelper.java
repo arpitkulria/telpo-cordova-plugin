@@ -134,6 +134,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
                         chipData = getCardDetails();
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD ANS>>>>>>>>>>>>>>>>>>>" + chipData);
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
                     }
@@ -182,17 +183,6 @@ public class MagneticCardHelper extends CordovaPlugin {
             Map<String, String> blankMap = new HashMap();
            return blankMap;
         }
-
-/*
-        switch(resp) {
-            case "6A82":
-                new HashMap();
-                break;
-            default: getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
-        }
-*/
-
-
     }
 
     private boolean checkValidResponse(String resApdu) {
