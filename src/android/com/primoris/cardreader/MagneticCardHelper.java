@@ -135,6 +135,8 @@ public class MagneticCardHelper extends CordovaPlugin {
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
                         chipData = getCardDetails();
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD result getCardDetails()>>> " + getCardDetails());
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
                     }
