@@ -125,7 +125,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         this.activity.registerReceiver(mReceiver, filter);
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
 //            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 //            Date date = new Date();
 //            System.out.println(" beforeeeeeeee" + dateFormat.format(date));
