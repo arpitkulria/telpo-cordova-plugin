@@ -70,25 +70,34 @@ public class MagneticCardHelper extends CordovaPlugin {
         if (action.equals("open")) {
             System.out.println("\n\n\n In Action == open \n\n\n\n");
             try {
-                this.open();
-                callbackContext.success("Successssssss opeeeeenn");
+                this.activity.runOnUiThread(new Runnable() {
+                    public void run() {
+                        this.open();
+                        callbackContext.success("Successssssss opeeeeenn");
+                    }
+                });
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             try {
-                String[] ans = this.startReading();
+                this.activity.runOnUiThread(new Runnable() {
+                    String[] ans = this.startReading();
                 callbackContext.success(Arrays.toString(ans));
+                });
+
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
         } else if(action.equals("startMonitor")) {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
-                Map<String, String> result  = this.startMonitor();
+                this.activity.runOnUiThread(new Runnable() {
+                    Map<String, String> result  = this.startMonitor();
                 callbackContext.success(new JSONObject(result));
                 System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
+                });
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
             }
@@ -125,20 +134,12 @@ public class MagneticCardHelper extends CordovaPlugin {
         this.activity.registerReceiver(mReceiver, filter);
 
         try {
+            //TODO -- DONT USE Thread.sleep()
             Thread.sleep(3000);
-//            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-//            Date date = new Date();
-//            System.out.println(" beforeeeeeeee" + dateFormat.format(date));
-//            Thread.currentThread().join();
-//            Date date1 = new Date();
-//            System.out.println(" Aftereeeeeeeee" + dateFormat.format(date1));
         } catch (Exception e) {
-            System.out.println("=================================================");
             System.out.println(e);
         }
-
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
-
         return chipData;
     }
 
