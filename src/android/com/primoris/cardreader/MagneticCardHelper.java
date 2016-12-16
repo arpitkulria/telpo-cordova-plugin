@@ -81,10 +81,20 @@ public class MagneticCardHelper extends CordovaPlugin {
             }
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
+
+            this.cordova.getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    callbackContext.sendPluginResult(myMethod(inputs));
+                }
+            });
+
+
             try {
                 this.activity.runOnUiThread(new Runnable() {
-                    String[] ans = this.startReading();
-                callbackContext.success(Arrays.toString(ans));
+                    public void run() {
+                        String[] ans = this.startReading();
+                        callbackContext.success(Arrays.toString(ans));
+                    }
                 });
 
             } catch (Exception ex) {
@@ -94,9 +104,11 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
                 this.activity.runOnUiThread(new Runnable() {
-                    Map<String, String> result  = this.startMonitor();
-                callbackContext.success(new JSONObject(result));
-                System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
+                    public void run() {
+                        Map<String, String> result = this.startMonitor();
+                        callbackContext.success(new JSONObject(result));
+                        System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
+                    }
                 });
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
