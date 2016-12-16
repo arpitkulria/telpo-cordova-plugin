@@ -72,7 +72,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             try {
                 this.activity.runOnUiThread(new Runnable() {
                     public void run() {
-                        this.open();
+                        open();
                         callbackContext.success("Successssssss opeeeeenn");
                     }
                 });
@@ -92,7 +92,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             try {
                 this.activity.runOnUiThread(new Runnable() {
                     public void run() {
-                        String[] ans = this.startReading();
+                        String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
                     }
                 });
@@ -105,7 +105,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             try {
                 this.activity.runOnUiThread(new Runnable() {
                     public void run() {
-                        Map<String, String> result = this.startMonitor();
+                        Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
                     }
