@@ -119,7 +119,11 @@ public class MagneticCardHelper extends CordovaPlugin {
         System.out.println("<<<<<<<<<< Before register ??? >> " + chipData);
 
         this.activity.registerReceiver(mReceiver, filter);
+
+        Thread.sleep(4000);
+
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
+
         return chipData;
     }
 
