@@ -83,6 +83,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
             try {
                 Map<String, String> result  = this.startMonitor();
+                System.out.println("JSON OBJECT >>>>>>>>>> " + new JSONObject(result));
                 callbackContext.success(new JSONObject(result));
             } catch (Exception ex) {
                 System.out.println("in teklpo exception");
