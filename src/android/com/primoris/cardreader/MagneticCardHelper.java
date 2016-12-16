@@ -136,7 +136,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
                         chipData = getCardDetails();
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
-                        System.out.println("<<<<<<<<<<<<<<SMART CARD result getCardDetails()>>> " + getCardDetails());
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD result getCardDetails()>>> " + geCardDetails());
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
                     }
@@ -152,9 +152,12 @@ public class MagneticCardHelper extends CordovaPlugin {
     private Map<String, String> getCardDetails() {
         Map<String, String> cardAppIdentifiers = new HashMap();
         Map<String, String> result = new HashMap();
+        Map<String, String> result1 = new HashMap();
         cardAppIdentifiers.put("A00000002501", "AMEX");
         cardAppIdentifiers.put("A0000000031010", "VISA");
         cardAppIdentifiers.put("A0000000041010", "MC");
+
+
 
         String selectCommandApdu = "00A40400";
 
@@ -164,16 +167,19 @@ public class MagneticCardHelper extends CordovaPlugin {
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
+                result1.putAll(result);
                 System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + result);
             } else {
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
                 System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
-                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex<<>>>>>" + result);
+                result1.putAll(result);
+                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex result<<>>>>>" + result);
+                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex result1<<>>>>>" + result1);
             }
         }
-        return result;
+        return resul1;
     }
 
     private Map<String, String> checkSelectResponse(String resp, String cardType) {
