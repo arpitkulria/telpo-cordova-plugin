@@ -82,13 +82,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
 
-            this.cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    callbackContext.sendPluginResult(myMethod(inputs));
-                }
-            });
-
-
             try {
                 this.activity.runOnUiThread(new Runnable() {
                     public void run() {
