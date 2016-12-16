@@ -63,7 +63,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args,
-                           CallbackContext callbackContext) throws JSONException {
+                           final CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
         boolean retValue = true;
@@ -75,7 +75,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
-                        callbackContext.sendPluginResult("SUccessss");
+                        //callbackContext.sendPluginResult("SUccessss");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -91,7 +91,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
-                        callbackContext.sendPluginResult(Arrays.toString(ans));
+                        //callbackContext.sendPluginResult(Arrays.toString(ans));
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -106,7 +106,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
-                        callbackContext.sendPluginResult(new JSONObject(result));
+                        //callbackContext.sendPluginResult(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
