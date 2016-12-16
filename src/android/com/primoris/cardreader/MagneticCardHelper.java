@@ -75,6 +75,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
+                        callbackContext.sendPluginResult("SUccessss");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -90,6 +91,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
+                        callbackContext.sendPluginResult(Arrays.toString(ans));
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -104,6 +106,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
+                        callbackContext.sendPluginResult(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
