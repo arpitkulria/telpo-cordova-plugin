@@ -106,7 +106,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
-                        this.activity.unregisterReceiver(mReceiverCopy);
+                        activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
