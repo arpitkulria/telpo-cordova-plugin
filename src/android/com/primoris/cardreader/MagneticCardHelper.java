@@ -82,8 +82,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         } else if (action.equals("startReading")) {
             System.out.println("\n\n\n In Action == startReading \n\n\n\n");
-
-
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
@@ -110,8 +108,8 @@ public class MagneticCardHelper extends CordovaPlugin {
                     }
                 }
             });
-        } else if(action.equals("stopMonitor")) {
-            System.out.println("\n\n\n In Action == stopMonitor \n\n\n\n");
+        } else if(action.equals("stop")) {
+            System.out.println("\n\n\n In Action == stop \n\n\n\n");
 
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
