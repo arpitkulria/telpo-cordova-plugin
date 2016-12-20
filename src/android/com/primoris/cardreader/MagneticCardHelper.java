@@ -164,7 +164,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         try {
             //TODO -- DONT USE Thread.sleep()
-            Thread.sleep(3000);
+            Thread.sleep(3500);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -189,7 +189,6 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
                         chipData = getCardDetails();
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
-                        //System.out.println("<<<<<<<<<<<<<<SMART CARD result getCardDetails()>>> " + getCardDetails());
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
                     }
