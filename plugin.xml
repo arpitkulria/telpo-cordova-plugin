@@ -42,7 +42,7 @@
         <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi"  framework="true" />
         <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi"  framework="true" />
         <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi"  framework="true" />
-        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi"  framework="true" />
+        <!--<source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi"  framework="true" />-->
         <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi"  framework="true" />
         <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi"  framework="true" />
 
@@ -56,7 +56,7 @@
         <lib-file src="src/android/libs/armeabi/libpicc.so" arch="device"  framework="true" />
         <lib-file src="src/android/libs/armeabi/libsystem_util.so" arch="device"  framework="true" />
         <lib-file src="src/android/libs/armeabi/libtelpo_msr.so" arch="device"  framework="true" />
-        <lib-file src="src/android/libs/armeabi/libtelpo_printer.so" arch="device"  framework="true" />
+        <!--<lib-file src="src/android/libs/armeabi/libtelpo_printer.so" arch="device"  framework="true" />-->
         <lib-file src="src/android/libs/armeabi/libtelpo_serial.so" arch="device"  framework="true" />
         <lib-file src="src/android/libs/armeabi/libusb_util.so" arch="device"  framework="true" />
 
@@ -69,7 +69,7 @@
         <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi-v7a"  framework="true" />
         <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
         <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi-v7a"  framework="true" />
-        <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi-v7a"  framework="true" />
+        <!--<source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi-v7a"  framework="true" />-->
         <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi-v7a"  framework="true" />
         <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
 
