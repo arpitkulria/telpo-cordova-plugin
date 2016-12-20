@@ -28,8 +28,13 @@ MagneticCardHelper.prototype.startReading = function(callback) {
 
 MagneticCardHelper.prototype.startMonitor = function(callback) {
     console.log("+++++++++++++++IN START MONITOR++++++++++++++++++++++");
+    var failureCallbackStop = function() {
+        console.log("Problem while Stoping");
+    };
+
     var failureCallback = function() {
         console.log("Problem while startReading");
+        cordova.exec(callback, failureCallbackStop, "MagneticCardHelper", "stopMonitor", []);
     };
 
     cordova.exec(callback, failureCallback, "MagneticCardHelper", "startMonitor", []);

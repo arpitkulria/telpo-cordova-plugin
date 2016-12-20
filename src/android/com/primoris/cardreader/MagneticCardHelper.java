@@ -40,7 +40,6 @@ import android.content.BroadcastReceiver;
 import com.telpo.tps550.api.reader.ReaderMonitor;
 import com.telpo.tps550.api.reader.SmartCardReader;
 import android.content.IntentFilter;
-import com.telpo.tps550.api.reader.SmartCardReader;
 import java.io.UnsupportedEncodingException;
 import android.content.IntentFilter;
 import com.telpo.tps550.api.reader.CardReader;
@@ -72,6 +71,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
+                public void run() {
                     try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
@@ -90,7 +90,6 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
-                        close();
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -107,6 +106,24 @@ public class MagneticCardHelper extends CordovaPlugin {
                         callbackContext.success(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
                         //activity.unregisterReceiver(mReceiverCopy);
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception");
+                    }
+                }
+            });
+        } else if(action.equals("stopMonitor")) {
+            System.out.println("\n\n\n In Action == stopMonitor \n\n\n\n");
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
+                        //Stop Smart card reader
+                        activity.unregisterReceiver(mReceiverCopy);
+                        ReaderMonitor.stopMonitor();
+                        //Stop mag card reader
+                        close();
+//                        Map<String, String> result = startMonitor();
+                        callbackContext.success("STOP success");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
