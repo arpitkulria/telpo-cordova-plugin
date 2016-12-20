@@ -75,7 +75,6 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
-                        //callbackContext.sendPluginResult("SUccessss");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -91,7 +90,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
-                        //callbackContext.sendPluginResult(Arrays.toString(ans));
+                        close();
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -106,8 +105,8 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
-                        //callbackContext.sendPluginResult(new JSONObject(result));
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
+                        this.activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -122,6 +121,10 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     public static void open() throws TelpoException {
         MagneticCard.open();
+    }
+
+    public static void close() throws TelpoException {
+        MagneticCard.close();
     }
 
     public static String[] startReading() throws TelpoException {
@@ -143,7 +146,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         System.out.println("<<<<<<<<<< Before register ??? >> " + chipData);
 
-        this.activity.registerReceiver(mReceiver, filter);
+        this.activity.registerReceiver(mReceiverCopy, filter);
 
         try {
             //TODO -- DONT USE Thread.sleep()
@@ -154,6 +157,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
         return chipData;
     }
+
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
@@ -182,6 +186,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         }
 
     };
+
+    private final BroadcastReceiver mReceiverCopy = mReceiver ;
 
 
     private Map<String, String> getCardDetails() {
