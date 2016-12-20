@@ -164,7 +164,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         try {
             //TODO -- DONT USE Thread.sleep()
-            Thread.sleep(3500);
+            Thread.sleep(4000);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -294,9 +294,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private Map<String, String> getCommandAPDUParams(String resApdu, String cardType) {
-        System.out.println("---------before sliding = == " + resApdu);
         ArrayList<String> resArr = sliding(resApdu);
-        System.out.println("---------after sliding = == " + Arrays.toString(resArr.toArray()));
         Map<String, String> response;
         if(cardType.equals("VISA")) {
             String sfiStr1 = resArr.get(4);
@@ -359,16 +357,8 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private String hexStringToAscii(String hexValue) {
-
         StringBuilder output = new StringBuilder("");
-
-
-        System.out.println("in hexStringToAscii == " + hexValue);
-
         ArrayList<String> strArr = sliding(hexValue);
-
-        System.out.println("-----------STRARR >>> AFTER SLIDING  == " + strArr);
-
 
         for (int i = 0; i < strArr.size(); i ++) {
             String str = strArr.get(i);
@@ -381,15 +371,10 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
     private String getParam2(String sfiStr) {
-        //byte[] sfiByte = sfiStr.getBytes();
-
         byte[] data = toByteArray(sfiStr);
-
         byte[] p2 = {(byte)(data[0] | 4)};
         return StringUtil.toHexString(p2);
     }
-
-
 
     private String sendApdu(String apdu) {
         byte[] apduArr = toByteArray(apdu);
