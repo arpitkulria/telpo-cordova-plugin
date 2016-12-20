@@ -71,7 +71,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
-                public void run() {
                     try {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
