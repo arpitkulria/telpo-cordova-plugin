@@ -456,7 +456,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
         int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 
-        return (level / scale.toFloat) * 100;
+        return (level / (Float) scale) * 100;
     }
 
 }
