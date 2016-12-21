@@ -134,7 +134,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        Int res = print(args.getString(0));
+                        int res = print(args.getString(0));
                         callbackContext.success(res);
                     } catch (Exception ex) {
                         System.out.println("in telpo exception");
@@ -413,15 +413,15 @@ public class MagneticCardHelper extends CordovaPlugin {
     /**
      * Plugin method for print functionality
      */
-    private Int print(String content) {
-        if (getBatteryPercent <= 5){
+    private int print(String content) {
+        if (getBatteryPercent() <= 5){
             return -2;
         } else {
-            startPrintProcess(content);
+            startPrinting(content);
         }
     }
 
-    private  Int startPrinting(String content) {
+    private int startPrinting(String content) {
         try {
             ThermalPrinter.start();
             ThermalPrinter.reset();
@@ -448,13 +448,13 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Float getBatteryPercent() {
         IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Context batteryStatus = this.activity.registerReceiver(new BroadcastReceiver() {
+        Intent batteryStatus = this.activity.registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {}
         }, ifilter);
 
-        Int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        Int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+        int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 
         return (level / scale.toFloat) * 100;
     }
