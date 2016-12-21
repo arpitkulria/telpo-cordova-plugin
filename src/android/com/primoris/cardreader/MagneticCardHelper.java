@@ -417,7 +417,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         if (getBatteryPercent <= 5){
             return -2;
         } else {
-            startPrintProcess(content)
+            startPrintProcess(content);
         }
     }
 
@@ -435,20 +435,20 @@ public class MagneticCardHelper extends CordovaPlugin {
             ThermalPrinter.walkPaper(100);
             return 0;
         } catch (NoPaperException ex) {
-            ex.printStackTrace()
+            ex.printStackTrace();
             return -1;
         } catch (OverHeatException ex) {
-            ex.printStackTrace()
-            return -3
+            ex.printStackTrace();
+            return -3;
         } catch (Exception ex) {
-            ex.printStackTrace()
-            return -4
+            ex.printStackTrace();
+            return -4;
         }
     }
 
-    private Float getBatteryPercent {
+    private Float getBatteryPercent() {
         IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Context batteryStatus = activity.registerReceiver(new BroadcastReceiver {
+        Context batteryStatus = this.activity.registerReceiver(new BroadcastReceiver {
             @Override
             public void onReceive(Context context, Intent intent) {}
         }, ifilter);
