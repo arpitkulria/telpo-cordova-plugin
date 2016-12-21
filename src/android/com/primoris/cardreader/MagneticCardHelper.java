@@ -41,9 +41,11 @@ import com.telpo.tps550.api.reader.ReaderMonitor;
 import com.telpo.tps550.api.reader.SmartCardReader;
 import android.content.IntentFilter;
 import java.io.UnsupportedEncodingException;
-import android.content.IntentFilter;
 import com.telpo.tps550.api.reader.CardReader;
-
+import android.os.BatteryManager;
+import com.telpo.tps550.api.printer.NoPaperException;
+import com.telpo.tps550.api.printer.OverHeatException;
+import com.telpo.tps550.api.printer.ThermalPrinter;
 
 public class MagneticCardHelper extends CordovaPlugin {
 
@@ -75,7 +77,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         open();
                         callbackContext.success("Successssssss opeeeeenn");
                     } catch (Exception ex) {
-                        System.out.println("in teklpo exception");
+                        System.out.println("in telpo exception");
                     }
                 }
             });
@@ -88,7 +90,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         String[] ans = startReading();
                         callbackContext.success(Arrays.toString(ans));
                     } catch (Exception ex) {
-                        System.out.println("in teklpo exception");
+                        System.out.println("in telpo exception");
                     }
                 }
             });
@@ -104,7 +106,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
-                        System.out.println("in teklpo exception");
+                        System.out.println("in telpo exception");
                     }
                 }
             });
@@ -122,7 +124,20 @@ public class MagneticCardHelper extends CordovaPlugin {
 //                        Map<String, String> result = startMonitor();
                         callbackContext.success("STOP success");
                     } catch (Exception ex) {
-                        System.out.println("in teklpo exception");
+                        System.out.println("in telpo exception");
+                    }
+                }
+            });
+        } else if(action.equals("print")) {
+            System.out.println("\n\n\n In Action == print \n\n\n\n");
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
+                        Int res = print(args.getString(0));
+                        callbackContext.success(res);
+                    } catch (Exception ex) {
+                        System.out.println("in telpo exception");
                     }
                 }
             });
@@ -394,4 +409,54 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         return op.toByteArray();
     }
+
+    /**
+     * Plugin method for print functionality
+     */
+    private Int print(String content) {
+        if (getBatteryPercent <= 5){
+            return -2;
+        } else {
+            startPrintProcess(content)
+        }
+    }
+
+    private  Int startPrinting(String content) {
+        try {
+            ThermalPrinter.start();
+            ThermalPrinter.reset();
+            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_LEFT);
+            ThermalPrinter.setLeftIndent(1);
+            ThermalPrinter.setLineSpace(1);
+            ThermalPrinter.setFontSize(2);
+            ThermalPrinter.setGray(5);
+            ThermalPrinter.addString(content);
+            ThermalPrinter.printString();
+            ThermalPrinter.walkPaper(100);
+            return 0;
+        } catch (NoPaperException ex) {
+            ex.printStackTrace()
+            return -1;
+        } catch (OverHeatException ex) {
+            ex.printStackTrace()
+            return -3
+        } catch (Exception ex) {
+            ex.printStackTrace()
+            return -4
+        }
+    }
+
+    private Float getBatteryPercent {
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Context batteryStatus = activity.registerReceiver(new BroadcastReceiver {
+            @Override
+            public void onReceive(Context context, Intent intent) {}
+        }, ifilter);
+
+        Int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        Int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+
+        return (level / scale.toFloat) * 100;
+    }
+
 }

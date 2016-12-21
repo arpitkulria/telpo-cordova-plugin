@@ -41,6 +41,15 @@ MagneticCardHelper.prototype.stop = function(callback) {
     cordova.exec(callback, failureCallback, "MagneticCardHelper", "stop", []);
 };
 
+MagneticCardHelper.prototype.print = function(callback, content) {
+    console.log("+++++++++++++++IN PRINT++++++++++++++++++++++");
+    var failureCallback = function() {
+        console.log("Problem while stopping");
+    };
+
+    cordova.exec(callback, failureCallback, "MagneticCardHelper", "print", [content]);
+};
+
 
 module.exports = new MagneticCardHelper();
 // module.exports = new SmartCardHelper();
