@@ -448,7 +448,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Float getBatteryPercent() {
         IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Context batteryStatus = this.activity.registerReceiver(new BroadcastReceiver {
+        Context batteryStatus = this.activity.registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {}
         }, ifilter);
