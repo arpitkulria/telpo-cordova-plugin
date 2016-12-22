@@ -135,7 +135,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 public void run() {
                     try {
                         System.out.println("Print agrs >>>>>>>>>>>>>>>>> "+args);
-                        int res = print(args.getString(0));
+                        int res = print(args.getString(0), args.getString(1));
                         callbackContext.success(res);
                     } catch (Exception ex) {
                         System.out.println("in telpo exception");
@@ -414,15 +414,15 @@ public class MagneticCardHelper extends CordovaPlugin {
     /**
      * Plugin method for print functionality
      */
-    private int print(String content) {
+    private int print(String content, String sign) {
         if (getBatteryPercent() <= 5) {
             return -2;
         } else {
-            return startPrinting(content);
+            return startPrinting(content, sign);
         }
     }
 
-    private int startPrinting(String content) {
+    private int startPrinting(String content, String sign) {
         try {
             ThermalPrinter.start();
             ThermalPrinter.reset();
@@ -433,7 +433,12 @@ public class MagneticCardHelper extends CordovaPlugin {
             ThermalPrinter.setGray(5);
             ThermalPrinter.addString(content);
             ThermalPrinter.printString();
+            byte[] decodedString = Base64.decode(sign, Base64.DEFAULT);
+            Bitmap bitMap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+            ThermalPrinter.printLogo(bitMap);
+
             ThermalPrinter.walkPaper(100);
+            ThermalPrinter.stop();
             return 0;
         } catch (NoPaperException ex) {
             ex.printStackTrace();
