@@ -134,6 +134,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
+                        System.out.println("Print agrs >>>>>>>>>>>>>>>>> "+args);
                         int res = print(args.getString(0));
                         callbackContext.success(res);
                     } catch (Exception ex) {
