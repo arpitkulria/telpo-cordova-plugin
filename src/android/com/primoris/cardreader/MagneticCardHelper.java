@@ -185,12 +185,12 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         try {
             //TODO -- DONT USE Thread.sleep()
-            Thread.sleep(4000);
+            Thread.currentThread().sleep(4000);
+            System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
+            return chipData;
         } catch (Exception e) {
             System.out.println(e);
         }
-        System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
-        return chipData;
     }
 
 
