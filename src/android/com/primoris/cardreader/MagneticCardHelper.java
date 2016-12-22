@@ -63,7 +63,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     private static final int REQUEST_CARD_SCAN = 10;
 
     @Override
-    public boolean execute(String action, JSONArray args,
+    public boolean execute(String action, final JSONArray args,
                            final CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
