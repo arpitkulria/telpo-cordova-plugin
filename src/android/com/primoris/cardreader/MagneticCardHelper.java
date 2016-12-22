@@ -446,7 +446,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         }
     }
 
-    private Float getBatteryPercent() {
+    private float getBatteryPercent() {
         IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         Intent batteryStatus = this.activity.registerReceiver(new BroadcastReceiver() {
             @Override
@@ -456,7 +456,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
         int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 
-        return (level / (Float) scale) * 100;
+        return (level / (float) 2.0) * 100;
     }
 
 }
