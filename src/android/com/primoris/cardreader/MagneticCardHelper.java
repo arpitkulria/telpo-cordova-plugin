@@ -183,9 +183,11 @@ public class MagneticCardHelper extends CordovaPlugin {
 
        Intent a =  this.activity.registerReceiver(mReceiver, filter);
 
-        a.getStringExtra("key");
+        String data = a.getStringExtra("key");
+
 
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
+        System.out.println("<<<<<<<<<< data === " + data);
 
         return chipData;
 
