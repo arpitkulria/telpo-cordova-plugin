@@ -181,17 +181,22 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         System.out.println("<<<<<<<<<< Before register ??? >> " + chipData);
 
-        this.activity.registerReceiver(mReceiver, filter);
+       Intent a =  this.activity.registerReceiver(mReceiver, filter);
 
-        //Thread.sleep(4000);
+        a.getStringExtra("key");
+
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
 
-        while(chipData.size() == 0) {
-            System.out.println("<<<<<in while loop size is 0<<<<");
-            continue;
-        }
-
         return chipData;
+
+
+        //Thread.sleep(4000);
+
+//        while(chipData.size() == 0) {
+//            System.out.println("<<<<<in while loop size is 0<<<<");
+//            continue;
+//        }
+
 
 //        if (chipData.size > 0) {
 //            return chipData;
@@ -231,7 +236,10 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
+
                         chipData = getCardDetails();
+                        intent.putExtra("key", "value");
+
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
