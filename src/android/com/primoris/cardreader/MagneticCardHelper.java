@@ -414,10 +414,10 @@ public class MagneticCardHelper extends CordovaPlugin {
      * Plugin method for print functionality
      */
     private int print(String content) {
-        if (getBatteryPercent() <= 5){
+        if (getBatteryPercent() <= 5) {
             return -2;
         } else {
-            startPrinting(content);
+            return startPrinting(content);
         }
     }
 
