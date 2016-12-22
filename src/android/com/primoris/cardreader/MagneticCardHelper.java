@@ -44,6 +44,27 @@ import java.io.UnsupportedEncodingException;
 import android.content.IntentFilter;
 import com.telpo.tps550.api.reader.CardReader;
 
+//class ReadThread extends Thread {
+//    //MagneticCardHelper mch = new MagneticCardHelper();
+//    override def run: Unit = {
+////        openMagneticCard()
+////        startReading()
+//        MagneticCardHelper.open();
+//        MagneticCardHelper.startReading()
+//
+//
+//        while(!Thread.interrupted()) {
+//            try {
+//
+//                displayCardDetails(trackData)
+//                startReading()
+//            } catch (Exception ex) {
+//                System.out.println("Thread class exception");
+//            }
+//        }
+//    }
+//}
+
 
 public class MagneticCardHelper extends CordovaPlugin {
 
