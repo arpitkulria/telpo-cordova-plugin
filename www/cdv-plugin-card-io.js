@@ -42,7 +42,7 @@ MagneticCardHelper.prototype.stop = function(callback) {
 };
 
 MagneticCardHelper.prototype.print = function(callback, content) {
-    console.log("+++++++++++++++IN PRINT++++++++++++++++++++++");
+    console.log("+++++++++++++++IN PRINT++++++++++++++++++++++",content);
     var failureCallback = function() {
         console.log("Problem while stopping");
     };
