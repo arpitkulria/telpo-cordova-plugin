@@ -172,7 +172,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     public Map<String, String> chipData = new HashMap();
 
-    public Map<String, String> startMonitor() throws TelpoException {
+    public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
 
@@ -182,8 +182,11 @@ public class MagneticCardHelper extends CordovaPlugin {
         System.out.println("<<<<<<<<<< Before register ??? >> " + chipData);
 
         this.activity.registerReceiver(mReceiver, filter);
+        Thread.sleep(4000);
+        System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
+        return chipData;
 
-        try {
+/*        try {
             //TODO -- DONT USE Thread.sleep()
             Thread.sleep(4000);
             System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
@@ -191,7 +194,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         } catch (Exception e) {
             System.out.println(e);
             return chipData;
-        }
+        }*/
     }
 
 
