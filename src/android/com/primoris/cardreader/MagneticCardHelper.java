@@ -46,6 +46,8 @@ import android.os.BatteryManager;
 import com.telpo.tps550.api.printer.NoPaperException;
 import com.telpo.tps550.api.printer.OverHeatException;
 import com.telpo.tps550.api.printer.ThermalPrinter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 public class MagneticCardHelper extends CordovaPlugin {
 
