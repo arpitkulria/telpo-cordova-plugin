@@ -185,14 +185,19 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         Thread.sleep(4000);
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
-        return chipData;
-        if (chipData.size() == 0) {
-            System.out.println("in if caseeee \n\n\n\n\n\n ");
-            continue;
-        } else {
-            System.out.println("in else caseeee \n\n\n\n\n\n ");
-            return chipData;
+//        return chipData;
+
+        while(chipData.size() == 0) {
+            if (chipData.size() == 0) {
+                System.out.println("in if caseeee \n\n\n\n\n\n ");
+                continue;
+            } else {
+                System.out.println("in else caseeee \n\n\n\n\n\n ");
+                return chipData;
+            }
         }
+
+
 
 
 /*        try {
