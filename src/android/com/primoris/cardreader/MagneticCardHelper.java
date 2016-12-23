@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Date;
 import java.util.*;
 import java.text.*;
+import java.io.InputStream;
 
 import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
