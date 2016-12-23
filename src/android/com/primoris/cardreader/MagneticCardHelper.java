@@ -425,6 +425,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private int startPrinting(String content, String sign) {
+        System.out.println("\n\n STRING sign >>>>>>>>>>>>>>>> "+sign);
         try {
             ThermalPrinter.start();
             ThermalPrinter.reset();
