@@ -436,7 +436,8 @@ public class MagneticCardHelper extends CordovaPlugin {
             ThermalPrinter.setGray(5);
             ThermalPrinter.addString(content);
             ThermalPrinter.printString();
-            byte[] decodedString = Base64.decode(sign, Base64.DEFAULT);
+            String sign1 = sign.split(",");
+            byte[] decodedString = Base64.decode(sign1[1], Base64.DEFAULT);
             Bitmap bitMap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             ThermalPrinter.printLogo(bitMap);
 
