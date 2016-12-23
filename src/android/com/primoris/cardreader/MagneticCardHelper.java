@@ -433,7 +433,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             ThermalPrinter.setLeftIndent(1);
             ThermalPrinter.setLineSpace(1);
             ThermalPrinter.setFontSize(2);
-            ThermalPrinter.setGray(5);
+            ThermalPrinter.setGray(8);
             ThermalPrinter.addString(content);
             ThermalPrinter.printString();
             String[] sign1 = sign.split(",");
