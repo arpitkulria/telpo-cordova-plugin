@@ -425,8 +425,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         }
     }
 
-    private int startPrinting(String content, String sign) {
-        System.out.println("\n\n STRING sign >>>>>>>>>>>>>>>> "+sign);
+    private int startPrinting(String content, String signImageDataUrl, String logoPath) {
         try {
             ThermalPrinter.start();
             ThermalPrinter.reset();
@@ -438,20 +437,14 @@ public class MagneticCardHelper extends CordovaPlugin {
 
             InputStream inputStream = null;
 
-            for (int i=0; i<this.activity.getApplicationContext().getAssets().list("www/assets").length; i++) {
-                // Get filename of file or directory
-                String filename = this.activity.getApplicationContext().getAssets().list("www/assets")[i];
-                System.out.println("\n\n getAssets >>>>>>>>>>>>>>>> "+filename);
-            }
-
-            inputStream = this.activity.getApplicationContext().getAssets().open("www/assets/primoris.png");
+            inputStream = this.activity.getApplicationContext().getAssets().open(logoPath);
             Bitmap logoBitMap = BitmapFactory.decodeStream(inputStream);
             ThermalPrinter.printLogo(logoBitMap);
 
             ThermalPrinter.addString(content);
             ThermalPrinter.printString();
-            String[] sign1 = sign.split(",");
-            byte[] decodedString = Base64.decode(sign1[1], Base64.DEFAULT);
+            String[] dataUrlArray = signImageDataUrl.split(",");
+            byte[] decodedString = Base64.decode(dataUrlArray[1], Base64.DEFAULT);
             Bitmap bitMap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             ThermalPrinter.printLogo(bitMap);
 

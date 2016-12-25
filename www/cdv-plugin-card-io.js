@@ -41,13 +41,13 @@ MagneticCardHelper.prototype.stop = function(callback) {
     cordova.exec(callback, failureCallback, "MagneticCardHelper", "stop", []);
 };
 
-MagneticCardHelper.prototype.print = function(content, signaturePath, callback) {
-    console.log("+++++++++++++++IN PRINT++++++++++++++++++++ ::: ",content);
+MagneticCardHelper.prototype.print = function(content, signaturePath, logo, callback) {
+    console.log("+++++++++++++++IN PRINT++++++++++++++++++++ ::: ");
     var failureCallback = function() {
         console.log("Problem while stopping");
     };
 
-    cordova.exec(callback, failureCallback, "MagneticCardHelper", "print", [content, signaturePath]);
+    cordova.exec(callback, failureCallback, "MagneticCardHelper", "print", [content, signaturePath, logo]);
 };
 
 
