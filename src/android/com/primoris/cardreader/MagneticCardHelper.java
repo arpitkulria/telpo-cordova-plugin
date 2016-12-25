@@ -438,9 +438,9 @@ public class MagneticCardHelper extends CordovaPlugin {
 
             InputStream inputStream = null;
 
-            for (int i=0; i<this.activity.getApplicationContext().getAssets().list("www").length; i++) {
+            for (int i=0; i<this.activity.getApplicationContext().getAssets().list("www/assets").length; i++) {
                 // Get filename of file or directory
-                String filename = this.activity.getApplicationContext().getAssets().list("www")[i];
+                String filename = this.activity.getApplicationContext().getAssets().list("www/assets")[i];
                 System.out.println("\n\n getAssets >>>>>>>>>>>>>>>> "+filename);
             }
 
@@ -456,7 +456,6 @@ public class MagneticCardHelper extends CordovaPlugin {
             ThermalPrinter.printLogo(bitMap);
 
             ThermalPrinter.walkPaper(100);
-            ThermalPrinter.stop();
             return 0;
         } catch (NoPaperException ex) {
             ex.printStackTrace();
@@ -467,6 +466,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         } catch (Exception ex) {
             ex.printStackTrace();
             return -4;
+        } finally {
+            ThermalPrinter.stop();
         }
     }
 
