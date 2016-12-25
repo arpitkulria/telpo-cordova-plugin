@@ -438,9 +438,9 @@ public class MagneticCardHelper extends CordovaPlugin {
 
             InputStream inputStream = null;
 
-            System.out.println("\n\n getAssets >>>>>>>>>>>>>>>> "+this.activity.getApplicationContext().getAssets().list("").length());
+            System.out.println("\n\n getAssets size >>>>>>>>>>>>>>>> "+this.activity.getApplicationContext().getAssets().list("").size());
             System.out.println("\n\n getAssets >>>>>>>>>>>>>>>> "+this.activity.getApplicationContext().getAssets().list("")[1]);
-            inputStream = this.activity.getApplicationContext().getAssets().open("primoris.png");
+            inputStream = this.activity.getApplicationContext().getAssets().open("assets/primoris.png");
             Bitmap logoBitMap = BitmapFactory.decodeStream(inputStream);
             ThermalPrinter.printLogo(logoBitMap);
 
