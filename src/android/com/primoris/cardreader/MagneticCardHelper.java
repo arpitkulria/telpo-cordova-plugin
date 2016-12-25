@@ -137,8 +137,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        System.out.println("Print agrs >>>>>>>>>>>>>>>>> "+args);
-                        int res = print(args.getString(0), args.getString(1));
+                        int res = print(args.getString(0), args.getString(1), args.getString(2));
                         callbackContext.success(res);
                     } catch (Exception ex) {
                         System.out.println("in telpo exception");
