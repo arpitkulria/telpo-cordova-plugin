@@ -185,6 +185,8 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         String data = a.getStringExtra("key");
 
+        Thread.sleep(5000);
+
 
         System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
         System.out.println("<<<<<<<<<< data === " + data);
