@@ -179,11 +179,15 @@ public class MagneticCardHelper extends CordovaPlugin {
         IntentFilter filter = new IntentFilter();
         filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
         System.out.println("+++++++++++++++++++ Before register ??? >> " + chipData);
-        Intent a =  this.activity.registerReceiver(mReceiver, filter);
+//        Intent a =  this.activity.registerReceiver(mReceiver, filter);
         //String data = a.getStringExtra("key");
+        Process p = Runtime.getRuntime().exec(this.activity.registerReceiver(mReceiver, filter));
 
-        Thread.sleep(5000);
-        Thread.currentThread().sleep(5000);
+        p.waitFor();
+
+//
+//        Thread.sleep(5000);
+//        Thread.currentThread().sleep(5000);
 
         System.out.println("+++++++++++++++++++ After register ??? >> " + chipData);
         //System.out.println("+++++++++++++++++++ data === " + data);
