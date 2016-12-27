@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Date;
 import java.util.*;
 import java.text.*;
+import java.io.InputStream;
+
 
 import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
@@ -43,6 +45,12 @@ import android.content.IntentFilter;
 import java.io.UnsupportedEncodingException;
 import android.content.IntentFilter;
 import com.telpo.tps550.api.reader.CardReader;
+import android.os.BatteryManager;
+import com.telpo.tps550.api.printer.NoPaperException;
+import com.telpo.tps550.api.printer.OverHeatException;
+import com.telpo.tps550.api.printer.ThermalPrinter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 //class ReadThread extends Thread {
 //    //MagneticCardHelper mch = new MagneticCardHelper();
@@ -163,6 +171,19 @@ public class MagneticCardHelper extends CordovaPlugin {
                         callbackContext.success("STOP success");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
+                    }
+                }
+            });
+        } else if(action.equals("print")) {
+            System.out.println("\n\n\n In Action == print \n\n\n\n");
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
+                        int res = print(args.getString(0), args.getString(1), args.getString(2));
+                        callbackContext.success(res);
+                    } catch (Exception ex) {
+                        System.out.println("in telpo exception");
                     }
                 }
             });
@@ -470,5 +491,68 @@ public class MagneticCardHelper extends CordovaPlugin {
         }
 
         return op.toByteArray();
+    }
+
+    /**
+     * Plugin method for print functionality
+     */
+    private int print(String content, String sign, String logoPath) {
+        if (getBatteryPercent() <= 5) {
+            return -2;
+        } else {
+            return startPrinting(content, sign, logoPath);
+        }
+    }
+
+    private int startPrinting(String content, String signImageDataUrl, String logoPath) {
+        try {
+            ThermalPrinter.start();
+            ThermalPrinter.reset();
+            ThermalPrinter.setLeftIndent(1);
+            ThermalPrinter.setLineSpace(1);
+            ThermalPrinter.setFontSize(2);
+            ThermalPrinter.setGray(8);
+            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_MIDDLE);
+            InputStream inputStream = null;
+
+            inputStream = this.activity.getApplicationContext().getAssets().open(logoPath);
+            Bitmap logoBitMap = BitmapFactory.decodeStream(inputStream);
+            ThermalPrinter.printLogo(logoBitMap);
+
+            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_LEFT);
+            ThermalPrinter.addString(content);
+            ThermalPrinter.printString();
+            String[] dataUrlArray = signImageDataUrl.split(",");
+            byte[] decodedString = Base64.decode(dataUrlArray[1], Base64.DEFAULT);
+            Bitmap bitMap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+            ThermalPrinter.printLogo(bitMap);
+
+            ThermalPrinter.walkPaper(100);
+            return 0;
+        } catch (NoPaperException ex) {
+            ex.printStackTrace();
+            return -1;
+        } catch (OverHeatException ex) {
+            ex.printStackTrace();
+            return -3;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return -4;
+        } finally {
+            ThermalPrinter.stop();
+        }
+    }
+
+    private float getBatteryPercent() {
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = this.activity.registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {}
+        }, ifilter);
+
+        int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+
+        return (level / (float) 2.0) * 100;
     }
 }
