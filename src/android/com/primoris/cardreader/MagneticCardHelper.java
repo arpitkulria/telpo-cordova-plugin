@@ -428,18 +428,18 @@ public class MagneticCardHelper extends CordovaPlugin {
         try {
             ThermalPrinter.start();
             ThermalPrinter.reset();
-            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_LEFT);
             ThermalPrinter.setLeftIndent(1);
             ThermalPrinter.setLineSpace(1);
             ThermalPrinter.setFontSize(2);
             ThermalPrinter.setGray(8);
-
+            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_MIDDLE);
             InputStream inputStream = null;
 
             inputStream = this.activity.getApplicationContext().getAssets().open(logoPath);
             Bitmap logoBitMap = BitmapFactory.decodeStream(inputStream);
             ThermalPrinter.printLogo(logoBitMap);
 
+            ThermalPrinter.setAlgin(ThermalPrinter.ALGIN_LEFT);
             ThermalPrinter.addString(content);
             ThermalPrinter.printString();
             String[] dataUrlArray = signImageDataUrl.split(",");
