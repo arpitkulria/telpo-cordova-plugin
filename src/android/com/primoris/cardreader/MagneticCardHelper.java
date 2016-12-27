@@ -174,7 +174,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         if (chipData.size() == 0) {
             System.out.println("\n\n chipData.size() == 0 case ---------+++++++----------");
             Thread.sleep(1000);
-            readSmartCard();
+             return readSmartCard();
         } else {
             System.out.println("\n in else case ---------+++++++----------");
             return chipData;
