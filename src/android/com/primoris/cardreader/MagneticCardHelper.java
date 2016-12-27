@@ -136,9 +136,15 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        Map<String, String> result = readSmartCard();
-                        callbackContext.success(new JSONObject(result));
-                        System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + result);
+//                        Map<String, String> result = readSmartCard();
+                        Map<String, String> result = chipData;
+                        if (result.size() == 0) {
+                            System.out.println("IN result.size() == 0 case sending error");
+                            callbackContext.error("SIZE IS 0");
+                        } else {
+                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + result);
+                            callbackContext.success(new JSONObject(result));
+                        }
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
@@ -170,7 +176,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         return retValue;
     }
 
-    public Map<String, String> readSmartCard() throws Exception {
+    /*public Map<String, String> readSmartCard() throws Exception {
         if (chipData.size() == 0) {
             System.out.println("\n\n chipData.size() == 0 case ---------+++++++----------");
             Thread.currentThread().sleep(1000);
@@ -179,7 +185,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             System.out.println("\n in else case ---------+++++++----------");
             return chipData;
         }
-    }
+    }*/
 
     public static void open() throws TelpoException {
         MagneticCard.open();

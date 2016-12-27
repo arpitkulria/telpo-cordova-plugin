@@ -60,8 +60,8 @@
       <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+            <state relative-caret-position="320">
+              <caret line="139" column="61" selection-start-line="139" selection-start-column="61" selection-end-line="139" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -861,12 +861,12 @@
       <workItem from="1482226252218" duration="6665000" />
       <workItem from="1482389062440" duration="16646000" />
       <workItem from="1482751523556" duration="6552000" />
-      <workItem from="1482816689950" duration="4144000" />
+      <workItem from="1482816689950" duration="5750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192709000" />
+    <option name="totallyTimeSpent" value="194315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -915,7 +915,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java</url>
-          <line>322</line>
+          <line>328</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -927,7 +927,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java</url>
-          <line>263</line>
+          <line>269</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1316,8 +1316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+        <state relative-caret-position="320">
+          <caret line="139" column="61" selection-start-line="139" selection-start-column="61" selection-end-line="139" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
