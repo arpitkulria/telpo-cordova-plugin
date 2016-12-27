@@ -136,9 +136,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-//                        Map<String, String> result = readSmartCard();
-                        Map<String, String> result = chipData;
-                        if (result.size() == 0) {
+                        if (chipData.size() == 0) {
                             System.out.println("IN result.size() == 0 case sending error");
                             callbackContext.error("SIZE IS 0");
                         } else {
@@ -162,7 +160,6 @@ public class MagneticCardHelper extends CordovaPlugin {
                         ReaderMonitor.stopMonitor();
                         //Stop mag card reader
                         close();
-//                        Map<String, String> result = startMonitor();
                         callbackContext.success("STOP success");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
@@ -202,9 +199,6 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
 
-
-
-
     public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
@@ -215,16 +209,6 @@ public class MagneticCardHelper extends CordovaPlugin {
 //        Intent a =  this.activity.registerReceiver(mReceiver, filter);
         //String data = a.getStringExtra("key");
         this.activity.registerReceiver(mReceiver, filter);
-
-    /*    Process p = Runtime.getRuntime().exec(cmdArray, null);
-
-        p.waitFor();
-*/
-//
-        //Thread.sleep(5000);
-
-//       Thread.currentThread().sleep(50000);
-
         System.out.println("+++++++++++++++++++ After register ??? >> " + chipData);
         //System.out.println("+++++++++++++++++++ data === " + data);
 
