@@ -148,8 +148,8 @@ public class MagneticCardHelper extends CordovaPlugin {
                             System.out.println("IN result.size() == 0 case sending error");
                             callbackContext.error("SIZE IS 0");
                         } else {
-                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + result);
-                            callbackContext.success(new JSONObject(result));
+                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + chipData);
+                            callbackContext.success(new JSONObject(chipData));
                         }
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
