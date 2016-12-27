@@ -80,6 +80,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
+    public Map<String, String> chipData = new HashMap();
 
     @Override
     public boolean execute(String action, JSONArray args,
@@ -129,6 +130,21 @@ public class MagneticCardHelper extends CordovaPlugin {
                     }
                 }
             });
+        } else if(action.equals("readSmartCard")) {
+            System.out.println("\n\n\n In Action == readSmartCard \n\n\n\n");
+
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
+                        Map<String, String> result = readSmartCard();
+                        callbackContext.success(new JSONObject(result));
+                        System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + result);
+                        //activity.unregisterReceiver(mReceiverCopy);
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception");
+                    }
+                }
+            });
         } else if(action.equals("stop")) {
             System.out.println("\n\n\n In Action == stop \n\n\n\n");
 
@@ -154,6 +170,15 @@ public class MagneticCardHelper extends CordovaPlugin {
         return retValue;
     }
 
+    public Map<String, String> readSmartCard() throws Exception {
+        if (chipData.size() == 0) {
+            Thread.sleep(1000);
+            readSmartCard();
+        } else {
+            return chipData;
+        }
+    }
+
     public static void open() throws TelpoException {
         MagneticCard.open();
     }
@@ -170,7 +195,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
 
-    public Map<String, String> chipData = new HashMap();
+
 
     public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
@@ -190,7 +215,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 //
         //Thread.sleep(5000);
 
-       Thread.currentThread().sleep(50000);
+//       Thread.currentThread().sleep(50000);
 
         System.out.println("+++++++++++++++++++ After register ??? >> " + chipData);
         //System.out.println("+++++++++++++++++++ data === " + data);
