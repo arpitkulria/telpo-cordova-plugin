@@ -91,7 +91,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     public Map<String, String> chipData = new HashMap();
 
     @Override
-    public boolean execute(String action, JSONArray args,
+    public boolean execute(String action, final JSONArray args,
                            final CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();

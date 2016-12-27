@@ -59,8 +59,8 @@
       <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="151" column="78" selection-start-line="151" selection-start-column="78" selection-end-line="151" selection-end-column="78" />
+            <state relative-caret-position="504">
+              <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2608#2609#0" expanded="true" />
@@ -860,12 +860,12 @@
       <workItem from="1481874729119" duration="675000" />
       <workItem from="1481876975570" duration="5309000" />
       <workItem from="1482226252218" duration="6665000" />
-      <workItem from="1482841481955" duration="631000" />
+      <workItem from="1482841481955" duration="1042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165998000" />
+    <option name="totallyTimeSpent" value="166409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
@@ -1309,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="151" column="78" selection-start-line="151" selection-start-column="78" selection-end-line="151" selection-end-column="78" />
+        <state relative-caret-position="504">
+          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2608#2609#0" expanded="true" />
