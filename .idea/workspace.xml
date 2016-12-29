@@ -48,8 +48,8 @@
       <file leaf-file-name="MagneticCardHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+            <state relative-caret-position="741">
+              <caret line="252" column="45" selection-start-line="252" selection-start-column="38" selection-end-line="252" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2703#2704#0" expanded="true" />
@@ -752,12 +752,12 @@
       <workItem from="1481876975570" duration="5309000" />
       <workItem from="1482226252218" duration="6665000" />
       <workItem from="1482841481955" duration="2355000" />
-      <workItem from="1483007823269" duration="4462000" />
+      <workItem from="1483007823269" duration="4527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172184000" />
+    <option name="totallyTimeSpent" value="172249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -1195,8 +1195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/com/primoris/cardreader/MagneticCardHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+        <state relative-caret-position="741">
+          <caret line="252" column="45" selection-start-line="252" selection-start-column="38" selection-end-line="252" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2703#2704#0" expanded="true" />
