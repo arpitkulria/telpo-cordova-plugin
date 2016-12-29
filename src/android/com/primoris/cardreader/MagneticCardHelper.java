@@ -11,7 +11,7 @@ import java.util.*;
 import java.text.*;
 import java.io.InputStream;
 
-
+import org.apache.cordova.PluginResult;
 import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
 import org.apache.cordova.CallbackContext;
@@ -76,6 +76,8 @@ import android.graphics.BitmapFactory;
 
 public class MagneticCardHelper extends CordovaPlugin {
 
+    private CallbackContext connectionCallbackContext;
+
     @Override
     protected void pluginInitialize() {
     }
@@ -85,7 +87,8 @@ public class MagneticCardHelper extends CordovaPlugin {
         super.initialize(cordova, webView);
     }
 
-    private CallbackContext callbackContext;
+    this.connectionCallbackContext = null;
+    //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
     public Map<String, String> chipData = new HashMap();
@@ -144,12 +147,19 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        if (chipData.size() == 0) {
-                            System.out.println("IN result.size() == 0 case sending error");
-                            callbackContext.error("SIZE IS 0");
-                        } else {
-                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + chipData);
-                            callbackContext.success(new JSONObject(chipData));
+//                        if (chipData.size() == 0) {
+//                            System.out.println("IN result.size() == 0 case sending error");
+//                            callbackContext.error("SIZE IS 0");
+//                        } else {
+//                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + chipData);
+//
+                            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "--***--");
+                            pluginResult.setKeepCallback(true);
+//                            callbackContext.sendPluginResult(pluginResult);
+                            return true;
+
+
+//                            callbackContext.success(new JSONObject(chipData));
                         }
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
@@ -234,37 +244,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         //System.out.println("+++++++++++++++++++ data === " + data);
 
         return chipData;
-
-
-        //Thread.sleep(4000);
-
-//        while(chipData.size() == 0) {
-//            System.out.println("<<<<<in while loop size is 0<<<<");
-//            continue;
-//        }
-
-
-//        if (chipData.size > 0) {
-//            return chipData;
-//        } else {
-//
-//        }
-
-
-//        return chipData;
-
-
-
-
-/*        try {
-            //TODO -- DONT USE Thread.sleep()
-            Thread.sleep(4000);
-            System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
-            return chipData;
-        } catch (Exception e) {
-            System.out.println(e);
-            return chipData;
-        }*/
     }
 
 
@@ -284,7 +263,16 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
 
                         chipData = getCardDetails();
-                        intent.putExtra("key", "value");
+
+                        //--------------------------
+
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, chipData);
+                        result.setKeepCallback(true);
+                        callbackContext.sendPluginResult(pluginResult);
+
+                        //--------------------------
+
+//                        intent.putExtra("key", "value");
 
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
                     } else {
