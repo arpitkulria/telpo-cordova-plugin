@@ -268,7 +268,8 @@ public class MagneticCardHelper extends CordovaPlugin {
 
                         PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
                         result.setKeepCallback(true);
-                        callbackContext.sendPluginResult(result);
+//                        callbackContext.sendPluginResult(result);
+                        context.sendPluginResult(result);
 
                         //--------------------------
 
