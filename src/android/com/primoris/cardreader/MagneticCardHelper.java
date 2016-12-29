@@ -87,7 +87,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         super.initialize(cordova, webView);
     }
 
-    //this.connectionCallbackContext = null;
+    this.connectionCallbackContext = null;
     //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
@@ -156,7 +156,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                             PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "--***--");
                             pluginResult.setKeepCallback(true);
 //                            callbackContext.sendPluginResult(pluginResult);
-                            return true;
+                            //return true;
 
 
 //                            callbackContext.success(new JSONObject(chipData));
@@ -266,7 +266,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
                         //--------------------------
 
-                        PluginResult result = new PluginResult(PluginResult.Status.OK, chipData);
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
                         result.setKeepCallback(true);
                         callbackContext.sendPluginResult(pluginResult);
 
