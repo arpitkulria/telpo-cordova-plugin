@@ -87,7 +87,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         super.initialize(cordova, webView);
     }
 
-    this.connectionCallbackContext = null;
+    //this.connectionCallbackContext = null;
     //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
@@ -96,7 +96,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     @Override
     public boolean execute(String action, final JSONArray args,
                            final CallbackContext callbackContext) throws JSONException {
-        this.callbackContext = callbackContext;
+        //this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
         boolean retValue = true;
         if (action.equals("open")) {
