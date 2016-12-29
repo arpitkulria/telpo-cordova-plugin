@@ -87,7 +87,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         super.initialize(cordova, webView);
     }
 
-    this.connectionCallbackContext = null;
+    //this.connectionCallbackContext = null;
     //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
@@ -160,7 +160,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
 
 //                            callbackContext.success(new JSONObject(chipData));
-                        }
+
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
