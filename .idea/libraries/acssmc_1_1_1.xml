@@ -2,7 +2,6 @@
   <library name="acssmc-1.1.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/android/libs/acssmc-1.1.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/android/libs/core-3.1.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/android/libs/sdtapi.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/android/libs/telpo_api.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/android/libs/SmartCardLib.jar!/" />
