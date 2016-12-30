@@ -52,28 +52,6 @@ import com.telpo.tps550.api.printer.ThermalPrinter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-//class ReadThread extends Thread {
-//    //MagneticCardHelper mch = new MagneticCardHelper();
-//    override def run: Unit = {
-////        openMagneticCard()
-////        startReading()
-//        MagneticCardHelper.open();
-//        MagneticCardHelper.startReading()
-//
-//
-//        while(!Thread.interrupted()) {
-//            try {
-//
-//                displayCardDetails(trackData)
-//                startReading()
-//            } catch (Exception ex) {
-//                System.out.println("Thread class exception");
-//            }
-//        }
-//    }
-//}
-
-
 public class MagneticCardHelper extends CordovaPlugin {
 
     private CallbackContext connectionCallbackContext;
@@ -85,9 +63,13 @@ public class MagneticCardHelper extends CordovaPlugin {
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
+        this.connectionCallbackContext = null;
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
+        System.out.println("+++++++++++++++++++ In initialize function  >> ");
+        webView.getContext().registerReceiver(mReceiver, filter);
     }
 
-    //this.connectionCallbackContext = null;
     //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
@@ -143,6 +125,7 @@ public class MagneticCardHelper extends CordovaPlugin {
             });
         } else if(action.equals("readSmartCard")) {
             System.out.println("\n\n\n In Action == readSmartCard \n\n\n\n");
+            this.connectionCallbackContext = callbackContext;
 
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
@@ -153,14 +136,11 @@ public class MagneticCardHelper extends CordovaPlugin {
 //                        } else {
 //                            System.out.println("AFTER SENDING SUCCESS readSmartCard >>>>>>> " + chipData);
 //
-                            PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "--***--");
-                            pluginResult.setKeepCallback(true);
-//                            callbackContext.sendPluginResult(pluginResult);
-                            //return true;
-
-
+                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+                        pluginResult.setKeepCallback(true);
+                        callbackContext.sendPluginResult(pluginResult);
+                        return true;
 //                            callbackContext.success(new JSONObject(chipData));
-
                         //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
@@ -234,12 +214,12 @@ public class MagneticCardHelper extends CordovaPlugin {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
 
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
+//        IntentFilter filter = new IntentFilter();
+//        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
         System.out.println("+++++++++++++++++++ Before register ??? >> " + chipData);
 //        Intent a =  this.activity.registerReceiver(mReceiver, filter);
         //String data = a.getStringExtra("key");
-        this.activity.registerReceiver(mReceiver, filter);
+//        this.activity.registerReceiver(mReceiver, filter);
         System.out.println("+++++++++++++++++++ After register ??? >> " + chipData);
         //System.out.println("+++++++++++++++++++ data === " + data);
 
@@ -268,6 +248,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
                         PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
                         result.setKeepCallback(true);
+                        connectionCallbackContext.sendPluginResult(result);
 //                        callbackContext.sendPluginResult(result);
                         //context.sendPluginResult(result);
 
