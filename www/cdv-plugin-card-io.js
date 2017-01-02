@@ -35,7 +35,7 @@ MagneticCardHelper.prototype.startMonitor = function(callback) {
 MagneticCardHelper.prototype.readSmartCard = function(callback, failureCallback) {
     console.log("+++++++++++++++IN readSmartCard++++++++++++++++++++++");
     cordova.exec(callback, failureCallback, "MagneticCardHelper", "readSmartCard", []);
-    cordova.fireDocumentEvent("dataMapEvent", callback);
+    //cordova.fireDocumentEvent("dataMapEvent", callback);
 };
 
 
