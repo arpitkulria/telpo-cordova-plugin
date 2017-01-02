@@ -216,6 +216,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         String[] arr = MagneticCard.check(10000);
 
         PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(arr));
+        PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(arr));
         result.setKeepCallback(true);
         connectionCallbackContext.sendPluginResult(result);
 
@@ -333,7 +334,9 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private Map<String, String> getCardDetailsHelper(String response, String getCommandApdu, String processingOptionsApdu, String cardType) {
 
+        System.out.println("\n\n\n\n\n IN getCardDetailsHelper function and resposne is " + response);
         String nBytes = response.substring(2);
+        System.out.println("\n\n\n\n\n IN getCardDetailsHelper AFTER CALLING SUBSTRING function and resposne is " + response);
         String getRespApdu = sendApdu(getCommandApdu + nBytes);
         if (checkValidResponse(getRespApdu)) {
             return callGetProcessingOptions(processingOptionsApdu, getCommandApdu, cardType);
@@ -343,8 +346,10 @@ public class MagneticCardHelper extends CordovaPlugin {
     }
 
     private Map<String, String> callGetProcessingOptions(String processingOptionsApdu, String getCommandApdu, String cardType) {
+        System.out.println("\n\n\n\n\n IN callGetProcessingOptions function and resposne is " + respApdu);
         String respApdu = sendApdu(processingOptionsApdu);
         String processingOptResp = sendApdu(getCommandApdu + respApdu.substring(2));
+        System.out.println("\n\n\n\n\n IN callGetProcessingOptions  AFTER CALLING SUBSTRING function and resposne is " + respApdu);
         if (checkValidResponse(processingOptResp)) {
             return getCommandAPDUParams(processingOptResp, cardType);
         } else {
