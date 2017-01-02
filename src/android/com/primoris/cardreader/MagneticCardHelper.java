@@ -70,7 +70,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         webView.getContext().registerReceiver(mReceiver, filter);
     }
 
-    //private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
     public Map<String, String> chipData = new HashMap();
@@ -100,8 +99,17 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
+
                         String[] ans = startReading();
-                        callbackContext.success(Arrays.toString(ans));
+
+                        //EXTRA
+                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, Arrays.toString(ans));
+                        pluginResult.setKeepCallback(true);
+                        callbackContext.sendPluginResult(pluginResult);
+                        //EXTRA
+
+//                        String[] ans = startReading();
+//                        callbackContext.success(Arrays.toString(ans));
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception");
                     }
@@ -206,6 +214,11 @@ public class MagneticCardHelper extends CordovaPlugin {
     public static String[] startReading() throws TelpoException {
         MagneticCard.startReading();
         String[] arr = MagneticCard.check(10000);
+
+        PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(arr));
+        result.setKeepCallback(true);
+        connectionCallbackContext.sendPluginResult(result);
+
         return arr;
     }
 
@@ -241,21 +254,10 @@ public class MagneticCardHelper extends CordovaPlugin {
                         System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
-
                         chipData = getCardDetails();
-
-                        //--------------------------
-
                         PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
                         result.setKeepCallback(true);
                         connectionCallbackContext.sendPluginResult(result);
-//                        callbackContext.sendPluginResult(result);
-                        //context.sendPluginResult(result);
-
-                        //--------------------------
-
-//                        intent.putExtra("key", "value");
-
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
