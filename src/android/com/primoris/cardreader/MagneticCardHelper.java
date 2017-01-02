@@ -211,7 +211,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         MagneticCard.close();
     }
 
-    public static String[] startReading() throws TelpoException {
+    public String[] startReading() throws TelpoException {
         MagneticCard.startReading();
         String[] arr = MagneticCard.check(10000);
 
