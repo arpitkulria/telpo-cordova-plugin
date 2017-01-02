@@ -32,6 +32,13 @@ MagneticCardHelper.prototype.startMonitor = function(callback) {
 };
 
 
+MagneticCardHelper.prototype.readSmartCard = function(callback, failureCallback) {
+    console.log("+++++++++++++++IN readSmartCard++++++++++++++++++++++");
+    cordova.exec(callback, failureCallback, "MagneticCardHelper", "readSmartCard", []);
+    //cordova.fireDocumentEvent("dataMapEvent", callback);
+};
+
+
 MagneticCardHelper.prototype.stop = function(callback) {
     console.log("+++++++++++++++IN STOP MONITOR++++++++++++++++++++++");
     var failureCallback = function() {
@@ -40,6 +47,16 @@ MagneticCardHelper.prototype.stop = function(callback) {
 
     cordova.exec(callback, failureCallback, "MagneticCardHelper", "stop", []);
 };
+
+MagneticCardHelper.prototype.print = function(content, signaturePath, logo, callback) {
+    console.log("+++++++++++++++IN PRINT++++++++++++++++++++ ::: ");
+    var failureCallback = function() {
+        console.log("Problem while stopping");
+    };
+
+    cordova.exec(callback, failureCallback, "MagneticCardHelper", "print", [content, signaturePath, logo]);
+};
+
 
 MagneticCardHelper.prototype.print = function(content, signaturePath, logo, callback) {
     console.log("+++++++++++++++IN PRINT++++++++++++++++++++ ::: ");

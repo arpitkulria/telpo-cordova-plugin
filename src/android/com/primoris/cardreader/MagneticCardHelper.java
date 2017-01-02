@@ -11,6 +11,7 @@ import java.util.*;
 import java.text.*;
 import java.io.InputStream;
 
+import org.apache.cordova.PluginResult;
 import com.telpo.tps550.api.util.StringUtil;
 import android.util.Base64;
 import org.apache.cordova.CallbackContext;
@@ -42,6 +43,7 @@ import com.telpo.tps550.api.reader.ReaderMonitor;
 import com.telpo.tps550.api.reader.SmartCardReader;
 import android.content.IntentFilter;
 import java.io.UnsupportedEncodingException;
+import android.content.IntentFilter;
 import com.telpo.tps550.api.reader.CardReader;
 import android.os.BatteryManager;
 import com.telpo.tps550.api.printer.NoPaperException;
@@ -52,6 +54,8 @@ import android.graphics.BitmapFactory;
 
 public class MagneticCardHelper extends CordovaPlugin {
 
+    private CallbackContext connectionCallbackContext;
+
     @Override
     protected void pluginInitialize() {
     }
@@ -59,88 +63,93 @@ public class MagneticCardHelper extends CordovaPlugin {
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
+        this.connectionCallbackContext = null;
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
+        webView.getContext().registerReceiver(mReceiver, filter);
     }
 
-    private CallbackContext callbackContext;
     private Activity activity = null;
     private static final int REQUEST_CARD_SCAN = 10;
+    public Map<String, String> chipData = new HashMap();
 
     @Override
     public boolean execute(String action, final JSONArray args,
                            final CallbackContext callbackContext) throws JSONException {
-        this.callbackContext = callbackContext;
         this.activity = this.cordova.getActivity();
         boolean retValue = true;
         if (action.equals("open")) {
-            System.out.println("\n\n\n In Action == open \n\n\n\n");
-
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
                         open();
-                        callbackContext.success("Successssssss opeeeeenn");
+                        callbackContext.success("Success open");
                     } catch (Exception ex) {
-                        System.out.println("in telpo exception");
+                        System.out.println("in teklpo exception" + ex);
                     }
                 }
             });
 
         } else if (action.equals("startReading")) {
-            System.out.println("\n\n\n In Action == startReading \n\n\n\n");
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
                         String[] ans = startReading();
-                        callbackContext.success(Arrays.toString(ans));
+                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, Arrays.toString(ans));
+                        pluginResult.setKeepCallback(true);
+                        callbackContext.sendPluginResult(pluginResult);
                     } catch (Exception ex) {
-                        System.out.println("in telpo exception");
+                        System.out.println("in teklpo exception" + ex);
                     }
                 }
             });
 
         } else if(action.equals("startMonitor")) {
-            System.out.println("\n\n\n In Action == startMonitor \n\n\n\n");
-
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
                         Map<String, String> result = startMonitor();
                         callbackContext.success(new JSONObject(result));
-                        System.out.println("AFTER SENDING SUCCESS >>>>>>> " + result);
-                        //activity.unregisterReceiver(mReceiverCopy);
                     } catch (Exception ex) {
-                        System.out.println("in telpo exception");
+                        System.out.println("in teklpo exception" + ex);
                     }
                 }
             });
-        } else if(action.equals("stop")) {
-            System.out.println("\n\n\n In Action == stop \n\n\n\n");
+        } else if(action.equals("readSmartCard")) {
+            this.connectionCallbackContext = callbackContext;
 
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        //Stop Smart card reader
+                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+                        pluginResult.setKeepCallback(true);
+                        callbackContext.sendPluginResult(pluginResult);
+                    } catch (Exception ex) {
+                        System.out.println("in teklpo exception" + ex);
+                    }
+                }
+            });
+        } else if(action.equals("stop")) {
+            this.activity.runOnUiThread(new Runnable() {
+                public void run() {
+                    try {
                         activity.unregisterReceiver(mReceiverCopy);
                         ReaderMonitor.stopMonitor();
-                        //Stop mag card reader
                         close();
-//                        Map<String, String> result = startMonitor();
                         callbackContext.success("STOP success");
                     } catch (Exception ex) {
-                        System.out.println("in telpo exception");
+                        System.out.println("in teklpo exception" + ex);
                     }
                 }
             });
         } else if(action.equals("print")) {
-            System.out.println("\n\n\n In Action == print \n\n\n\n");
-
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
                         int res = print(args.getString(0), args.getString(1), args.getString(2));
                         callbackContext.success(res);
                     } catch (Exception ex) {
-                        System.out.println("in telpo exception");
+                        System.out.println("in telpo exception" + ex);
                     }
                 }
             });
@@ -159,34 +168,18 @@ public class MagneticCardHelper extends CordovaPlugin {
         MagneticCard.close();
     }
 
-    public static String[] startReading() throws TelpoException {
+    public String[] startReading() throws TelpoException {
         MagneticCard.startReading();
         String[] arr = MagneticCard.check(10000);
+        PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(arr));
+        result.setKeepCallback(true);
+        connectionCallbackContext.sendPluginResult(result);
         return arr;
     }
 
-
-
-    public Map<String, String> chipData = new HashMap();
-
-    public Map<String, String> startMonitor() throws TelpoException {
+    public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
-
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ReaderMonitor.ACTION_ICC_PRESENT);
-
-        System.out.println("<<<<<<<<<< Before register ??? >> " + chipData);
-
-        this.activity.registerReceiver(mReceiver, filter);
-
-        try {
-            //TODO -- DONT USE Thread.sleep()
-            Thread.sleep(4000);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        System.out.println("<<<<<<<<<< After register ??? >> " + chipData);
         return chipData;
     }
 
@@ -206,6 +199,9 @@ public class MagneticCardHelper extends CordovaPlugin {
                     } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
                         System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
                         chipData = getCardDetails();
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+                        result.setKeepCallback(true);
+                        connectionCallbackContext.sendPluginResult(result);
                         System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
                     } else {
                         System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
@@ -228,35 +224,23 @@ public class MagneticCardHelper extends CordovaPlugin {
         cardAppIdentifiers.put("A00000002501", "AMEX");
         cardAppIdentifiers.put("A0000000031010", "VISA");
         cardAppIdentifiers.put("A0000000041010", "MC");
-
-
-
         String selectCommandApdu = "00A40400";
 
         for(String key : cardAppIdentifiers.keySet()) {
             if(cardAppIdentifiers.get(key) == "AMEX") {
-                System.out.println("<<<<<<<<<<<<>>>AMEX>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "06" + key + "00");
-                System.out.println("<<<<<<<<<<<<>>>AMEX>>>RESP>>>>>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 result1.putAll(result);
-                System.out.println("<<<<<<<THIS IS THE ANS <<AMEX<<<>>>>>" + result);
             } else {
-                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>>>>>>>>>>>>>>>>>>>>>");
                 String resp = sendApdu(selectCommandApdu + "07" + key + "00");
-                System.out.println("<<<<<<<<<<<<>>>>>OTHER THEN AMEX>>>>>resp>>>>>>>>>>>>>>>>>>>>" + resp);
                 result = checkSelectResponse(resp, cardAppIdentifiers.get(key));
                 result1.putAll(result);
-                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex result<<>>>>>" + result);
-                System.out.println("<<<<<<<THIS IS THE ANS <<< other then amex result1<<>>>>>" + result1);
             }
         }
         return result1;
     }
 
     private Map<String, String> checkSelectResponse(String resp, String cardType) {
-
-        System.out.println("<<<<<<<<<<<<in >>>checkSelectResponse>>>>>>>>>>>card type === " + cardType + ">>>>>>>>>>>>>>>>");
         //Response APDU if File Not Found
         String fileResponseApdu = "6A82";
         //Get Response Command APDU
@@ -265,22 +249,18 @@ public class MagneticCardHelper extends CordovaPlugin {
         String processingOptionsApdu = "80A80000028300";
 
         if(!resp.equals("6A82")) {
-            System.out.println("----------------in!resp.equal6A82) ----------------");
             return getCardDetailsHelper(resp, getCommandApdu, processingOptionsApdu, cardType);
         } else {
-            System.out.println("---------------- else case resp == " + resp +" ----------------");
             Map<String, String> blankMap = new HashMap();
             return blankMap;
         }
     }
 
     private boolean checkValidResponse(String resApdu) {
-        System.out.println("in chack valid respons enad stsing is ===" + resApdu);
         return resApdu.endsWith("9000");
     }
 
     private Map<String, String> getCardDetailsHelper(String response, String getCommandApdu, String processingOptionsApdu, String cardType) {
-
         String nBytes = response.substring(2);
         String getRespApdu = sendApdu(getCommandApdu + nBytes);
         if (checkValidResponse(getRespApdu)) {
@@ -307,7 +287,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         for(int i = 0; i < resApdu.length(); i+=2) {
             resArr.add(charArr[i] + "" + charArr[i+1]);
         }
-
         return resArr;
     }
 
@@ -340,13 +319,9 @@ public class MagneticCardHelper extends CordovaPlugin {
         String readRecordCommandApdu = "00B2" + param1 + param2;
         String readRecordResp = sendApdu(readRecordCommandApdu + "00");
         String cardDetailResp = sendApdu(readRecordCommandApdu + readRecordResp.substring(2));
-        System.out.println("------IN readCardDetails FUNCTION ---param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
         if(checkValidResponse(cardDetailResp)) {
-            System.out.println("+++++++++++check valid response if case and card deaaa =   "+ cardDetailResp+" +++++++++++");
             return getCardInfo(cardDetailResp);
-        }
-        else {
-            System.out.println("---------param 1 = "+ param1+"--------param 2 === "+ param2+"---------------");
+        } else {
             throw new IllegalArgumentException("Invalid Parameter for command APDU");
         }
 
@@ -382,8 +357,6 @@ public class MagneticCardHelper extends CordovaPlugin {
             String str = strArr.get(i);
             output.append((char) Integer.parseInt(str, 16));
         }
-
-        System.out.println("----------- output.toString().trim()== " + output.toString().trim());
         return output.toString().trim();
     }
 
@@ -403,13 +376,10 @@ public class MagneticCardHelper extends CordovaPlugin {
     private byte[] toByteArray(String hex) {
         String finedHex = hex.replaceAll("[^0-9A-Fa-f]", "");
         ArrayList<String> data = sliding(hex);
-
         ByteArrayOutputStream op = new ByteArrayOutputStream();
-
         for (int i = 0; i < data.size(); i++) {
             op.write((byte)Integer.parseInt(data.get(i),16));
         }
-
         return op.toByteArray();
     }
 
@@ -446,7 +416,6 @@ public class MagneticCardHelper extends CordovaPlugin {
             byte[] decodedString = Base64.decode(dataUrlArray[1], Base64.DEFAULT);
             Bitmap bitMap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             ThermalPrinter.printLogo(bitMap);
-
             ThermalPrinter.walkPaper(100);
             return 0;
         } catch (NoPaperException ex) {
@@ -475,5 +444,4 @@ public class MagneticCardHelper extends CordovaPlugin {
 
         return (level / (float) 2.0) * 100;
     }
-
 }
