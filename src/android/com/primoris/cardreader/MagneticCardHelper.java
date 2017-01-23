@@ -131,12 +131,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         readThread = new ReadThread();
                         readThread.start();
-             /*           PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
-                        pluginResult.setKeepCallback(true);
-                        callbackContext.sendPluginResult(pluginResult);*/
-                        /*PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, Arrays.toString(ans));
-                        pluginResult.setKeepCallback(true);
-                        callbackContext.sendPluginResult(pluginResult);*/
+                        startMonitor();
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception" + ex);
                     }
@@ -228,22 +223,14 @@ public class MagneticCardHelper extends CordovaPlugin {
         MagneticCard.close();
     }
 
-/*    public String[] startReading() throws TelpoException {
-        MagneticCard.startReading();
-        String[] arr = MagneticCard.check(100000);
-        PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(arr));
-        result.setKeepCallback(true);
-        connectionCallbackContext.sendPluginResult(result);
-        return arr;
-    }*/
-
     public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
+        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+        pluginResult.setKeepCallback(true);
+        connectionCallbackContext.sendPluginResult(pluginResult);
         return chipData;
     }
-//    private final BroadcastReceiver mReceiverCopy = mReceiver ;
-
 
     private Map<String, String> getCardDetails() {
         Map<String, String> cardAppIdentifiers = new HashMap();
