@@ -56,7 +56,37 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     Thread readThread;
     private CallbackContext connectionCallbackContext;
-    BroadcastReceiver mCR = mReceiver;
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("123", "icc present Broadcast Receiver");
+            if (intent.getAction() == ReaderMonitor.ACTION_ICC_PRESENT) {
+                if (intent.getExtras().getBoolean(ReaderMonitor.EXTRA_IS_PRESENT)) {
+                    int cardType = intent.getExtras().getInt(ReaderMonitor.EXTRA_CARD_TYPE);
+                    if (cardType == CardReader.CARD_TYPE_SLE4428) {
+                        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<SLE4428>>>>>>>>>>>>>>>>>>>>>");
+                    } else if (cardType == CardReader.CARD_TYPE_SLE4442) {
+                        System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
+                    } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
+                        chipData = getCardDetails();
+                        PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+                        result.setKeepCallback(true);
+                        connectionCallbackContext.sendPluginResult(result);
+                        System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
+                    } else {
+                        System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
+                    }
+                } else {
+                    System.out.println("<<<<<<<<<<<<<<<NO Card>>>>>>>>>>>>>>>>>>>");
+                }
+            }
+        }
+
+    };
+
+    private final BroadcastReceiver mCR = mReceiver;
 
     @Override
     protected void pluginInitialize() {
@@ -210,39 +240,6 @@ public class MagneticCardHelper extends CordovaPlugin {
         ReaderMonitor.startMonitor();
         return chipData;
     }
-
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d("123", "icc present Broadcast Receiver");
-            if (intent.getAction() == ReaderMonitor.ACTION_ICC_PRESENT) {
-                if (intent.getExtras().getBoolean(ReaderMonitor.EXTRA_IS_PRESENT)) {
-                    int cardType = intent.getExtras().getInt(ReaderMonitor.EXTRA_CARD_TYPE);
-                    if (cardType == CardReader.CARD_TYPE_SLE4428) {
-                        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<SLE4428>>>>>>>>>>>>>>>>>>>>>");
-                    } else if (cardType == CardReader.CARD_TYPE_SLE4442) {
-                        System.out.println("<<<<<<<<<<<<<<<SLE4442>>>>>>>>>>>>>>>>>>>");
-                    } else if (cardType == CardReader.CARD_TYPE_ISO7816) {
-                        System.out.println("<<<<<<<<<<<<<<SMART CARD>>>>>>>>>>>>>>>>>>>");
-                        chipData = getCardDetails();
-                        PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
-                        result.setKeepCallback(true);
-                        connectionCallbackContext.sendPluginResult(result);
-                        System.out.println("<<<<<<<<<<<<<<SMART CARD result chipData>>> " + chipData);
-                    } else {
-                        System.out.println("<<<<<<<<<<<Unknown>>>>>>>>>>>>>");
-                    }
-                } else {
-                    System.out.println("<<<<<<<<<<<<<<<NO Card>>>>>>>>>>>>>>>>>>>");
-                }
-            }
-        }
-
-    };
-
-
-
 //    private final BroadcastReceiver mReceiverCopy = mReceiver ;
 
 
