@@ -175,7 +175,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         readThread.interrupt();
                         readThread = null;
                         close();
-                        activity.unregisterReceiver(mCR);
+                     //   activity.unregisterReceiver(mCR);
                         ReaderMonitor.stopMonitor();
                         chipData = new HashMap();
                         callbackContext.success("STOP success");
