@@ -131,6 +131,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         readThread = new ReadThread();
                         readThread.start();
+                        startMonitor();
              /*           PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
                         pluginResult.setKeepCallback(true);
                         callbackContext.sendPluginResult(pluginResult);*/
@@ -240,6 +241,9 @@ public class MagneticCardHelper extends CordovaPlugin {
     public Map<String, String> startMonitor() throws Exception {
         ReaderMonitor.setContext(this.activity);
         ReaderMonitor.startMonitor();
+        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
+        pluginResult.setKeepCallback(true);
+        callbackContext.sendPluginResult(pluginResult);
         return chipData;
     }
 //    private final BroadcastReceiver mReceiverCopy = mReceiver ;
