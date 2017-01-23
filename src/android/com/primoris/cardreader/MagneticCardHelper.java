@@ -56,6 +56,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     Thread readThread;
     private CallbackContext connectionCallbackContext;
+
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
         @Override
@@ -176,6 +177,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                         close();
                         activity.unregisterReceiver(mCR);
                         ReaderMonitor.stopMonitor();
+                        chipData = new HashMap();
                         callbackContext.success("STOP success");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception" + ex);
