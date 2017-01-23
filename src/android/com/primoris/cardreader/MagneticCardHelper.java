@@ -94,10 +94,12 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
-                        String[] ans = startReading();
-                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, Arrays.toString(ans));
-                        pluginResult.setKeepCallback(true);
-                        callbackContext.sendPluginResult(pluginResult);
+                        readThread = new ReadThread();
+                        readThread.start();
+//                        String[] ans = startReading();
+//                        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, Arrays.toString(ans));
+//                        pluginResult.setKeepCallback(true);
+//                        callbackContext.sendPluginResult(pluginResult);
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception" + ex);
                     }
@@ -133,6 +135,8 @@ public class MagneticCardHelper extends CordovaPlugin {
             this.activity.runOnUiThread(new Runnable() {
                 public void run() {
                     try {
+                        readThread.interrupt();
+                        readThread = null;
                         activity.unregisterReceiver(mReceiverCopy);
                         ReaderMonitor.stopMonitor();
                         close();
@@ -158,6 +162,23 @@ public class MagneticCardHelper extends CordovaPlugin {
         }
 
         return retValue;
+    }
+
+    private class ReadThread extends Thread {
+        @Override
+        public void run()
+        {
+            MagneticCard.startReading();
+            while (!Thread.interrupted()){
+                try{
+                    TracData = MagneticCard.check(1000);
+                    PluginResult result = new PluginResult(PluginResult.Status.OK, Arrays.toString(TracData));
+                    result.setKeepCallback(true);
+                    connectionCallbackContext.sendPluginResult(result);
+                    MagneticCard.startReading();
+                }catch (TelpoException e){}
+            }
+        }
     }
 
     public static void open() throws TelpoException {
