@@ -243,7 +243,7 @@ public class MagneticCardHelper extends CordovaPlugin {
         ReaderMonitor.startMonitor();
         PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, new JSONObject(chipData));
         pluginResult.setKeepCallback(true);
-        callbackContext.sendPluginResult(pluginResult);
+        connectionCallbackContext.sendPluginResult(pluginResult);
         return chipData;
     }
 //    private final BroadcastReceiver mReceiverCopy = mReceiver ;
