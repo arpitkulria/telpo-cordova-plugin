@@ -86,7 +86,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                 public void run() {
                     try {
                         open();
-                        startMonitor();
+                       // startMonitor();
                         callbackContext.success("Success open");
                     } catch (Exception ex) {
                         System.out.println("in teklpo exception" + ex);
