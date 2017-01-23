@@ -73,7 +73,7 @@ public class MagneticCardHelper extends CordovaPlugin {
     private static final int REQUEST_CARD_SCAN = 10;
     public Map<String, String> chipData = new HashMap();
     public String[] TracData = null;
-    public ReadThread = null;
+    public ReadThread readThread = null;
 
     @Override
     public boolean execute(String action, final JSONArray args,
