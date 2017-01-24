@@ -139,7 +139,7 @@ public class MagneticCardHelper extends CordovaPlugin {
                     try {
                         readThread.interrupt();
                         readThread = null;
-                        activity.unregisterReceiver(mReceiverCopy);
+                       // activity.unregisterReceiver(mReceiverCopy);
                         ReaderMonitor.stopMonitor();
                         close();
                         callbackContext.success("STOP success");
@@ -168,8 +168,7 @@ public class MagneticCardHelper extends CordovaPlugin {
 
     private class ReadThread extends Thread {
         @Override
-        public void run()
-        {
+        public void run() {
             MagneticCard.startReading();
             while (!Thread.interrupted()){
                 try{
